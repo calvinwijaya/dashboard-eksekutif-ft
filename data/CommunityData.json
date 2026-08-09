@@ -1,0 +1,245 @@
+{
+  "communityPrograms": [
+    {
+      "id": "PKM-001",
+      "title": "Pemberdayaan Desa Digital Berbasis Geospasial",
+      "status": "Aktif",
+      "department": "Departemen Teknik Geodesi",
+      "year": "2026–2027",
+      "location": "Sleman",
+      "partner": "Pemerintah Kabupaten Sleman",
+      "impact": 88,
+      "sustainability": 91,
+      "category": "Digital & Spatial",
+      "description": "Penguatan kapasitas desa melalui pemanfaatan informasi geospasial, pemetaan partisipatif, dan dashboard desa."
+    },
+    {
+      "id": "PKM-002",
+      "title": "Smart Energy untuk Fasilitas Publik Desa",
+      "status": "Aktif",
+      "department": "Departemen Teknik Elektro",
+      "year": "2026",
+      "location": "Bantul",
+      "partner": "Pemerintah Kabupaten Bantul",
+      "impact": 82,
+      "sustainability": 86,
+      "category": "Energy",
+      "description": "Implementasi monitoring dan efisiensi energi untuk fasilitas publik berbasis sensor dan sistem kendali."
+    },
+    {
+      "id": "PKM-003",
+      "title": "Teknologi Tepat Guna Pengolahan Hasil Pertanian",
+      "status": "Selesai",
+      "department": "Departemen Teknik Mesin",
+      "year": "2025",
+      "location": "Kulon Progo",
+      "partner": "Kelompok Tani Kulon Progo",
+      "impact": 79,
+      "sustainability": 74,
+      "category": "Appropriate Technology",
+      "description": "Penerapan teknologi tepat guna untuk meningkatkan produktivitas dan efisiensi pengolahan hasil pertanian."
+    },
+    {
+      "id": "PKM-004",
+      "title": "Sistem Monitoring Kualitas Air Berbasis IoT",
+      "status": "Direncanakan",
+      "department": "Departemen Teknik Fisika",
+      "year": "2027",
+      "location": "Gunungkidul",
+      "partner": "Pemerintah Kabupaten Gunungkidul",
+      "impact": 76,
+      "sustainability": 88,
+      "category": "Environment",
+      "description": "Pengembangan sistem monitoring kualitas air berbasis sensor dan Internet of Things."
+    },
+    {
+      "id": "PKM-005",
+      "title": "Pemetaan Risiko Bencana Berbasis Komunitas",
+      "status": "Aktif",
+      "department": "Departemen Teknik Geodesi",
+      "year": "2026",
+      "location": "Bantul",
+      "partner": "BPBD Kabupaten Bantul",
+      "impact": 94,
+      "sustainability": 89,
+      "category": "Disaster Resilience",
+      "description": "Pemetaan risiko dan penguatan kapasitas masyarakat dalam menghadapi ancaman bencana."
+    },
+    {
+      "id": "PKM-006",
+      "title": "Revitalisasi Infrastruktur Permukiman",
+      "status": "Selesai",
+      "department": "Departemen Teknik Sipil",
+      "year": "2025",
+      "location": "Kota Yogyakarta",
+      "partner": "Pemerintah Kota Yogyakarta",
+      "impact": 87,
+      "sustainability": 78,
+      "category": "Infrastructure",
+      "description": "Pendampingan perencanaan dan peningkatan kualitas infrastruktur permukiman."
+    },
+    {
+      "id": "PKM-007",
+      "title": "Pelatihan Pengolahan Sampah Mandiri Skala RT/RW",
+      "status": "Selesai",
+      "department": "Departemen Teknik Kimia",
+      "year": "2024",
+      "location": "Sleman",
+      "partner": "Karang Taruna Sleman",
+      "impact": 45,
+      "sustainability": 52,
+      "category": "Environment",
+      "description": "Edukasi dan pendampingan daur ulang sampah organik dan anorganik berbasis komunitas."
+    },
+    {
+      "id": "PKM-008",
+      "title": "Penerapan Lampu Tenaga Surya Jalan Kampung",
+      "status": "Aktif",
+      "department": "Departemen Teknik Elektro",
+      "year": "2025",
+      "location": "Gunungkidul",
+      "partner": "Kecamatan Tepus",
+      "impact": 65,
+      "sustainability": 70,
+      "category": "Energy",
+      "description": "Instalasi penerangan jalan umum mandiri menggunakan panel surya skala kecil."
+    },
+    {
+      "id": "PKM-009",
+      "title": "Desain Sanitasi Air Bersih Pesisir",
+      "status": "Direncanakan",
+      "department": "Departemen Teknik Sipil",
+      "year": "2027",
+      "location": "Bantul",
+      "partner": "Masyarakat Nelayan Samas",
+      "impact": 72,
+      "sustainability": 60,
+      "category": "Infrastructure",
+      "description": "Pembangunan instalasi penjernihan air payau untuk kebutuhan konsumsi warga pesisir."
+    },
+    {
+      "id": "PKM-010",
+      "title": "Optimalisasi Bengkel Perawatan Traktor Pertanian",
+      "status": "Selesai",
+      "department": "Departemen Teknik Mesin",
+      "year": "2024",
+      "location": "Klaten",
+      "partner": "Gabungan Kelompok Tani",
+      "impact": 58,
+      "sustainability": 48,
+      "category": "Appropriate Technology",
+      "description": "Pelatihan mekanik lokal untuk perawatan dan perbaikan alat mesin pertanian."
+    },
+    {
+      "id": "PKM-011",
+      "title": "Klinik Konsultasi Bangunan Tahan Gempa",
+      "status": "Aktif",
+      "department": "Departemen Teknik Sipil",
+      "year": "2026",
+      "location": "Yogyakarta",
+      "partner": "Dinas PUPKP",
+      "impact": 91,
+      "sustainability": 82,
+      "category": "Disaster Resilience",
+      "description": "Pendampingan teknis konstruksi rumah sederhana tahan gempa bagi tukang lokal."
+    },
+    {
+      "id": "PKM-012",
+      "title": "Edukasi Sadar Tata Ruang Sejak Dini",
+      "status": "Selesai",
+      "department": "Departemen Teknik Geodesi",
+      "year": "2024",
+      "location": "Kota Yogyakarta",
+      "partner": "SMA/SMK Se-DIY",
+      "impact": 38,
+      "sustainability": 42,
+      "category": "Education",
+      "description": "Pengenalan peta tematik dan pentingnya tata ruang wilayah kepada pelajar."
+    },
+    {
+      "id": "PKM-013",
+      "title": "Digitalisasi Koperasi Desa (KopDes)",
+      "status": "Aktif",
+      "department": "Departemen Teknik Elektro",
+      "year": "2026",
+      "location": "Sleman",
+      "partner": "Koperasi Unit Desa Sleman",
+      "impact": 84,
+      "sustainability": 79,
+      "category": "Digital & Spatial",
+      "description": "Pembuatan sistem pencatatan keuangan dan inventaris berbasis web untuk koperasi."
+    },
+    {
+      "id": "PKM-014",
+      "title": "Konservasi Mata Air Berbasis Masyarakat",
+      "status": "Aktif",
+      "department": "Departemen Teknik Fisika",
+      "year": "2025–2028",
+      "location": "Kulon Progo",
+      "partner": "PDAM & Warga Menoreh",
+      "impact": 77,
+      "sustainability": 93,
+      "category": "Environment",
+      "description": "Pemetaan daerah tangkapan air dan penanaman pohon pelindung sumber air."
+    },
+    {
+      "id": "PKM-015",
+      "title": "Alat Pengering Hasil Laut Tenaga Hibrid",
+      "status": "Direncanakan",
+      "department": "Departemen Teknik Mesin",
+      "year": "2027",
+      "location": "Bantul",
+      "partner": "Koperasi Nelayan Pantai Baru",
+      "impact": 68,
+      "sustainability": 65,
+      "category": "Appropriate Technology",
+      "description": "Penerapan dome dryer tenaga surya dan biomassa untuk pengeringan ikan asin higienis."
+    }
+  ],
+  "partners": [
+    {
+      "name": "Pemerintah Kabupaten Sleman",
+      "type": "Pemerintah",
+      "programs": 18
+    },
+    {
+      "name": "Pemerintah Kabupaten Bantul",
+      "type": "Pemerintah",
+      "programs": 15
+    },
+    {
+      "name": "Pemerintah Kota Yogyakarta",
+      "type": "Pemerintah",
+      "programs": 11
+    },
+    {
+      "name": "BPBD Daerah Istimewa Yogyakarta",
+      "type": "Pemerintah",
+      "programs": 8
+    },
+    {
+      "name": "Kelompok Tani & Desa Binaan",
+      "type": "Masyarakat",
+      "programs": 14
+    },
+    {
+      "name": "Mitra Industri FT UGM",
+      "type": "Industri",
+      "programs": 9
+    }
+  ],
+  "departmentMatrix": [
+    ["Teknik Geodesi", "●", "●", "○", "●", "○"],
+    ["Teknik Elektro", "●", "—", "●", "○", "●"],
+    ["Teknik Fisika", "○", "●", "—", "●", "●"],
+    ["Teknik Mesin", "●", "○", "●", "—", "●"],
+    ["Teknik Sipil", "○", "●", "●", "●", "—"]
+  ],
+  "departmentHeaders": [
+    "Geodesi",
+    "Elektro",
+    "Fisika",
+    "Mesin",
+    "Sipil"
+  ]
+}

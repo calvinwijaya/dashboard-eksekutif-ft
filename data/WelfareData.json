@@ -1,0 +1,118 @@
+{
+  "staffGroups": [
+    { "id": "dosen", "label": "Dosen", "count": 486, "score": 78, "iconName": "GraduationCap" },
+    { "id": "tendik", "label": "Tendik", "count": 214, "score": 81, "iconName": "BriefcaseBusiness" },
+    { "id": "mahasiswa", "label": "Mahasiswa", "count": 8240, "score": 84, "iconName": "Users" }
+  ],
+  "workloadData": [
+    { "name": "Pengajaran", "value": 38, "target": 30, "note": "Relatif tinggi" },
+    { "name": "Penelitian", "value": 22, "target": 25, "note": "Seimbang" },
+    { "name": "Pengabdian", "value": 14, "target": 15, "note": "Seimbang" },
+    { "name": "Administrasi", "value": 18, "target": 10, "note": "Perlu dikurangi" },
+    { "name": "Tugas tambahan", "value": 8, "target": 5, "note": "Perlu dievaluasi" }
+  ],
+  "workloadInterventions": [
+    {
+      "title": "Redistribusi beban administrasi",
+      "description": "Alihkan pekerjaan administratif rutin ke sistem digital dan dukungan tendik.",
+      "priority": "Prioritas tinggi",
+      "impact": "−20% waktu administratif"
+    },
+    {
+      "title": "Optimasi distribusi mengajar",
+      "description": "Identifikasi mata kuliah dengan beban pengajaran tidak proporsional antar dosen.",
+      "priority": "Prioritas tinggi",
+      "impact": "Lebih merata"
+    },
+    {
+      "title": "Single faculty reporting",
+      "description": "Kurangi pelaporan berulang dengan satu sumber data fakultas.",
+      "priority": "Prioritas sedang",
+      "impact": "−15% pekerjaan berulang"
+    }
+  ],
+  "facilities": [
+    {
+      "name": "Laboratorium Geodesi & Geoinformatika",
+      "department": "Teknik Geodesi",
+      "items": 38,
+      "good": 29,
+      "repair": 6,
+      "critical": 3,
+      "utilization": 82
+    },
+    {
+      "name": "Laboratorium Energi & Sistem Tenaga",
+      "department": "Teknik Elektro",
+      "items": 46,
+      "good": 46,
+      "repair": 0,
+      "critical": 0,
+      "utilization": 88
+    },
+    {
+      "name": "Laboratorium Instrumentasi",
+      "department": "Teknik Fisika",
+      "items": 34,
+      "good": 26,
+      "repair": 6,
+      "critical": 2,
+      "utilization": 76
+    },
+    {
+      "name": "Laboratorium Material & Manufaktur",
+      "department": "Teknik Mesin",
+      "items": 51,
+      "good": 51,
+      "repair": 0,
+      "critical": 0,
+      "utilization": 91
+    },
+    {
+      "name": "Laboratorium Struktur & Infrastruktur",
+      "department": "Teknik Sipil",
+      "items": 43,
+      "good": 35,
+      "repair": 8,
+      "critical": 0,
+      "utilization": 84
+    }
+  ],
+  "academicRanks": [
+    { "rank": "Tenaga Pengajar", "count": 24, "tone": "blue" },
+    { "rank": "Asisten Ahli", "count": 96, "tone": "blue" },
+    { "rank": "Lektor", "count": 182, "tone": "green" },
+    { "rank": "Lektor Kepala", "count": 121, "tone": "gold" },
+    { "rank": "Guru Besar", "count": 63, "tone": "navy" }
+  ],
+  "welfareIndicators": [
+    { "label": "Work-Life Balance", "value": 76, "trend": "+4.2%" },
+    { "label": "Beban Administratif", "value": 62, "trend": "−8.5%" },
+    { "label": "Akses Fasilitas", "value": 83, "trend": "+3.1%" },
+    { "label": "Pengembangan Karier", "value": 79, "trend": "+5.6%" },
+    { "label": "Dukungan Kesehatan", "value": 86, "trend": "+2.4%" },
+    { "label": "Kepuasan Organisasi", "value": 81, "trend": "+4.8%" }
+  ],
+  "sdmActions": [
+    { "label": "Dosen menuju Lektor", "value": 37, "detail": "eligible / in preparation" },
+    { "label": "Dosen menuju Lektor Kepala", "value": 22, "detail": "eligible / in preparation" },
+    { "label": "Kandidat Guru Besar", "value": 14, "detail": "academic promotion pipeline" },
+    { "label": "Program pengembangan kompetensi", "value": 68, "detail": "participants this year" }
+  ],
+  "socialGuarantees": [
+    {
+      "id": "bpjs",
+      "title": "BPJS Kesehatan & Ketenagakerjaan",
+      "coverage": 100,
+      "status": "Terintegrasi Penuh",
+      "desc": "Fasilitas jaminan kesehatan dan perlindungan hari tua terjamin untuk seluruh Dosen dan Tendik aktif secara otomatis."
+    },
+    {
+      "id": "kp4",
+      "title": "Tunjangan Keluarga (KP4)",
+      "coverage": 100,
+      "status": "Terverifikasi",
+      "desc": "Pembaruan data tanggungan (suami/istri dan anak) terintegrasi dengan mulus ke dalam sistem penggajian universitas."
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+Place these files in this public/ folder:
+- logo_ugm.png
+- logo_ugm_emas.png
+- foto_prof_trias.png
