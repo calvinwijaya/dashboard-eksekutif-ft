@@ -2021,3 +2021,56 @@ button,input,select{font:inherit}button{cursor:pointer}
 .impact-point:hover {
   z-index: 50; /* Memastikan titik yang di-hover muncul di paling depan */
 }
+
+/* =========================================================
+   STANDARDIZASI BANNER DECISION / DESIGN PRINCIPLE
+   ========================================================= */
+
+/* Menyamakan padding dan jarak elemen */
+.decision-banner {
+  padding: 20px 22px !important;
+  gap: 14px !important;
+}
+
+/* Ukuran Ikon di Sebelah Kiri */
+.decision-icon {
+  width: 42px !important;
+  height: 42px !important;
+  border-radius: 12px !important;
+}
+
+.decision-icon svg {
+  width: 20px !important;
+  height: 20px !important;
+}
+
+/* Teks Kicker/Eyebrow */
+.decision-banner .eyebrow {
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.13em !important;
+  color: #64748b !important;
+}
+
+/* Judul Utama Banner */
+.decision-banner h3 {
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  color: #102a43 !important;
+  margin: 4px 0 3px !important;
+  line-height: 1.3 !important;
+}
+
+/* Paragraf / Deskripsi */
+.decision-banner p {
+  font-size: 11px !important;
+  color: #64748b !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+}
+
+/* Teks Alur di Kanan (DATA -> INSIGHT -> DECISION) */
+.decision-flow {
+  font-size: 11px !important;
+  gap: 8px !important;
+}
