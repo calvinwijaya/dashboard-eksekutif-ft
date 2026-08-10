@@ -118,7 +118,7 @@ export default function TeachingPage({ onBack }) {
           <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 14 }}>
             <thead style={{ position: "sticky", top: 0, background: "#fff", zIndex: 10 }}>
               <tr style={{ textAlign: "left", borderBottom: "1px solid #e2e8f0" }}>
-                {["Program Studi", "Jenjang", "Mahasiswa", "Dosen", "Mata Kuliah", "Kurikulum", "Rasio"].map(h => <th key={h} style={{ padding: "11px 8px", color: "#64748b", fontSize: 12 }}>{h}</th>)}
+                {["Program Studi", "Jenjang", "Mahasiswa", "Dosen", "Mata Kuliah", "Implementasi OBE", "Rasio"].map(h => <th key={h} style={{ padding: "11px 8px", color: "#64748b", fontSize: 12 }}>{h}</th>)}
               </tr>
             </thead>
             <tbody>
@@ -141,6 +141,27 @@ export default function TeachingPage({ onBack }) {
             </tbody>
           </table>
         </div>
+        {/* BANNER TOTAL DI BAWAH TABEL */}
+        {(() => {
+          const totalMhs = filteredPrograms.reduce((acc, p) => acc + p.students, 0);
+          const totalDosen = filteredPrograms.reduce((acc, p) => acc + p.lecturers, 0);
+          const totalRasio = totalDosen > 0 ? (totalMhs / totalDosen).toFixed(1) : 0;
+
+          return (
+            <div style={{ marginTop: 16, paddingTop: 14, borderTop: "1px solid #e2e8f0", display: "flex", justifyContent: "space-between", alignItems: "center", background: "#f8fafc", padding: "12px 18px", borderRadius: 10 }}>
+              <div>
+                <strong style={{ fontSize: 13, color: "#0f172a" }}>Total Rasio Dosen : Mahasiswa ({programFilter})</strong>
+                <div style={{ ...muted, fontSize: 12 }}>Akumulasi dari {filteredPrograms.length} program studi yang ditampilkan.</div>
+              </div>
+              <div style={{ display: "flex", gap: 20, alignItems: "center" }}>
+                <span style={{ fontSize: 13, color: "#475569" }}><b>{totalMhs.toLocaleString("id-ID")}</b> Mahasiswa · <b>{totalDosen}</b> Dosen</span>
+                <span style={{ fontSize: 20, fontWeight: 800, color: "#0b5ea8", background: "#eef4f9", padding: "4px 12px", borderRadius: 8, border: "1px solid #d0e1f0" }}>
+                  {totalRasio} : 1
+                </span>
+              </div>
+            </div>
+          );
+        })()}
       </section>
 
       {/* BEBAN PENGAJARAN DOSEN */}
