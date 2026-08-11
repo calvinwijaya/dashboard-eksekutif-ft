@@ -1,38 +1,38 @@
 {
   "programs": [
-    { "name": "Arsitektur", "level": "Sarjana (S1)", "students": 600, "lecturers": 45, "courses": 98, "curriculum": 90 },
-    { "name": "Perencanaan Wilayah dan Kota", "level": "Sarjana (S1)", "students": 520, "lecturers": 38, "courses": 92, "curriculum": 92 },
-    { "name": "Teknik Elektro", "level": "Sarjana (S1)", "students": 750, "lecturers": 52, "courses": 105, "curriculum": 94 },
-    { "name": "Teknologi Informasi", "level": "Sarjana (S1)", "students": 680, "lecturers": 42, "courses": 95, "curriculum": 96 },
-    { "name": "Teknik Biomedis", "level": "Sarjana (S1)", "students": 280, "lecturers": 22, "courses": 55, "curriculum": 88 },
-    { "name": "Teknik Mesin", "level": "Sarjana (S1)", "students": 820, "lecturers": 62, "courses": 110, "curriculum": 91 },
-    { "name": "Teknik Industri", "level": "Sarjana (S1)", "students": 650, "lecturers": 45, "courses": 90, "curriculum": 93 },
-    { "name": "Teknik Sipil", "level": "Sarjana (S1)", "students": 880, "lecturers": 68, "courses": 115, "curriculum": 92 },
-    { "name": "Teknik Infrastruktur Lingkungan", "level": "Sarjana (S1)", "students": 320, "lecturers": 26, "courses": 60, "curriculum": 89 },
-    { "name": "Teknik Sumber Daya Air", "level": "Sarjana (S1)", "students": 240, "lecturers": 20, "courses": 52, "curriculum": 85 },
-    { "name": "Teknik Kimia", "level": "Sarjana (S1)", "students": 780, "lecturers": 56, "courses": 102, "curriculum": 90 },
-    { "name": "Teknik Geodesi", "level": "Sarjana (S1)", "students": 550, "lecturers": 38, "courses": 85, "curriculum": 94 },
-    { "name": "Teknik Geologi", "level": "Sarjana (S1)", "students": 620, "lecturers": 44, "courses": 88, "curriculum": 91 },
-    { "name": "Teknik Fisika", "level": "Sarjana (S1)", "students": 490, "lecturers": 36, "courses": 78, "curriculum": 90 },
-    { "name": "Teknik Nuklir", "level": "Sarjana (S1)", "students": 420, "lecturers": 32, "courses": 72, "curriculum": 88 },
+    { "name": "Arsitektur", "level": "Sarjana (S1)", "students": 553, "lecturers": 18, "courses": 98, "curriculum": 90 },
+    { "name": "Perencanaan Wilayah dan Kota", "level": "Sarjana (S1)", "students": 479, "lecturers": 15, "courses": 92, "curriculum": 92 },
+    { "name": "Teknik Elektro", "level": "Sarjana (S1)", "students": 691, "lecturers": 21, "courses": 105, "curriculum": 94 },
+    { "name": "Teknologi Informasi", "level": "Sarjana (S1)", "students": 627, "lecturers": 17, "courses": 95, "curriculum": 96 },
+    { "name": "Teknik Biomedis", "level": "Sarjana (S1)", "students": 258, "lecturers": 9, "courses": 55, "curriculum": 88 },
+    { "name": "Teknik Mesin", "level": "Sarjana (S1)", "students": 756, "lecturers": 25, "courses": 110, "curriculum": 91 },
+    { "name": "Teknik Industri", "level": "Sarjana (S1)", "students": 599, "lecturers": 18, "courses": 90, "curriculum": 93 },
+    { "name": "Teknik Sipil", "level": "Sarjana (S1)", "students": 811, "lecturers": 27, "courses": 115, "curriculum": 92 },
+    { "name": "Teknik Infrastruktur Lingkungan", "level": "Sarjana (S1)", "students": 295, "lecturers": 10, "courses": 60, "curriculum": 89 },
+    { "name": "Teknik Sumber Daya Air", "level": "Sarjana (S1)", "students": 221, "lecturers": 8, "courses": 52, "curriculum": 85 },
+    { "name": "Teknik Kimia", "level": "Sarjana (S1)", "students": 719, "lecturers": 22, "courses": 102, "curriculum": 90 },
+    { "name": "Teknik Geodesi", "level": "Sarjana (S1)", "students": 507, "lecturers": 15, "courses": 85, "curriculum": 94 },
+    { "name": "Teknik Geologi", "level": "Sarjana (S1)", "students": 571, "lecturers": 18, "courses": 88, "curriculum": 91 },
+    { "name": "Teknik Fisika", "level": "Sarjana (S1)", "students": 452, "lecturers": 14, "courses": 78, "curriculum": 90 },
+    { "name": "Teknik Nuklir", "level": "Sarjana (S1)", "students": 386, "lecturers": 13, "courses": 72, "curriculum": 88 },
     
-    { "name": "IUP Teknik Kimia", "level": "IUP", "students": 120, "lecturers": 15, "courses": 32, "curriculum": 94 },
-    { "name": "IUP Teknik Geodesi", "level": "IUP", "students": 95, "lecturers": 12, "courses": 28, "curriculum": 96 },
-    { "name": "IUP Perencanaan Wilayah dan Kota", "level": "IUP", "students": 105, "lecturers": 14, "courses": 30, "curriculum": 93 },
+    { "name": "IUP Teknik Kimia", "level": "IUP", "students": 111, "lecturers": 6, "courses": 32, "curriculum": 94 },
+    { "name": "IUP Teknik Geodesi", "level": "IUP", "students": 88, "lecturers": 5, "courses": 28, "curriculum": 96 },
+    { "name": "IUP Perencanaan Wilayah dan Kota", "level": "IUP", "students": 97, "lecturers": 6, "courses": 30, "curriculum": 93 },
 
-    { "name": "Magister Teknik Sipil", "level": "Magister (S2)", "students": 150, "lecturers": 25, "courses": 45, "curriculum": 92 },
-    { "name": "Magister Arsitektur", "level": "Magister (S2)", "students": 90, "lecturers": 15, "courses": 38, "curriculum": 88 },
-    { "name": "Magister Teknik Elektro", "level": "Magister (S2)", "students": 130, "lecturers": 22, "courses": 48, "curriculum": 94 },
-    { "name": "Magister Teknik Mesin", "level": "Magister (S2)", "students": 140, "lecturers": 20, "courses": 46, "curriculum": 90 },
-    { "name": "Magister Teknik Geodesi", "level": "Magister (S2)", "students": 80, "lecturers": 15, "courses": 35, "curriculum": 92 },
-    { "name": "Magister Teknologi Informasi", "level": "Magister (S2)", "students": 180, "lecturers": 26, "courses": 50, "curriculum": 95 },
+    { "name": "Magister Teknik Sipil", "level": "Magister (S2)", "students": 138, "lecturers": 10, "courses": 45, "curriculum": 92 },
+    { "name": "Magister Arsitektur", "level": "Magister (S2)", "students": 83, "lecturers": 6, "courses": 38, "curriculum": 88 },
+    { "name": "Magister Teknik Elektro", "level": "Magister (S2)", "students": 120, "lecturers": 9, "courses": 48, "curriculum": 94 },
+    { "name": "Magister Teknik Mesin", "level": "Magister (S2)", "students": 129, "lecturers": 8, "courses": 46, "curriculum": 90 },
+    { "name": "Magister Teknik Geodesi", "level": "Magister (S2)", "students": 74, "lecturers": 6, "courses": 35, "curriculum": 92 },
+    { "name": "Magister Teknologi Informasi", "level": "Magister (S2)", "students": 166, "lecturers": 10, "courses": 50, "curriculum": 95 },
 
-    { "name": "Doktor Teknik Sipil", "level": "Doktor (S3)", "students": 45, "lecturers": 15, "courses": 18, "curriculum": 95 },
-    { "name": "Doktor Teknik Elektro", "level": "Doktor (S3)", "students": 35, "lecturers": 12, "courses": 16, "curriculum": 92 },
-    { "name": "Doktor Teknik Kimia", "level": "Doktor (S3)", "students": 50, "lecturers": 18, "courses": 20, "curriculum": 94 },
+    { "name": "Doktor Teknik Sipil", "level": "Doktor (S3)", "students": 41, "lecturers": 6, "courses": 18, "curriculum": 95 },
+    { "name": "Doktor Teknik Elektro", "level": "Doktor (S3)", "students": 32, "lecturers": 5, "courses": 16, "curriculum": 92 },
+    { "name": "Doktor Teknik Kimia", "level": "Doktor (S3)", "students": 46, "lecturers": 7, "courses": 20, "curriculum": 94 },
 
-    { "name": "Pendidikan Profesi Arsitek", "level": "Profesi", "students": 80, "lecturers": 15, "courses": 24, "curriculum": 96 },
-    { "name": "Pendidikan Profesi Insinyur", "level": "Profesi", "students": 250, "lecturers": 35, "courses": 32, "curriculum": 98 }
+    { "name": "Pendidikan Profesi Arsitek", "level": "Profesi", "students": 74, "lecturers": 6, "courses": 24, "curriculum": 96 },
+    { "name": "Pendidikan Profesi Insinyur", "level": "Profesi", "students": 230, "lecturers": 15, "courses": 32, "curriculum": 98 }
   ],
   "courses": [
     { "code": "TKS101", "name": "Matematika Teknik", "program": "Teknik Sipil", "sks": 3, "students": 168, "classes": 4 },
@@ -80,5 +80,27 @@
     ["Perencanaan Wilayah dan Kota", 92, 95],
     ["Teknik Fisika", 90, 93],
     ["Teknik Nuklir", 88, 92]
-  ]
+  ],
+  "technoKarsa": [
+    { "id": "TK-01", "name": "Geospasial 3D & Digital Twin Terapan", "dept": "Teknik Geodesi", "tags": ["Integrasi Riset", "Studi Kasus Urban", "Mitra Industri"], "students": 85 },
+    { "id": "TK-02", "name": "Kecerdasan Buatan & Machine Learning", "dept": "Teknologi Informasi", "tags": ["NVIDIA Academy", "Proyek AI", "Sharing Praktisi"], "students": 140 },
+    { "id": "TK-03", "name": "Manajemen Rantai Pasok Berkelanjutan", "dept": "Teknik Industri", "tags": ["Problem-Based", "Manufaktur Hijau", "Studi Kasus"], "students": 95 }
+  ],
+  "technoTalenta": [
+    { "title": "Engineering Capstone Expo", "desc": "Eksibisi proyek capstone multi-disiplin bersama mitra industri, pemerintah daerah, dan investor.", "iconName": "Briefcase" },
+    { "title": "Idea Factory & Inovasi", "desc": "Fasilitas inkubasi ide mahasiswa menuju prototipe teruji (TRL maju) dan rintisan startup teknologi.", "iconName": "Lightbulb" },
+    { "title": "Hub Pembinaan Lomba", "desc": "Pusat pembinaan talenta unggul dan komunitas mahasiswa, terhubung langsung dengan ekosistem riset FT.", "iconName": "Trophy" }
+  ],
+  "transformativeIndicators": {
+    "ocean": [
+      { "trait": "Openness", "pre": 72, "post": 86, "desc": "Keterbukaan ide & inovasi" },
+      { "trait": "Conscientiousness", "pre": 68, "post": 84, "desc": "Tanggung jawab & presisi" },
+      { "trait": "Extraversion", "pre": 65, "post": 78, "desc": "Komunikasi & kepemimpinan" },
+      { "trait": "Agreeableness", "pre": 74, "post": 89, "desc": "Kerja sama tim & empati" },
+      { "trait": "Neuroticism", "pre": 62, "post": 45, "desc": "Stabilitas emosi (Skor rendah = Baik)" }
+    ],
+    "capstoneParticipation": 88,
+    "masaTunggu": 2.4,
+    "kesesuaianBidang": 84
+  }
 }

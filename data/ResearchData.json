@@ -7,8 +7,11 @@
       "kbks": [
         { "id": "ars-desain", "name": "KBK Desain Arsitektur", "color": "blue" },
         { "id": "ars-tek", "name": "KBK Teknologi Bangunan Arsitektur", "color": "cyan" },
-        { "id": "ars-mukim", "name": "KBK Permukiman dan Desain Arsitektur Perumahan", "color": "teal" },
-        { "id": "ars-sejarah", "name": "KBK Sejarah, Teori, dan Konservasi Arsitektur", "color": "gold" }
+        { "id": "ars-mukim", "name": "KBK Desain Perumahan dan Permukiman", "color": "teal" },
+        { "id": "ars-sejarah", "name": "KBK Sejarah, Teori, Konservasi Arsitektur, dan Rancang Kota", "color": "gold" },
+        { "id": "pwk-kawasan", "name": "KBK Perencanaan Kawasan", "color": "orange" },
+        { "id": "pwk-kota", "name": "KBK Perencanaan Kota", "color": "purple" },
+        { "id": "pwk-wilayah", "name": "KBK Perencanaan Wilayah", "color": "green" }
       ]
     },
     {
@@ -26,9 +29,12 @@
       "name": "Departemen Teknik Mesin dan Industri",
       "short": "DTMI",
       "kbks": [
-        { "id": "ms-mat", "name": "KBK Engineering Materials", "color": "slate" },
-        { "id": "ms-energi", "name": "KBK Energy", "color": "red" },
-        { "id": "ms-manufaktur", "name": "KBK Integrated Design Mechanic & Manufacturing", "color": "blue" }
+        { "id": "ms-mat", "name": "KBK Material", "color": "slate" },
+        { "id": "ms-energi", "name": "KBK Energi", "color": "red" },
+        { "id": "ms-manufaktur", "name": "KBK Desain, Mekanika, dan Manufaktur Terpadu", "color": "blue" },
+        { "id": "ms-prod", "name": "KBK Sistem Manufaktur dan Produksi", "color": "teal" },
+        { "id": "ms-scm", "name": "KBK Rekayasa Rantai Pasok dan Riset Operasi", "color": "orange" },
+        { "id": "ms-ergonomi", "name": "KBK Faktor Manusia dan Manajemen Rekayasa", "color": "cyan" }
       ]
     },
     {
@@ -40,7 +46,8 @@
         { "id": "sp-air", "name": "KBK Hidraulika", "color": "cyan" },
         { "id": "sp-trans", "name": "KBK Transportasi", "color": "slate" },
         { "id": "sp-geo", "name": "KBK Geoteknik", "color": "red" },
-        { "id": "sp-ling", "name": "KBK Lingkungan", "color": "green" }
+        { "id": "sp-ling", "name": "KBK Lingkungan", "color": "green" },
+        { "id": "sp-mpk", "name": "KBK Manajemen Proyek Konstruksi", "color": "blue" }
       ]
     },
     {
@@ -48,10 +55,12 @@
       "name": "Departemen Teknik Kimia",
       "short": "DTK",
       "kbks": [
-        { "id": "tk-mat", "name": "KBK Advanced Material dan Mineral Processing", "color": "purple" },
-        { "id": "tk-energi", "name": "KBK Energy & Environment", "color": "green" },
-        { "id": "tk-bio", "name": "Bioresource Engineering", "color": "teal" },
-        { "id": "tk-prod", "name": "Chemical Product", "color": "blue" }
+        { "id": "tk-ling", "name": "KBK Rekayasa Lingkungan Berkelanjutan", "color": "green" },
+        { "id": "tk-mat", "name": "KBK Material Maju", "color": "purple" },
+        { "id": "tk-metalurgi", "name": "KBK Metalurgi Berkelanjutan", "color": "slate" },
+        { "id": "tk-energi", "name": "KBK Rekayasa Energi Berkelanjutan", "color": "red" },
+        { "id": "tk-bio", "name": "KBK Rekayasa Sumberdaya Hayati", "color": "teal" },
+        { "id": "tk-prod", "name": "KBK Teknologi Produk Kimia dan Teknik Sistem", "color": "blue" }
       ]
     },
     {
@@ -68,8 +77,9 @@
       "name": "Departemen Teknik Geologi",
       "short": "DTGL",
       "kbks": [
-        { "id": "gl-kimia", "name": "KBK Geokimia", "color": "orange" },
-        { "id": "gl-fisika", "name": "KBK Geofisika Eksplorasi & Panas Bumi", "color": "red" },
+        { "id": "gl-dinamika", "name": "KBK Geodinamika", "color": "orange" },
+        { "id": "gl-energi", "name": "KBK Geologi Sumberdaya Energi", "color": "red" },
+        { "id": "gl-mineral", "name": "KBK Geologi Sumberdaya Mineral", "color": "gold" },
         { "id": "gl-lingkungan", "name": "KBK Geologi Tata Lingkungan", "color": "green" }
       ]
     },
@@ -88,127 +98,50 @@
   "kbkExpertise": {
     "KBK Desain Arsitektur": { "keywords": ["arsitektur", "desain", "ruang", "estetika", "bangunan", "kreatif"] },
     "KBK Teknologi Bangunan Arsitektur": { "keywords": ["teknologi bangunan", "material", "konstruksi", "akustik", "pencahayaan", "smart building"] },
-    "KBK Permukiman dan Desain Arsitektur Perumahan": { "keywords": ["permukiman", "perumahan", "urban", "kota", "tata ruang", "sosial"] },
-    "KBK Sejarah, Teori, dan Konservasi Arsitektur": { "keywords": ["sejarah", "konservasi", "teori", "heritage", "budaya", "pelestarian"] },
+    "KBK Desain Perumahan dan Permukiman": { "keywords": ["permukiman", "perumahan", "urban", "kota", "tata ruang", "sosial"] },
+    "KBK Sejarah, Teori, Konservasi Arsitektur, dan Rancang Kota": { "keywords": ["sejarah", "konservasi", "teori", "heritage", "budaya", "pelestarian"] },
+    "KBK Perencanaan Kawasan": { "keywords": ["kawasan", "site planning", "tata ruang", "pengembangan lahan", "zonasi", "desain kawasan"] },
+    "KBK Perencanaan Kota": { "keywords": ["perkotaan", "urban planning", "smart city", "infrastruktur kota", "tata kota", "transportasi urban"] },
+    "KBK Perencanaan Wilayah": { "keywords": ["wilayah", "regional planning", "pembangunan daerah", "tata ruang wilayah", "ekonomi wilayah", "spasial"] },
+    
     "KBK Sistem Energi Listrik Cerdas Berkelanjutan": { "keywords": ["listrik", "kelistrikan", "smart grid", "power", "energi", "renewable"] },
-    "KBK Isyarat dan Sistem Kendali": { "keywords": ["kendali", "control", "isyarat", "sinyal", "robotika", "otomasi", "ai"] },
+    "KBK Isyarat dan Sistem Kendali": { "keywords": ["isyarat", "signal processing", "kontrol", "kendali", "robotika", "otomasi", "sistem terbenam"] },
     "KBK Teknik Informasi": { "keywords": ["informasi", "data", "software", "ai", "machine learning", "iot", "jaringan", "komputasi"] },
-    "KBK Engineering Materials": { "keywords": ["material", "logam", "komposit", "polimer", "struktur", "manufaktur"] },
-    "KBK Energy": { "keywords": ["energi", "termodinamika", "konversi energi", "mesin", "panas", "angin", "renewable"] },
-    "KBK Integrated Design Mechanic & Manufacturing": { "keywords": ["manufaktur", "mekanik", "desain", "produksi", "industri", "cad", "cam"] },
+    
+    "KBK Material": { "keywords": ["material", "logam", "komposit", "polimer", "struktur", "manufaktur"] },
+    "KBK Energi": { "keywords": ["energi", "termodinamika", "konversi energi", "mesin", "panas", "angin", "renewable"] },
+    "KBK Desain, Mekanika, dan Manufaktur Terpadu": { "keywords": ["manufaktur", "mekanik", "desain", "produksi", "industri", "cad", "cam"] },
+    "KBK Sistem Manufaktur dan Produksi": { "keywords": ["manufaktur", "produksi", "otomatisi pabrik", "sistem produksi", "kualitas", "lean manufacturing"] },
+    "KBK Rekayasa Rantai Pasok dan Riset Operasi": { "keywords": ["rantai pasok", "supply chain", "logistik", "riset operasi", "optimasi", "simulasi"] },
+    "KBK Faktor Manusia dan Manajemen Rekayasa": { "keywords": ["ergonomi", "faktor manusia", "keselamatan kerja", "k3", "manajemen rekayasa", "desain produk"] },
+    
     "KBK Struktur": { "keywords": ["struktur", "beton", "baja", "jembatan", "gedung", "konstruksi", "infrastruktur"] },
     "KBK Hidraulika": { "keywords": ["hidraulika", "air", "sungai", "bendungan", "pantai", "banjir", "sumber daya air"] },
     "KBK Transportasi": { "keywords": ["transportasi", "jalan", "lalu lintas", "aspal", "rel", "kereta", "infrastruktur"] },
     "KBK Geoteknik": { "keywords": ["geoteknik", "tanah", "fondasi", "longsor", "gempa", "mekanika tanah"] },
-    "KBK Lingkungan": { "keywords": ["lingkungan", "limbah", "air bersih", "sanitasi", "polusi", "amdal"] },
-    "KBK Advanced Material dan Mineral Processing": { "keywords": ["material", "mineral", "kimia", "polimer", "nanoteknologi", "ekstraksi"] },
-    "KBK Energy & Environment": { "keywords": ["energi", "lingkungan", "biomassa", "bioenergi", "emisi", "karbon"] },
-    "Bioresource Engineering": { "keywords": ["bioresource", "bioteknologi", "pangan", "fermentasi", "hayati", "biokimia"] },
-    "Chemical Product": { "keywords": ["produk kimia", "formulasi", "kosmetik", "katalis", "industri kimia"] },
+    "KBK Lingkungan": { "keywords": ["pengolahan air", "limbah", "kualitas udara", "sanitasi", "amdal", "teknik lingkungan"] },
+    "KBK Manajemen Proyek Konstruksi": { "keywords": ["manajemen konstruksi", "estimasi biaya", "jadwal proyek", "risiko proyek", "bim", "kontrak"] },
+    
+    "KBK Rekayasa Lingkungan Berkelanjutan": { "keywords": ["lingkungan", "limbah", "air bersih", "sanitasi", "polusi", "amdal"] },
+    "KBK Material Maju": { "keywords": ["material", "mineral", "kimia", "polimer", "nanoteknologi", "ekstraksi"] },
+    "KBK Metalurgi Berkelanjutan": { "keywords": ["metalurgi", "ekstraksi logam", "smelter", "korosi", "daur ulang logam", "mineral processing"] },
+    "KBK Rekayasa Energi Berkelanjutan": { "keywords": ["energi", "lingkungan", "biomassa", "bioenergi", "emisi", "karbon"] },
+    "KBK Rekayasa Sumberdaya Hayati": { "keywords": ["bioresource", "bioteknologi", "pangan", "fermentasi", "hayati", "biokimia"] },
+    "KBK Teknologi Produk Kimia dan Teknik Sistem": { "keywords": ["produk kimia", "formulasi", "kosmetik", "katalis", "industri kimia"] },
+    
     "KBK Geodesi": { "keywords": ["surveying", "geodesy", "positioning", "infrastructure", "monitoring", "deformation"] },
     "KBK Geoinformatika": { "keywords": ["geospatial", "gis", "digital twin", "3d", "point cloud", "lidar", "ai", "spatial", "urban", "mapping"] },
-    "KBK Geokimia": { "keywords": ["geokimia", "batuan", "mineralogi", "petrologi", "magma", "vulkanik"] },
-    "KBK Geofisika Eksplorasi & Panas Bumi": { "keywords": ["geofisika", "panas bumi", "eksplorasi", "geothermal", "seismik", "energi"] },
+    
+    "KBK Geodinamika": { "keywords": ["geodinamika", "tektonik", "petrologi", "sedimentologi", "stratigrafi", "struktur bumi"] },
+    "KBK Geologi Sumberdaya Energi": { "keywords": ["migas", "geotermal", "batubara", "petroleum", "reservoir", "eksplorasi energi"] },
+    "KBK Geologi Sumberdaya Mineral": { "keywords": ["mineral", "tambang", "biji logam", "eksplorasi mineral", "alterasi", "ore deposit"] },
     "KBK Geologi Tata Lingkungan": { "keywords": ["geologi", "lingkungan", "bencana", "air tanah", "hidrogeologi", "mitigasi"] },
+    
     "KBK Energi Nuklir dan Energi Terbarukan": { "keywords": ["nuklir", "energi", "reaktor", "radiasi", "terbarukan", "power plant"] },
     "KBK Proses Nuklir": { "keywords": ["proses nuklir", "radioisotop", "radiokimia", "limbah nuklir", "medis"] },
     "KBK Instrumentasi": { "keywords": ["instrumentasi", "sensor", "medis", "pengukuran", "kontrol", "iot"] },
     "KBK Multifisika": { "keywords": ["multifisika", "komputasi", "simulasi", "termodinamika", "fluida", "modeling"] }
   },
-  "researches": [
-    {
-      "id": "R-001",
-      "title": "Integrated Urban Digital Twin for Energy-Resilient Cities",
-      "status": "Aktif",
-      "period": "2025–2028",
-      "lead": "Prof. Dr. Andi Pratama",
-      "department": "Departemen Teknik Geodesi",
-      "kbks": ["KBK Geoinformatika", "KBK Sistem Energi Listrik Cerdas Berkelanjutan", "KBK Energy"],
-      "topics": ["Digital Twin", "Energy", "AI", "Urban"],
-      "funding": "Rp 2,4 M",
-      "output": "8 publikasi · 2 paten",
-      "abstract": "Riset lintas disiplin untuk mengintegrasikan point cloud, model energi, dan analitik kota ke dalam kerangka digital twin multi-skala."
-    },
-    {
-      "id": "R-002",
-      "title": "AI-Based Smart Grid Fault Detection",
-      "status": "Aktif",
-      "period": "2026–2029",
-      "lead": "Dr. Budi Santoso",
-      "department": "Departemen Teknik Elektro dan Teknologi Informasi",
-      "kbks": ["KBK Sistem Energi Listrik Cerdas Berkelanjutan", "KBK Isyarat dan Sistem Kendali", "KBK Teknik Informasi"],
-      "topics": ["Smart Grid", "AI", "Energy"],
-      "funding": "Rp 1,8 M",
-      "output": "5 publikasi · 1 prototipe",
-      "abstract": "Pengembangan model AI untuk deteksi gangguan jaringan listrik dan integrasi informasi spasial untuk pemetaan risiko."
-    },
-    {
-      "id": "R-003",
-      "title": "Urban Heat Mapping from Multi-Sensor Earth Observation",
-      "status": "Selesai",
-      "period": "2023–2025",
-      "lead": "Dr. Sinta Maharani",
-      "department": "Departemen Teknik Geodesi",
-      "kbks": ["KBK Geodesi", "KBK Geoinformatika"],
-      "topics": ["Remote Sensing", "Climate", "Urban"],
-      "funding": "Rp 950 Jt",
-      "output": "7 publikasi · 1 dataset",
-      "abstract": "Pemetaan panas perkotaan menggunakan integrasi penginderaan jauh multi-sensor dan analisis spasial."
-    },
-    {
-      "id": "R-004",
-      "title": "Intelligent Building Energy Management",
-      "status": "Direncanakan",
-      "period": "2027–2030",
-      "lead": "Dr. Raka Wibowo",
-      "department": "Departemen Teknik Nuklir dan Teknik Fisika",
-      "kbks": ["KBK Instrumentasi", "KBK Teknologi Bangunan Arsitektur", "KBK Sistem Energi Listrik Cerdas Berkelanjutan"],
-      "topics": ["Building", "Energy", "IoT"],
-      "funding": "TBD",
-      "output": "Target 6 publikasi",
-      "abstract": "Platform analitik untuk optimasi energi bangunan dengan sensor IoT, digital twin, dan model prediktif."
-    },
-    {
-      "id": "R-005",
-      "title": "3D Infrastructure Monitoring with LiDAR and Computer Vision",
-      "status": "Aktif",
-      "period": "2026–2028",
-      "lead": "Dr. Fajar Nugroho",
-      "department": "Departemen Teknik Sipil dan Lingkungan",
-      "kbks": ["KBK Struktur", "KBK Geoinformatika"],
-      "topics": ["LiDAR", "Computer Vision", "Infrastructure"],
-      "funding": "Rp 1,2 M",
-      "output": "4 publikasi · 1 software",
-      "abstract": "Pemantauan kondisi infrastruktur menggunakan LiDAR, computer vision, dan model 3D semantik."
-    },
-    {
-      "id": "R-006",
-      "title": "Advanced Energy Conversion Materials",
-      "status": "Aktif",
-      "period": "2025–2027",
-      "lead": "Prof. Dr. Maya Lestari",
-      "department": "Departemen Teknik Mesin dan Industri",
-      "kbks": ["KBK Energy", "KBK Engineering Materials"],
-      "topics": ["Energy", "Materials", "Manufacturing"],
-      "funding": "Rp 1,6 M",
-      "output": "9 publikasi · 2 paten",
-      "abstract": "Pengembangan material dan sistem konversi energi berperforma tinggi untuk aplikasi industri."
-    }
-  ],
-  "publications": [
-    { "rank": 1, "title": "Digital Twins for Sustainable Urban Infrastructure", "author": "A. Pratama et al.", "journal": "Automation in Construction", "year": 2026, "citations": 38 },
-    { "rank": 2, "title": "Deep Learning-Based Urban Point Cloud Classification", "author": "C. Wijaya et al.", "journal": "ISPRS JPRS", "year": 2026, "citations": 31 },
-    { "rank": 3, "title": "Multi-Sensor Earth Observation for Climate Analytics", "author": "S. Maharani et al.", "journal": "Remote Sensing of Environment", "year": 2025, "citations": 27 },
-    { "rank": 4, "title": "AI for Smart Grid Resilience Assessment", "author": "B. Santoso et al.", "journal": "IEEE TSG", "year": 2025, "citations": 24 },
-    { "rank": 5, "title": "Energy-Efficient Intelligent Buildings", "author": "R. Wibowo et al.", "journal": "Energy and Buildings", "year": 2025, "citations": 22 }
-  ],
-  "scientists": [
-    { "name": "Prof. Dr. Andi Pratama", "field": "Digital Twin & Smart City", "impact": "Top 5%" },
-    { "name": "Prof. Dr. Maya Lestari", "field": "Energy Conversion", "impact": "Top 5%" },
-    { "name": "Dr. Budi Santoso", "field": "Smart Grid & AI", "impact": "Top 5%" },
-    { "name": "Dr. Sinta Maharani", "field": "Remote Sensing", "impact": "Top 5%" },
-    { "name": "Prof. Dr. R. Haryono", "field": "Infrastructure Engineering", "impact": "Top 5%" }
-  ],
   "nationalPriorities": [
     { "id": "kesehatan", "title": "Kesehatan", "desc": "Membangun sistem dan ketahanan kesehatan nasional yang tangguh.", "iconName": "HeartPulse", "count": 42 },
     { "id": "pangan", "title": "Ketahanan Pangan", "desc": "Mencapai swasembada pangan berbasis teknologi spasial dan presisi.", "iconName": "Leaf", "count": 68 },
@@ -218,5 +151,58 @@
     { "id": "material", "title": "Material & Manufaktur", "desc": "Transformasi sektor manufaktur dan penguasaan material tingkat lanjut.", "iconName": "Layers", "count": 89 },
     { "id": "energi", "title": "Energi", "desc": "Percepatan transisi energi bersih dan terbarukan.", "iconName": "Zap", "count": 143 },
     { "id": "maritim", "title": "Maritim", "desc": "Peningkatan kontribusi ekonomi dari pemetaan dan sektor kelautan.", "iconName": "Anchor", "count": 71 }
+  ],
+  "ugmFlagships": [
+    { "id": "pangan", "title": "Kedaulatan Pangan", "desc": "Mewujudkan kemandirian pangan nasional berbasis agroteknologi pintar.", "count": 28, "iconName": "Sprout" },
+    { "id": "kesehatan", "title": "Obat & Alkes", "desc": "Kemandirian bahan baku obat dan inovasi alat kesehatan lokal.", "count": 15, "iconName": "Stethoscope" },
+    { "id": "energi", "title": "Transisi Energi", "desc": "Percepatan adopsi energi terbarukan dan efisiensi konversi energi.", "count": 42, "iconName": "Zap" },
+    { "id": "iklim", "title": "Perubahan Iklim", "desc": "Mitigasi dan adaptasi lingkungan terhadap perubahan iklim global.", "count": 34, "iconName": "CloudRain" },
+    { "id": "sosbud", "title": "Ketangguhan Sosial", "desc": "Ketangguhan sosial budaya masyarakat dalam ekosistem industri.", "count": 18, "iconName": "Users" }
+  ],
+  "researches": [
+    {
+      "id": "R-001", "type": "Penelitian", "title": "Integrated Urban Digital Twin for Energy-Resilient Cities", "status": "Aktif", "period": "2025–2028", "lead": "Prof. Dr. Andi Pratama", "department": "Departemen Teknik Geodesi", "kbks": ["KBK Geoinformatika", "KBK Sistem Energi Listrik Cerdas Berkelanjutan"], "topics": ["Digital Twin", "Energy", "AI"], "flagships": ["Transisi Energi", "Perubahan Iklim"], "funding": "Rp 2,4 M", "output": "8 publikasi · 2 paten", "abstract": "Riset lintas disiplin untuk mengintegrasikan point cloud dan analitik kota."
+    },
+    {
+      "id": "P-001", "type": "Paten", "title": "Sistem Deteksi Gangguan Jaringan Cerdas Berbasis AI", "status": "Selesai", "period": "2026", "lead": "Dr. Budi Santoso", "department": "Departemen Teknik Elektro dan Teknologi Informasi", "kbks": ["KBK Sistem Energi Listrik Cerdas Berkelanjutan"], "topics": ["Smart Grid", "AI"], "flagships": ["Transisi Energi"], "funding": "Lisensi Aktif", "output": "IDP000012345", "abstract": "Paten algoritma deteksi gangguan jaringan cerdas terintegrasi."
+    },
+    {
+      "id": "R-002", "type": "Penelitian", "title": "Advanced Energy Conversion Materials for Biomass", "status": "Aktif", "period": "2025–2027", "lead": "Prof. Dr. Maya Lestari", "department": "Departemen Teknik Mesin dan Industri", "kbks": ["KBK Energy", "KBK Engineering Materials"], "topics": ["Biomass", "Materials"], "flagships": ["Transisi Energi"], "funding": "Rp 1,6 M", "output": "9 publikasi · 2 paten", "abstract": "Pengembangan material sistem konversi energi biomassa berperforma tinggi."
+    },
+    {
+      "id": "H-001", "type": "HKI", "title": "Software Pemetaan Panas Perkotaan (UrbanHeatMap v2)", "status": "Selesai", "period": "2025", "lead": "Dr. Sinta Maharani", "department": "Departemen Teknik Geodesi", "kbks": ["KBK Geoinformatika"], "topics": ["Remote Sensing", "Climate"], "flagships": ["Perubahan Iklim"], "funding": "Hak Cipta", "output": "EC0020251234", "abstract": "Hak Cipta perangkat lunak pemetaan panas perkotaan multi-sensor."
+    },
+    {
+      "id": "R-003", "type": "Penelitian", "title": "Bahan Baku Implan Tulang Berbasis Material Lokal", "status": "Aktif", "period": "2026–2029", "lead": "Dr. I Wayan Mustika", "department": "Departemen Teknik Kimia", "kbks": ["KBK Advanced Material dan Mineral Processing"], "topics": ["Biomaterial", "Health"], "flagships": ["Obat & Alkes"], "funding": "Rp 3,2 M", "output": "Target 5 Paten", "abstract": "Penelitian hilirisasi material lokal untuk kebutuhan alkes implan medis."
+    },
+    {
+      "id": "R-004", "type": "Penelitian", "title": "Sistem Irigasi Presisi untuk Ketahanan Pangan", "status": "Aktif", "period": "2025–2027", "lead": "Dr. K. Santoso", "department": "Departemen Teknik Sipil dan Lingkungan", "kbks": ["KBK Hidraulika", "KBK Teknik Informasi"], "topics": ["Water Management", "IoT"], "flagships": ["Kedaulatan Pangan", "Ketangguhan Sosial Budaya"], "funding": "Rp 1,1 M", "output": "3 publikasi", "abstract": "Pengembangan sistem irigasi cerdas hemat air untuk lahan pertanian kering."
+    },
+    {
+      "id": "P-002", "type": "Paten", "title": "Reaktor Pirolisis Limbah Plastik Portabel", "status": "Selesai", "period": "2025", "lead": "Prof. Arief Budiman", "department": "Departemen Teknik Nuklir dan Teknik Fisika", "kbks": ["KBK Energi Nuklir dan Energi Terbarukan"], "topics": ["Waste to Energy"], "flagships": ["Transisi Energi", "Perubahan Iklim"], "funding": "Lisensi Industri", "output": "IDP000054321", "abstract": "Reaktor skala desa untuk mengubah limbah plastik menjadi bahan bakar cair."
+    }
+  ],
+  "publications": [
+    { "rank": 1, "title": "Digital Twins for Sustainable Urban Infrastructure", "author": "A. Pratama et al.", "journal": "Automation in Construction", "year": 2026, "citations": 38 },
+    { "rank": 2, "title": "Deep Learning-Based Urban Point Cloud Classification", "author": "C. Wijaya et al.", "journal": "ISPRS JPRS", "year": 2026, "citations": 31 },
+    { "rank": 3, "title": "Multi-Sensor Earth Observation for Climate Analytics", "author": "S. Maharani et al.", "journal": "Remote Sensing of Environment", "year": 2025, "citations": 27 },
+    { "rank": 4, "title": "AI for Smart Grid Resilience Assessment", "author": "B. Santoso et al.", "journal": "IEEE TSG", "year": 2025, "citations": 24 },
+    { "rank": 5, "title": "Energy-Efficient Intelligent Buildings", "author": "R. Wibowo et al.", "journal": "Energy and Buildings", "year": 2025, "citations": 22 },
+    { "rank": 6, "title": "Biocompatible Titanium Alloys for Medical Implants", "author": "I. W. Mustika et al.", "journal": "Journal of Biomaterials", "year": 2026, "citations": 19 },
+    { "rank": 7, "title": "Precision Irrigation Networks using IoT Sensors", "author": "K. Santoso et al.", "journal": "Agricultural Water Management", "year": 2026, "citations": 15 },
+    { "rank": 8, "title": "Waste-to-Energy Conversion Efficiency", "author": "A. Budiman et al.", "journal": "Renewable Energy", "year": 2025, "citations": 42 },
+    { "rank": 9, "title": "Hydrological Modeling for Flood Mitigation", "author": "D. Legono et al.", "journal": "Journal of Hydrology", "year": 2025, "citations": 28 },
+    { "rank": 10, "title": "Advanced Geothermal Exploration Techniques", "author": "W. Suryanto et al.", "journal": "Geothermics", "year": 2026, "citations": 12 }
+  ],
+  "scientists": [
+    { "name": "Prof. Himawan Tri Bayu Murti Petrus", "field": "Mineral & Energy Conservation", "impact": "Top 5%" },
+    { "name": "Prof. Deendarlianto", "field": "Energy Transition", "impact": "Top 5%" },
+    { "name": "Prof. Hanung Nugroho", "field": "Biomedical Engineering", "impact": "Top 5%" },
+    { "name": "Prof. Arief Budiman", "field": "Waste to Energy", "impact": "Top 5%" },
+    { "name": "Prof. Paulus Insap Santosa", "field": "Computer & Human Interaction", "impact": "Top 5%" },
+    { "name": "Adhistya Erna Permanasari, Ph.D.", "field": "Decision Support System", "impact": "Top 5%" },
+    { "name": "Widyawan, Ph.D.", "field": "Big Data", "impact": "Top 5%" },
+    { "name": "Prof. Kusmono", "field": "Engineering Materials", "impact": "Top 5%" },
+    { "name": "Dr. I Wayan Mustika", "field": "IoT & Telecommunication", "impact": "Top 5%" }
   ]
 }

@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import {
   ArrowLeft, ArrowRight, BarChart3, BriefcaseBusiness, Building2,
   ChevronRight, Clock3, GraduationCap, HeartPulse, ShieldCheck,
-  Sparkles, TrendingDown, TrendingUp, Users, Wrench,
+  Sparkles, TrendingDown, TrendingUp, Users, Wrench, X, Eye
 } from "lucide-react";
 import "./styles.css";
 
@@ -10,7 +10,7 @@ import WelfareData from "../data/WelfareData.json";
 const { 
   staffGroups, workloadData, workloadInterventions, 
   facilities, academicRanks, welfareIndicators, sdmActions,
-  socialGuarantees 
+  socialGuarantees, personalWelfare 
 } = WelfareData;
 
 const iconMap = {
@@ -28,7 +28,7 @@ function ProgressBar({ value, max = 100, tone = "navy", height = 8 }) {
   const colors = { navy: "#102a43", green: "#2f7d4f", gold: "#b7791f", blue: "#2b6cb0", red: "#c2410c" };
   return (
     <div style={{ height, borderRadius: 999, background: "#edf2f7", overflow: "hidden", width: "100%" }}>
-      <div style={{ width: `${Math.min(100, (value / max) * 100)}%`, height: "100%", borderRadius: 999, background: colors[tone] || colors.navy, transition: "width .35s ease" }} />
+      <div style={{ width: `${Math.min(100, Math.max(0, (value / max) * 100))}%`, height: "100%", borderRadius: 999, background: colors[tone] || colors.navy, transition: "width .35s ease" }} />
     </div>
   );
 }
@@ -49,7 +49,7 @@ function MetricCard({ icon: Icon, label, value, sub, tone = "navy" }) {
   );
 }
 
-function SectionHeader({ eyebrow, title, description, icon: Icon }) {
+function SectionHeader({ eyebrow, title, description, icon: Icon, actionElement }) {
   return (
     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 20, marginBottom: 18 }}>
       <div>
@@ -57,6 +57,7 @@ function SectionHeader({ eyebrow, title, description, icon: Icon }) {
         <h3 style={{ margin: "7px 0 0", fontSize: 23, color: "#102a43" }}>{title}</h3>
         {description && <p style={{ margin: "6px 0 0", color: "#64748b", fontSize: 13, lineHeight: 1.55 }}>{description}</p>}
       </div>
+      {actionElement && <div>{actionElement}</div>}
     </div>
   );
 }
@@ -66,6 +67,10 @@ export default function WelfarePage({ onBack }) {
   const [facilityFilter, setFacilityFilter] = useState("Semua");
   const [selectedFacility, setSelectedFacility] = useState(null);
   const [selectedWorkload, setSelectedWorkload] = useState(null);
+  
+  // State untuk Modal Personal dan Klik Intervensi
+  const [showPersonalModal, setShowPersonalModal] = useState(false);
+  const [expandedIntervention, setExpandedIntervention] = useState(null);
 
   const activeStaff = staffGroups.find((item) => item.id === activeGroup);
   const filteredFacilities = useMemo(() => {
@@ -98,7 +103,7 @@ export default function WelfarePage({ onBack }) {
       </section>
 
       <section className="kpi-grid">
-        <MetricCard icon={HeartPulse} label="Faculty Welfare Index" value="81 / 100" sub="Composite dummy indicator" tone="green" />
+        <MetricCard icon={HeartPulse} label="Faculty Welfare Index" value="81 / 100" sub="Target Strategis > 80%" tone="green" />
         <MetricCard icon={Clock3} label="Rata-rata beban administratif" value="18%" sub="Target strategis: ≤ 10%" tone="red" />
         <MetricCard icon={Wrench} label="Inventaris fasilitas" value={totalFacilities} sub={`${totalCritical} unit berstatus kritis`} tone="gold" />
         <MetricCard icon={TrendingUp} label="Utilisasi fasilitas" value={`${avgUtilization}%`} sub="Rata-rata 5 laboratorium utama" tone="blue" />
@@ -125,9 +130,6 @@ export default function WelfarePage({ onBack }) {
         </div>
       </section>
 
-      {/* =====================================================
-          BASIC WELFARE & COVERAGE (BPJS & KP4)
-      ===================================================== */}
       <section style={{ border: "1px solid #e2e8f0", borderRadius: 20, background: "#fff", padding: 22, marginBottom: 24 }}>
         <SectionHeader 
           eyebrow="BASIC WELFARE & COVERAGE" 
@@ -139,30 +141,17 @@ export default function WelfarePage({ onBack }) {
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
           {socialGuarantees.map((item) => (
             <div key={item.id} style={{ display: "flex", alignItems: "center", gap: 18, padding: 18, borderRadius: 14, background: "#f8fafc", border: "1px solid #edf2f7" }}>
-              
-              {/* Blok Angka Ketercakupan */}
               <div style={{ textAlign: "center", paddingRight: 18, borderRight: "1px solid #e2e8f0" }}>
-                <div style={{ fontSize: 32, fontWeight: 800, color: "#2f7d4f", lineHeight: 1, letterSpacing: "-0.03em" }}>
-                  {item.coverage}%
-                </div>
-                <div style={{ fontSize: 10, color: "#64748b", marginTop: 6, letterSpacing: ".08em", textTransform: "uppercase", fontWeight: 700 }}>
-                  Ter-cover
-                </div>
+                <div style={{ fontSize: 32, fontWeight: 800, color: "#2f7d4f", lineHeight: 1, letterSpacing: "-0.03em" }}>{item.coverage}%</div>
+                <div style={{ fontSize: 10, color: "#64748b", marginTop: 6, letterSpacing: ".08em", textTransform: "uppercase", fontWeight: 700 }}>Ter-cover</div>
               </div>
-              
-              {/* Blok Judul dan Deskripsi */}
               <div>
                 <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
                   <strong style={{ fontSize: 15, color: "#102a43" }}>{item.title}</strong>
-                  <span style={{ fontSize: 10, fontWeight: 800, background: "#e7f4ec", color: "#2d7b4b", padding: "4px 8px", borderRadius: 20 }}>
-                    {item.status}
-                  </span>
+                  <span style={{ fontSize: 10, fontWeight: 800, background: "#e7f4ec", color: "#2d7b4b", padding: "4px 8px", borderRadius: 20 }}>{item.status}</span>
                 </div>
-                <p style={{ margin: 0, fontSize: 13, color: "#64748b", lineHeight: 1.5 }}>
-                  {item.desc}
-                </p>
+                <p style={{ margin: 0, fontSize: 13, color: "#64748b", lineHeight: 1.5 }}>{item.desc}</p>
               </div>
-
             </div>
           ))}
         </div>
@@ -191,7 +180,33 @@ export default function WelfarePage({ onBack }) {
           <h3 style={{ fontSize: 25, lineHeight: 1.2, margin: "15px 0 10px" }}>Kesejahteraan bukan hanya soal kompensasi.</h3>
           <p style={{ margin: 0, color: "#cbd5e1", fontSize: 13, lineHeight: 1.65 }}>Salah satu tuas intervensi yang paling langsung adalah mengurangi pekerjaan administratif, pelaporan berulang, dan distribusi beban yang tidak seimbang.</p>
           <div style={{ marginTop: 24, display: "grid", gap: 10 }}>
-            {workloadInterventions.map((item) => { const tone = priorityStyle[item.priority]; return <div key={item.title} style={{ padding: 12, borderRadius: 12, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.08)" }}><div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><strong style={{ fontSize: 12 }}>{item.title}</strong><span style={{ fontSize: 9, fontWeight: 800, padding: "4px 7px", borderRadius: 999, background: tone.bg, color: tone.color, whiteSpace: "nowrap" }}>{item.priority}</span></div><div style={{ marginTop: 5, color: "#cbd5e1", fontSize: 10.5, lineHeight: 1.45 }}>{item.description}</div><div style={{ marginTop: 7, color: "#9ae6b4", fontSize: 10, fontWeight: 800 }}>Expected impact: {item.impact}</div></div>; })}
+            {workloadInterventions.map((item) => { 
+              const tone = priorityStyle[item.priority]; 
+              const isExpanded = expandedIntervention === item.title;
+              return (
+                <div 
+                  key={item.title} 
+                  onClick={() => setExpandedIntervention(isExpanded ? null : item.title)}
+                  style={{ padding: 12, borderRadius: 12, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.08)", cursor: "pointer", transition: "background 0.2s" }}
+                >
+                  <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}>
+                    <strong style={{ fontSize: 13 }}>{item.title}</strong>
+                    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                       <span style={{ fontSize: 9, fontWeight: 800, padding: "4px 7px", borderRadius: 999, background: tone.bg, color: tone.color, whiteSpace: "nowrap" }}>{item.priority}</span>
+                       <ChevronRight size={14} style={{ transform: isExpanded ? 'rotate(90deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}/>
+                    </div>
+                  </div>
+                  <div style={{ marginTop: 5, color: "#cbd5e1", fontSize: 11, lineHeight: 1.45 }}>{item.description}</div>
+                  
+                  {isExpanded && (
+                    <div style={{ marginTop: 10, padding: 10, background: "rgba(0,0,0,0.2)", borderRadius: 8, borderLeft: `3px solid ${tone.color}` }}>
+                      <strong style={{ fontSize: 10, color: "#9ae6b4", textTransform: "uppercase" }}>Tracking Metric / Target</strong>
+                      <div style={{ fontSize: 12, color: "#fff", marginTop: 4 }}>{item.metric}</div>
+                    </div>
+                  )}
+                </div>
+              ); 
+            })}
           </div>
         </div>
       </section>
@@ -217,18 +232,100 @@ export default function WelfarePage({ onBack }) {
         </div>
         <div style={{ border: "1px solid #e2e8f0", borderRadius: 20, background: "#fff", padding: 22 }}>
           <SectionHeader eyebrow="DEVELOPMENT PIPELINE" title="Agenda pengembangan" description="Dummy snapshot untuk melihat kebutuhan intervensi SDM." icon={Sparkles} />
-          <div style={{ display: "grid", gap: 11 }}>{sdmActions.map((item) => <div key={item.label} style={{ padding: 13, borderRadius: 13, background: "#f8fafc", border: "1px solid #edf2f7" }}><div style={{ display: "flex", justifyContent: "space-between", gap: 12 }}><span style={{ color: "#334155", fontWeight: 750, fontSize: 12 }}>{item.label}</span><strong style={{ color: "#102a43", fontSize: 16 }}>{item.value}</strong></div><div style={{ marginTop: 4, color: "#94a3b8", fontSize: 10 }}>{item.detail}</div></div>)}</div>
+          <div style={{ display: "grid", gap: 11 }}>{sdmActions.map((item) => <div key={item.label} style={{ padding: 13, borderRadius: 13, background: "#f8fafc", border: "1px solid #edf2f7" }}><div style={{ display: "flex", justifyContent: "space-between", gap: 12 }}><span style={{ color: "#334155", fontWeight: 750, fontSize: 13 }}>{item.label}</span><strong style={{ color: "#102a43", fontSize: 18 }}>{item.value}</strong></div><div style={{ marginTop: 4, color: "#94a3b8", fontSize: 11 }}>{item.detail}</div></div>)}</div>
         </div>
       </section>
 
       <section style={{ border: "1px solid #e2e8f0", borderRadius: 20, background: "#fff", padding: 22, marginBottom: 28 }}>
-        <SectionHeader eyebrow="WELFARE INDICATORS" title="Indikator kesejahteraan" description="Contoh indeks komposit yang dapat dikembangkan dari survei, HR system, workload system, dan inventaris fasilitas." icon={BarChart3} />
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,minmax(0,1fr))", gap: 12 }}>{welfareIndicators.map((item) => <div key={item.label} style={{ border: "1px solid #edf2f7", borderRadius: 14, padding: 15, background: "#fbfcfe" }}><div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}><span style={{ color: "#475569", fontSize: 11, fontWeight: 700 }}>{item.label}</span><span style={{ color: "#2f7d4f", fontSize: 10, fontWeight: 800 }}>{item.trend}</span></div><div style={{ display: "flex", alignItems: "baseline", gap: 7, marginTop: 11 }}><strong style={{ fontSize: 26, color: "#102a43" }}>{item.value}</strong><span style={{ color: "#94a3b8", fontSize: 10 }}>/100</span></div><div style={{ marginTop: 9 }}><ProgressBar value={item.value} tone={item.value >= 80 ? "green" : "gold"} /></div></div>)}</div>
+        <SectionHeader 
+           eyebrow="WELFARE INDICATORS" 
+           title="Indikator kesejahteraan" 
+           description="9 Indikator komposit hasil agregasi survei, HR system, dan data operasional fakultas." 
+           icon={BarChart3}
+           actionElement={
+             <button 
+               onClick={() => setShowPersonalModal(true)}
+               style={{ background: "#f1f5f9", border: "1px solid #cbd5e1", borderRadius: 8, padding: "8px 12px", fontSize: 11, fontWeight: 700, color: "#334155", display: "flex", alignItems: "center", gap: 6, cursor: "pointer" }}
+             >
+               <Eye size={14} /> Lihat Sampel Data Individu
+             </button>
+           }
+        />
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3,minmax(0,1fr))", gap: 14 }}>
+          {welfareIndicators.map((item) => (
+             <div key={item.label} style={{ border: "1px solid #edf2f7", borderRadius: 14, padding: 16, background: "#fbfcfe" }}>
+               <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}>
+                 <span style={{ color: "#475569", fontSize: 12, fontWeight: 700 }}>{item.label}</span>
+                 <span style={{ color: "#2f7d4f", fontSize: 11, fontWeight: 800 }}>{item.trend}</span>
+               </div>
+               <div style={{ display: "flex", alignItems: "baseline", gap: 7, marginTop: 12 }}>
+                 <strong style={{ fontSize: 28, color: "#102a43" }}>{item.value}</strong>
+                 <span style={{ color: "#94a3b8", fontSize: 11 }}>/100</span>
+               </div>
+               <div style={{ marginTop: 10 }}>
+                 <ProgressBar value={item.value} tone={item.value >= 80 ? "green" : item.value >= 70 ? "blue" : "gold"} />
+               </div>
+             </div>
+          ))}
+        </div>
       </section>
+
+      {/* MODAL SAMPEL DATA INDIVIDU */}
+      {showPersonalModal && (
+        <div className="modal-backdrop" onClick={() => setShowPersonalModal(false)}>
+          <div className="research-modal" style={{ maxWidth: 850 }} onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setShowPersonalModal(false)}><X size={18} /></button>
+            <div className="eyebrow">CONFIDENTIAL DATA · DUMMY SAMPLE</div>
+            <h2>Breakdown Kesejahteraan Personal</h2>
+            <p className="modal-abstract">
+              Contoh bagaimana ke-9 indikator kesejahteraan diagregasi di tingkat individu. 
+              Data ini dijaga kerahasiaannya dan hanya dapat diakses oleh sistem SDM.
+            </p>
+            
+            <div style={{ overflowX: "auto", marginTop: 20 }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 11, textAlign: "center" }}>
+                <thead>
+                  <tr style={{ background: "#f1f5f9", borderBottom: "2px solid #cbd5e1" }}>
+                    <th style={{ padding: "10px 8px", textAlign: "left", color: "#334155" }}>Nama / NIP</th>
+                    <th style={{ padding: "10px 8px", color: "#475569" }}>WLB</th>
+                    <th style={{ padding: "10px 8px", color: "#475569" }}>Admin</th>
+                    <th style={{ padding: "10px 8px", color: "#475569" }}>Fasilitas</th>
+                    <th style={{ padding: "10px 8px", color: "#475569" }}>Karier</th>
+                    <th style={{ padding: "10px 8px", color: "#475569" }}>Kes. Fisik</th>
+                    <th style={{ padding: "10px 8px", color: "#475569" }}>Kepuasan</th>
+                    <th style={{ padding: "10px 8px", color: "#475569" }}>S. Kerja</th>
+                    <th style={{ padding: "10px 8px", color: "#475569" }}>KP4</th>
+                    <th style={{ padding: "10px 8px", color: "#475569" }}>Mental</th>
+                    <th style={{ padding: "10px 8px", background: "#e0e7ff", color: "#1e3a8a", fontWeight: 800 }}>SKOR AKHIR</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {personalWelfare.map((p, idx) => (
+                    <tr key={idx} style={{ borderBottom: "1px solid #e2e8f0" }}>
+                      <td style={{ padding: "12px 8px", textAlign: "left" }}>
+                        <strong style={{ display: "block", fontSize: 12, color: "#0f172a" }}>{p.name}</strong>
+                        <span style={{ color: "#64748b", fontSize: 10 }}>{p.role}</span>
+                      </td>
+                      {p.scores.map((score, sIdx) => (
+                        <td key={sIdx} style={{ color: score < 70 ? "#dc2626" : "#334155", fontWeight: score < 70 ? 700 : 500 }}>
+                          {score}
+                        </td>
+                      ))}
+                      <td style={{ background: "#f8fafc", color: "#1e3a8a", fontSize: 13, fontWeight: 800 }}>{p.overall}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div style={{ display: "flex", justifyContent: "flex-end", marginTop: 16 }}>
+               <span style={{ fontSize: 10, color: "#ef4444" }}>*Skor di bawah 70 ditandai merah untuk prioritas pendampingan.</span>
+            </div>
+          </div>
+        </div>
+      )}
 
       <section style={{ borderRadius: 20, padding: "20px 22px", background: "#f5f8fb", border: "1px solid #dbe4ec", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 20 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 14 }}><div style={{ width: 42, height: 42, borderRadius: 12, background: "#fff", display: "grid", placeItems: "center", color: "#102a43", border: "1px solid #e2e8f0" }}><TrendingDown size={20} /></div><div><div style={{ fontSize: 10, fontWeight: 800, letterSpacing: ".13em", color: "#64748b" }}>EXECUTIVE DECISION</div><strong style={{ display: "block", color: "#102a43", marginTop: 4, fontSize: 15 }}>Kurangi beban yang tidak produktif sebelum menambah beban baru.</strong><span style={{ display: "block", color: "#64748b", marginTop: 3, fontSize: 11 }}>Data kesejahteraan sebaiknya diarahkan menjadi dasar prioritas intervensi organisasi.</span></div></div>
-        <button style={{ border: 0, background: "#102a43", color: "#fff", borderRadius: 10, padding: "10px 14px", display: "inline-flex", alignItems: "center", gap: 7, fontSize: 11, fontWeight: 800, cursor: "pointer", whiteSpace: "nowrap" }}>Strategic Actions <ArrowRight size={15} /></button>
       </section>
     </main>
   );

@@ -1,22 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { createRoot } from "react-dom/client";
 import {
-  ArrowRight,
-  BarChart3,
-  ChevronDown,
-  ChevronLeft,
-  ChevronRight,
-  GraduationCap,
-  HeartPulse,
-  Home,
-  LayoutDashboard,
-  LogOut,
-  Menu,
-  X,
-  Microscope,
-  Network,
-  Settings,
-  Users,
+  ArrowRight, BarChart3, ChevronDown, ChevronLeft, ChevronRight,
+  GraduationCap, HeartPulse, Home, LayoutDashboard, LogOut,
+  Menu, X, Microscope, Network, Settings, Users,
+  Factory, Building2, Rocket, Coins
 } from "lucide-react";
 import "./styles.css";
 import CommunityPage from "./CommunityPage";
@@ -58,7 +46,7 @@ const modules = [
       "Analitik akademik, program studi, mahasiswa, kurikulum, beban pengajaran, dan capaian pembelajaran.",
     icon: GraduationCap,
     tone: "gold",
-    metrics: ["12 Prodi", "8,420 Mahasiswa", "684 Dosen"],
+    metrics: ["29 Prodi", "8,420 Mahasiswa", "365 Dosen"],
   },
   {
     id: "welfare",
@@ -69,7 +57,7 @@ const modules = [
       "Indikator kesejahteraan sivitas akademika, pengembangan SDM, fasilitas, dan lingkungan kerja.",
     icon: HeartPulse,
     tone: "purple",
-    metrics: ["684 Dosen", "312 Tendik", "24 Fasilitas"],
+    metrics: ["365 Dosen", "322 Tendik", "24 Fasilitas"],
   },
 ];
 
@@ -96,6 +84,14 @@ const strategicPillars = [
   { id: "community", number: "03", title: "Pengabdian Solutif", english: "Solution-Oriented Engagement", description: "Pengabdian yang berbasis kebutuhan, terukur dampaknya, dan berkelanjutan melalui kemitraan dengan masyarakat serta pemangku kepentingan." },
   { id: "global", number: "04", title: "Keterlibatan Global", english: "Global Engagement", description: "Perluasan jejaring internasional melalui kolaborasi akademik, mobilitas, joint research, partnership, dan pengakuan global." },
   { id: "governance", number: "05", title: "Tata Kelola Lincah", english: "Agile Governance", description: "Pengambilan keputusan berbasis data, proses yang adaptif, transparan, dan terintegrasi untuk meningkatkan responsivitas organisasi." },
+];
+
+const pentahelixData = [
+  { id: "dudi", label: "Dunia Usaha & Industri", icon: Factory, color: "#d97706", desc: "Kemitraan strategis, hilirisasi produk, dan pendanaan riset industri.", metrics: [ { value: "120+", title: "Mitra Aktif" }, { value: "Rp 85 M", title: "Pendanaan Industri" } ] },
+  { id: "gov", label: "Regulator / Pemerintah", icon: Building2, color: "#059669", desc: "Perumusan kebijakan, standar nasional, dan proyek strategis pemerintah.", metrics: [ { value: "25", title: "Policy Briefs" }, { value: "18", title: "Proyek Nasional" } ] },
+  { id: "pt", label: "Perguruan Tinggi", icon: GraduationCap, color: "#2563eb", desc: "Kolaborasi akademik lintas benua, joint research, dan pertukaran pakar.", metrics: [ { value: "15", title: "Joint Degrees" }, { value: "45", title: "Visiting Scholars" } ] },
+  { id: "com", label: "Masyarakat Umum", icon: Users, color: "#4f46e5", desc: "Pemberdayaan desa, aplikasi teknologi tepat guna, dan komuniversitas.", metrics: [ { value: "14", title: "Desa Binaan" }, { value: "12.5K", title: "Penerima Manfaat" } ] },
+  { id: "exp", label: "Expert & Media", icon: Network, color: "#be123c", desc: "Diseminasi publik, sertifikasi keahlian, dan advokasi media massa.", metrics: [ { value: "85", title: "Sertifikasi Profesi" }, { value: "40+", title: "Opini Publik" } ] }
 ];
 
 
@@ -185,7 +181,7 @@ function Header({ onMenu, collapsed, onLogout }) {
 
       <div className="profile-area">
         <AssetImage
-          src="/foto_prof_trias.png"
+          src="/foto_prof_trias3.png"
           alt={PROFESSOR}
           className="profile-avatar-photo"
           fallback={<div className="profile-avatar">TA</div>}
@@ -210,6 +206,7 @@ function ExecutiveHome({ onOpen }) {
   const [selectedSdg, setSelectedSdg] = useState(sdgs[3]);
   const [selectedGesi, setSelectedGesi] = useState(null);
   const [selectedPillar, setSelectedPillar] = useState(strategicPillars[0]);
+  const [activeHelix, setActiveHelix] = useState(pentahelixData[0]);
 
   return (
     <main className="main-content">
@@ -272,6 +269,114 @@ function ExecutiveHome({ onOpen }) {
             </button>
           );
         })}
+      </section>
+
+      {/* =====================================================
+          INNOVATION ECOSYSTEM (PENTAHELIX & REKA VENTURA)
+      ===================================================== */}
+      {/* =====================================================
+          INNOVATION ECOSYSTEM (PENTAHELIX & REKA VENTURA)
+      ===================================================== */}
+      <section className="innovation-grid" style={{ marginTop: "40px" }}>
+        
+        {/* PENTAHELIX */}
+        <div className="panel pentahelix-panel">
+          <div className="panel-heading" style={{ marginBottom: 24 }}>
+            <div>
+              <div className="eyebrow">COLLABORATION ECOSYSTEM</div>
+              <h3>Sinergi Pentahelix</h3>
+            </div>
+            <span className="panel-chip">Interactive</span>
+          </div>
+          
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, alignItems: "center" }}>
+            {/* Grafik Segi Lima Interaktif */}
+            <div className="penta-container">
+              {/* Gambar Jaring/Garis Penghubung Segi Lima */}
+              <svg viewBox="0 0 200 200" className="penta-lines">
+                <polygon points="100,10 190,75 155,180 45,180 10,75" fill="none" stroke="#cbd5e1" strokeWidth="2"/>
+                <line x1="100" y1="100" x2="100" y2="10" stroke="#cbd5e1" strokeWidth="2"/>
+                <line x1="100" y1="100" x2="190" y2="75" stroke="#cbd5e1" strokeWidth="2"/>
+                <line x1="100" y1="100" x2="155" y2="180" stroke="#cbd5e1" strokeWidth="2"/>
+                <line x1="100" y1="100" x2="45" y2="180" stroke="#cbd5e1" strokeWidth="2"/>
+                <line x1="100" y1="100" x2="10" y2="75" stroke="#cbd5e1" strokeWidth="2"/>
+                <circle cx="100" cy="100" r="6" fill="#94a3b8" />
+              </svg>
+
+              {/* Tombol-tombol Pilar */}
+              {pentahelixData.map((helix, idx) => {
+                const Icon = helix.icon;
+                const isActive = activeHelix.id === helix.id;
+                return (
+                  <button 
+                    key={helix.id} 
+                    className={`penta-node node-${idx + 1} ${isActive ? "active" : ""}`}
+                    style={{ borderColor: isActive ? helix.color : "transparent", color: isActive ? helix.color : "#475569" }}
+                    onClick={() => setActiveHelix(helix)}
+                  >
+                    <Icon size={18} />
+                    <span>{helix.id.toUpperCase()}</span>
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Konten Indikator Pentahelix */}
+            <div className="helix-content" style={{ borderLeft: `4px solid ${activeHelix.color}`, background: "#f8fafc", padding: "16px 20px", borderRadius: 12 }}>
+              <strong style={{ fontSize: 16, color: "#102a43", display: "block", marginBottom: 6 }}>
+                {activeHelix.label}
+              </strong>
+              <p style={{ color: "#475569", fontSize: 13, marginBottom: 18, lineHeight: 1.5 }}>
+                {activeHelix.desc}
+              </p>
+              <div style={{ display: "grid", gap: 14 }}>
+                {activeHelix.metrics.map((metric, idx) => (
+                  <div key={idx} style={{ background: "#fff", padding: "10px 14px", borderRadius: 8, border: "1px solid #e2e8f0" }}>
+                    <div style={{ fontSize: 20, fontWeight: 800, color: activeHelix.color }}>{metric.value}</div>
+                    <div style={{ fontSize: 11, fontWeight: 700, color: "#64748b", textTransform: "uppercase", letterSpacing: "0.05em", marginTop: 2 }}>
+                      {metric.title}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* REKA VENTURA */}
+        <div className="panel rekaventura-panel">
+          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
+            <div style={{ width: 40, height: 40, background: "rgba(255,255,255,0.15)", borderRadius: 12, display: "grid", placeItems: "center" }}>
+              <Rocket size={20} color="#fff" />
+            </div>
+            <div>
+              <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: "0.15em", color: "#93c5fd" }}>INNOVATION HUB</div>
+              <h3 style={{ margin: 0, fontSize: 18, color: "#fff" }}>Reka Ventura</h3>
+            </div>
+          </div>
+          
+          <p style={{ color: "#bfdbfe", fontSize: 12, lineHeight: 1.5, marginBottom: 20 }}>
+            Hilirisasi riset, Matching Fund (Kedaireka), dan pembentukan perusahaan rintisan (spin-off) berbasis teknologi Fakultas.
+          </p>
+
+          <div style={{ display: "grid", gap: 12 }}>
+            <div style={{ background: "rgba(255,255,255,0.1)", padding: 14, borderRadius: 12, border: "1px solid rgba(255,255,255,0.1)" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, color: "#60a5fa", fontSize: 12, fontWeight: 700, marginBottom: 4 }}><Coins size={14}/> Matching Fund Kedaireka</div>
+              <div style={{ fontSize: 22, fontWeight: 800, color: "#fff" }}>Rp 42.5 Miliar</div>
+            </div>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+              <div style={{ background: "rgba(255,255,255,0.1)", padding: 14, borderRadius: 12, border: "1px solid rgba(255,255,255,0.1)" }}>
+                <div style={{ fontSize: 22, fontWeight: 800, color: "#fff" }}>12</div>
+                <div style={{ fontSize: 11, color: "#bfdbfe", marginTop: 4 }}>Startup / Spin-off</div>
+              </div>
+              <div style={{ background: "rgba(255,255,255,0.1)", padding: 14, borderRadius: 12, border: "1px solid rgba(255,255,255,0.1)" }}>
+                <div style={{ fontSize: 22, fontWeight: 800, color: "#fff" }}>8</div>
+                <div style={{ fontSize: 11, color: "#bfdbfe", marginTop: 4 }}>Lisensi Industri</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </section>
 
       <section className="analytics-grid">
