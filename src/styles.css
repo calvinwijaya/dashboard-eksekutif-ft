@@ -2330,3 +2330,102 @@ button,input,select{font:inherit}button{cursor:pointer}
   border-color: rgba(255, 255, 255, 0.3) !important;
   transform: translateX(6px) !important;
 }
+
+/* =========================================================
+   SOCIAL GUARANTEE CARDS (BPJS & KP4)
+   ========================================================= */
+
+.social-card {
+  transition: all 0.25s ease !important;
+}
+
+.social-card:hover {
+  transform: translateY(-4px) !important;
+  border-color: #93c5fd !important;
+  box-shadow: 0 12px 24px rgba(11, 94, 168, 0.12) !important;
+  background: #f0f9ff !important;
+}
+
+.social-card:hover strong {
+  color: #0284c7 !important;
+}
+
+/* =========================================================
+   PERFORMANCE LENS & INDICATORS (STRATEGIC PILLAR DETAIL)
+   ========================================================= */
+
+/* Mengubah layout pillar-detail menjadi 2 kolom (Split Grid) */
+.pillar-detail {
+  display: grid !important;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 28px !important;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+}
+
+.pillar-info {
+  display: flex;
+  gap: 20px;
+}
+
+.pillar-indicators {
+  width: 100%;
+}
+
+.indicator-list {
+  display: grid;
+  gap: 10px;
+}
+
+.indicator-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.indicator-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.indicator-name {
+  font-size: 11px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.indicator-score {
+  font-size: 14px;
+  color: #0f172a;
+}
+
+.indicator-score small {
+  color: #94a3b8;
+  font-size: 11px;
+}
+
+.indicator-track {
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: 99px;
+  position: relative;
+  overflow: hidden;
+}
+
+.indicator-fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Responsif: Jika layar kecil, tumpuk atas-bawah */
+@media (max-width: 1024px) {
+  .pillar-detail {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}

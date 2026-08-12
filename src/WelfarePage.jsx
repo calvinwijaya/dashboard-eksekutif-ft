@@ -2,7 +2,8 @@ import React, { useMemo, useState } from "react";
 import {
   ArrowLeft, ArrowRight, BarChart3, BriefcaseBusiness, Building2,
   ChevronRight, Clock3, GraduationCap, HeartPulse, ShieldCheck,
-  Sparkles, TrendingDown, TrendingUp, Users, Wrench, X, Eye
+  Sparkles, TrendingDown, TrendingUp, Users, Wrench, X, Eye,
+  FileSpreadsheet, FileEdit
 } from "lucide-react";
 import "./styles.css";
 
@@ -10,7 +11,7 @@ import WelfareData from "../data/WelfareData.json";
 const { 
   staffGroups, workloadData, workloadInterventions, 
   facilities, academicRanks, welfareIndicators, sdmActions,
-  socialGuarantees, personalWelfare 
+  socialGuarantees, personalWelfare, realStaffData
 } = WelfareData;
 
 const iconMap = {
@@ -71,6 +72,9 @@ export default function WelfarePage({ onBack }) {
   // State untuk Modal Personal dan Klik Intervensi
   const [showPersonalModal, setShowPersonalModal] = useState(false);
   const [expandedIntervention, setExpandedIntervention] = useState(null);
+
+  // State baru untuk Modal BPJS/KP4
+  const [selectedGuarantee, setSelectedGuarantee] = useState(null);
 
   const activeStaff = staffGroups.find((item) => item.id === activeGroup);
   const filteredFacilities = useMemo(() => {
@@ -140,7 +144,12 @@ export default function WelfarePage({ onBack }) {
         
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
           {socialGuarantees.map((item) => (
-            <div key={item.id} style={{ display: "flex", alignItems: "center", gap: 18, padding: 18, borderRadius: 14, background: "#f8fafc", border: "1px solid #edf2f7" }}>
+            <button 
+              key={item.id} 
+              className="social-card"
+              onClick={() => setSelectedGuarantee(item)}
+              style={{ display: "flex", alignItems: "center", gap: 18, padding: 18, borderRadius: 14, background: "#f8fafc", border: "1px solid #edf2f7", textAlign: "left", cursor: "pointer", width: "100%" }}
+            >
               <div style={{ textAlign: "center", paddingRight: 18, borderRight: "1px solid #e2e8f0" }}>
                 <div style={{ fontSize: 32, fontWeight: 800, color: "#2f7d4f", lineHeight: 1, letterSpacing: "-0.03em" }}>{item.coverage}%</div>
                 <div style={{ fontSize: 10, color: "#64748b", marginTop: 6, letterSpacing: ".08em", textTransform: "uppercase", fontWeight: 700 }}>Ter-cover</div>
@@ -152,7 +161,7 @@ export default function WelfarePage({ onBack }) {
                 </div>
                 <p style={{ margin: 0, fontSize: 13, color: "#64748b", lineHeight: 1.5 }}>{item.desc}</p>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </section>
@@ -320,6 +329,83 @@ export default function WelfarePage({ onBack }) {
             <div style={{ display: "flex", justifyContent: "flex-end", marginTop: 16 }}>
                <span style={{ fontSize: 10, color: "#ef4444" }}>*Skor di bawah 70 ditandai merah untuk prioritas pendampingan.</span>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* MODAL DATA AGREGAT BPJS & KP4 */}
+      {selectedGuarantee && (
+        <div className="modal-backdrop" onClick={() => setSelectedGuarantee(null)} style={{ zIndex: 1000 }}>
+          <div className="research-modal" style={{ maxWidth: 1000, maxHeight: '90vh', display: 'flex', flexDirection: 'column' }} onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setSelectedGuarantee(null)}><X size={18} /></button>
+            
+            <div className="eyebrow" style={{ color: "#0b5ea8" }}>MASTER DATA INTEGRATION · {selectedGuarantee.title}</div>
+            
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 20, flexWrap: "wrap", gap: 16 }}>
+              <div>
+                <h2 style={{ fontSize: 24, margin: "8px 0" }}>Database Pengagregat Sivitas</h2>
+                <p className="modal-abstract" style={{ margin: 0, maxWidth: 500 }}>
+                  Terhubung dengan <strong>Single Identity (NIP/NIK)</strong> untuk sinkronisasi otomatis layanan Kesejahteraan, Dharma Pendidikan, serta Penelitian & Pengabdian.
+                </p>
+              </div>
+              <div style={{ display: "flex", gap: 10 }}>
+                <button style={{ display: "flex", alignItems: "center", gap: 6, background: "#f1f5f9", color: "#334155", padding: "10px 14px", borderRadius: 8, border: "1px solid #cbd5e1", fontSize: 12, fontWeight: 700, cursor: "pointer", transition: "all 0.2s" }} onMouseOver={e => e.currentTarget.style.background = "#e2e8f0"} onMouseOut={e => e.currentTarget.style.background = "#f1f5f9"}>
+                  <FileSpreadsheet size={16} /> Sync dari Excel
+                </button>
+                <button style={{ display: "flex", alignItems: "center", gap: 6, background: "#0b5ea8", color: "#fff", padding: "10px 14px", borderRadius: 8, border: "none", fontSize: 12, fontWeight: 700, cursor: "pointer", transition: "all 0.2s" }} onMouseOver={e => e.currentTarget.style.background = "#1e3a8a"} onMouseOut={e => e.currentTarget.style.background = "#0b5ea8"}>
+                  <FileEdit size={16} /> Edit via Form
+                </button>
+              </div>
+            </div>
+            
+            {/* Area Tabel dengan Scroll Internal */}
+            <div style={{ overflowY: "auto", overflowX: "auto", flex: 1, border: "1px solid #e2e8f0", borderRadius: 8, background: "#fff" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12, textAlign: "left" }}>
+                <thead style={{ position: "sticky", top: 0, background: "#f8fafc", zIndex: 10 }}>
+                  <tr style={{ borderBottom: "2px solid #cbd5e1" }}>
+                    <th style={{ padding: "14px 16px", color: "#334155" }}>NIP / ID Unik</th>
+                    <th style={{ padding: "14px 16px", color: "#334155" }}>Nama Lengkap</th>
+                    <th style={{ padding: "14px 16px", color: "#334155" }}>Peran</th>
+                    <th style={{ padding: "14px 16px", color: "#334155" }}>No. Referensi Sistem</th>
+                    <th style={{ padding: "14px 16px", color: "#334155" }}>Status & Update</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {realStaffData.map((staff, idx) => {
+                    // Generate dummy nomor referensi yang persisten berdasarkan index agar tidak berubah-ubah
+                    const refNum = selectedGuarantee.id === 'bpjs' ? `000${(8765432 + (idx * 13)).toString()}` : `KP4-2026-${100 + idx}`;
+                    return (
+                      <tr key={idx} style={{ borderBottom: "1px solid #f1f5f9" }}>
+                        <td style={{ padding: "12px 16px", color: "#0f172a", fontFamily: "monospace", fontSize: 13, letterSpacing: "0.05em" }}>
+                          {staff.nip}
+                        </td>
+                        <td style={{ padding: "12px 16px", fontWeight: 700, color: "#0f172a" }}>
+                          {staff.name}
+                        </td>
+                        <td style={{ padding: "12px 16px", color: "#475569" }}>
+                          <span style={{ display: "inline-flex", alignItems: "center", gap: 6, background: "#f1f5f9", padding: "4px 8px", borderRadius: 6 }}>
+                             {staff.role === 'Dosen' ? <GraduationCap size={13} color="#0b5ea8" /> : <BriefcaseBusiness size={13} color="#d97706" />}
+                             <span style={{ fontWeight: 600 }}>{staff.role}</span>
+                          </span>
+                        </td>
+                        <td style={{ padding: "12px 16px", color: "#64748b", fontFamily: "monospace", fontSize: 13 }}>
+                          {refNum}
+                        </td>
+                        <td style={{ padding: "12px 16px" }}>
+                          <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                            <span style={{ background: "#dcfce7", color: "#166534", padding: "4px 8px", borderRadius: 6, fontWeight: 700, fontSize: 10, width: "fit-content", letterSpacing: "0.05em" }}>
+                              {selectedGuarantee.id === 'bpjs' ? 'AKTIF (SINKRON)' : 'TERVERIFIKASI'}
+                            </span>
+                            <span style={{ fontSize: 10, color: "#94a3b8", fontWeight: 600 }}>Last sync: {staff.lastSync}</span>
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+            
           </div>
         </div>
       )}

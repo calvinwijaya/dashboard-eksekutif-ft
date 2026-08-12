@@ -12,88 +12,15 @@ import WelfarePage from "./WelfarePage";
 import TeachingPage from "./TeachingPage";
 import ResearchPage from "./ResearchPage";
 
-const PROFESSOR = "Prof. Ir. Trias Aditya K.M., S.T., M.Sc., Ph.D., IPU., ASEAN Eng.";
+// IMPORT DATA DARI JSON
+import MainData from "../data/MainData.json";
+const { PROFESSOR, modules, sdgs, gesi, strategicPillars, pentahelixData } = MainData;
 
-const modules = [
-  {
-    id: "research",
-    number: "01",
-    title: "Penelitian & Riset",
-    short: "Research Intelligence",
-    description:
-      "Katalog riset, portofolio KBK, kolaborasi lintas departemen, dan peluang pengembangan riset strategis.",
-    icon: Microscope,
-    tone: "blue",
-    metrics: ["1,248 Riset", "326 Aktif", "94 Multi-KBK"],
-  },
-  {
-    id: "community",
-    number: "02",
-    title: "Pengabdian kepada Masyarakat",
-    short: "Community Impact",
-    description:
-      "Pemantauan program pengabdian, mitra, wilayah, keterlibatan departemen, serta dampak dan keberlanjutan.",
-    icon: Users,
-    tone: "green",
-    metrics: ["186 Program", "72 Mitra", "34 Wilayah"],
-  },
-  {
-    id: "teaching",
-    number: "03",
-    title: "Pengajaran",
-    short: "Academic Intelligence",
-    description:
-      "Analitik akademik, program studi, mahasiswa, kurikulum, beban pengajaran, dan capaian pembelajaran.",
-    icon: GraduationCap,
-    tone: "gold",
-    metrics: ["29 Prodi", "8,420 Mahasiswa", "365 Dosen"],
-  },
-  {
-    id: "welfare",
-    number: "04",
-    title: "Kesejahteraan",
-    short: "People & Wellbeing",
-    description:
-      "Indikator kesejahteraan sivitas akademika, pengembangan SDM, fasilitas, dan lingkungan kerja.",
-    icon: HeartPulse,
-    tone: "purple",
-    metrics: ["365 Dosen", "322 Tendik", "24 Fasilitas"],
-  },
-];
-
-const sdgs = [
-  { id: 4, label: "Quality Education", value: 82 },
-  { id: 5, label: "Gender Equality", value: 66 },
-  { id: 7, label: "Affordable & Clean Energy", value: 71 },
-  { id: 9, label: "Industry, Innovation & Infrastructure", value: 88 },
-  { id: 11, label: "Sustainable Cities", value: 79 },
-  { id: 13, label: "Climate Action", value: 74 },
-  { id: 17, label: "Partnerships for the Goals", value: 91 },
-];
-
-const gesi = [
-  { label: "Gender representation", value: 58 },
-  { label: "Accessibility & disability inclusion", value: 76 },
-  { label: "Inclusive learning environment", value: 84 },
-  { label: "Staff development access", value: 69 },
-];
-
-const strategicPillars = [
-  { id: "education", number: "01", title: "Pendidikan Transformatif", english: "Transformative Education", description: "Pembelajaran adaptif, kurikulum relevan, dan penguatan kompetensi lulusan untuk menghadapi perubahan teknologi dan kebutuhan industri." },
-  { id: "research", number: "02", title: "Riset Berdampak", english: "Impactful Research", description: "Riset unggul yang menghasilkan pengetahuan, inovasi, teknologi, dan solusi yang memberi dampak nyata bagi masyarakat dan industri." },
-  { id: "community", number: "03", title: "Pengabdian Solutif", english: "Solution-Oriented Engagement", description: "Pengabdian yang berbasis kebutuhan, terukur dampaknya, dan berkelanjutan melalui kemitraan dengan masyarakat serta pemangku kepentingan." },
-  { id: "global", number: "04", title: "Keterlibatan Global", english: "Global Engagement", description: "Perluasan jejaring internasional melalui kolaborasi akademik, mobilitas, joint research, partnership, dan pengakuan global." },
-  { id: "governance", number: "05", title: "Tata Kelola Lincah", english: "Agile Governance", description: "Pengambilan keputusan berbasis data, proses yang adaptif, transparan, dan terintegrasi untuk meningkatkan responsivitas organisasi." },
-];
-
-const pentahelixData = [
-  { id: "dudi", label: "Dunia Usaha & Industri", icon: Factory, color: "#d97706", desc: "Kemitraan strategis, hilirisasi produk, dan pendanaan riset industri.", metrics: [ { value: "120+", title: "Mitra Aktif" }, { value: "Rp 85 M", title: "Pendanaan Industri" } ] },
-  { id: "gov", label: "Regulator / Pemerintah", icon: Building2, color: "#059669", desc: "Perumusan kebijakan, standar nasional, dan proyek strategis pemerintah.", metrics: [ { value: "25", title: "Policy Briefs" }, { value: "18", title: "Proyek Nasional" } ] },
-  { id: "pt", label: "Perguruan Tinggi", icon: GraduationCap, color: "#2563eb", desc: "Kolaborasi akademik lintas benua, joint research, dan pertukaran pakar.", metrics: [ { value: "15", title: "Joint Degrees" }, { value: "45", title: "Visiting Scholars" } ] },
-  { id: "com", label: "Masyarakat Umum", icon: Users, color: "#4f46e5", desc: "Pemberdayaan desa, aplikasi teknologi tepat guna, dan komuniversitas.", metrics: [ { value: "14", title: "Desa Binaan" }, { value: "12.5K", title: "Penerima Manfaat" } ] },
-  { id: "exp", label: "Expert & Media", icon: Network, color: "#be123c", desc: "Diseminasi publik, sertifikasi keahlian, dan advokasi media massa.", metrics: [ { value: "85", title: "Sertifikasi Profesi" }, { value: "40+", title: "Opini Publik" } ] }
-];
-
+// KAMUS IKON
+const iconMap = {
+  Microscope, Users, GraduationCap, HeartPulse,
+  Factory, Building2, Network
+};
 
 function AssetImage({ src, alt, className, fallback }) {
   const [failed, setFailed] = useState(false);
@@ -192,8 +119,6 @@ function Header({ onMenu, collapsed, onLogout }) {
         </div>
         <ChevronDown size={17} className="muted" />
         <div className="header-divider" />
-        
-        {/* Tombol memanggil onLogout secara langsung */}
         <button className="logout-button" onClick={onLogout}>
           <LogOut size={17} /><span>Logout</span>
         </button>
@@ -207,6 +132,7 @@ function ExecutiveHome({ onOpen }) {
   const [selectedGesi, setSelectedGesi] = useState(null);
   const [selectedPillar, setSelectedPillar] = useState(strategicPillars[0]);
   const [activeHelix, setActiveHelix] = useState(pentahelixData[0]);
+  const [helixYear, setHelixYear] = useState("2026");
 
   return (
     <main className="main-content">
@@ -250,7 +176,7 @@ function ExecutiveHome({ onOpen }) {
 
       <section className="module-grid">
         {modules.map((module) => {
-          const Icon = module.icon;
+          const Icon = iconMap[module.iconName] || LayoutDashboard;
           return (
             <button key={module.id} className={`module-card ${module.tone}`} onClick={() => onOpen(module.id)}>
               <div className="card-top">
@@ -274,9 +200,6 @@ function ExecutiveHome({ onOpen }) {
       {/* =====================================================
           INNOVATION ECOSYSTEM (PENTAHELIX & REKA VENTURA)
       ===================================================== */}
-      {/* =====================================================
-          INNOVATION ECOSYSTEM (PENTAHELIX & REKA VENTURA)
-      ===================================================== */}
       <section className="innovation-grid" style={{ marginTop: "40px" }}>
         
         {/* PENTAHELIX */}
@@ -286,13 +209,34 @@ function ExecutiveHome({ onOpen }) {
               <div className="eyebrow">COLLABORATION ECOSYSTEM</div>
               <h3>Sinergi Pentahelix</h3>
             </div>
-            <span className="panel-chip">Interactive</span>
+            {/* Tombol Pemilih Tahun */}
+            <div style={{ display: "flex", gap: 6, background: "#f1f5f9", padding: 4, borderRadius: 8 }}>
+              {["2024", "2025", "2026"].map(year => (
+                <button 
+                  key={year}
+                  onClick={() => setHelixYear(year)}
+                  style={{ 
+                    padding: "4px 12px", 
+                    borderRadius: "6px", 
+                    fontSize: "11px", 
+                    fontWeight: 800,
+                    border: "none",
+                    background: helixYear === year ? "#fff" : "transparent",
+                    color: helixYear === year ? "#102a43" : "#64748b",
+                    boxShadow: helixYear === year ? "0 2px 4px rgba(0,0,0,0.05)" : "none",
+                    cursor: "pointer",
+                    transition: "all 0.2s"
+                  }}
+                >
+                  {year}
+                </button>
+              ))}
+            </div>
           </div>
           
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24, alignItems: "center" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.2fr", gap: 24, alignItems: "center" }}>
             {/* Grafik Segi Lima Interaktif */}
             <div className="penta-container">
-              {/* Gambar Jaring/Garis Penghubung Segi Lima */}
               <svg viewBox="0 0 200 200" className="penta-lines">
                 <polygon points="100,10 190,75 155,180 45,180 10,75" fill="none" stroke="#cbd5e1" strokeWidth="2"/>
                 <line x1="100" y1="100" x2="100" y2="10" stroke="#cbd5e1" strokeWidth="2"/>
@@ -303,9 +247,8 @@ function ExecutiveHome({ onOpen }) {
                 <circle cx="100" cy="100" r="6" fill="#94a3b8" />
               </svg>
 
-              {/* Tombol-tombol Pilar */}
               {pentahelixData.map((helix, idx) => {
-                const Icon = helix.icon;
+                const Icon = iconMap[helix.iconName];
                 const isActive = activeHelix.id === helix.id;
                 return (
                   <button 
@@ -323,17 +266,22 @@ function ExecutiveHome({ onOpen }) {
 
             {/* Konten Indikator Pentahelix */}
             <div className="helix-content" style={{ borderLeft: `4px solid ${activeHelix.color}`, background: "#f8fafc", padding: "16px 20px", borderRadius: 12 }}>
-              <strong style={{ fontSize: 16, color: "#102a43", display: "block", marginBottom: 6 }}>
-                {activeHelix.label}
-              </strong>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 6 }}>
+                <strong style={{ fontSize: 16, color: "#102a43" }}>{activeHelix.label}</strong>
+                <span style={{ fontSize: 10, fontWeight: 800, color: activeHelix.color, background: `${activeHelix.color}22`, padding: "4px 8px", borderRadius: 6 }}>
+                  DATA {helixYear}
+                </span>
+              </div>
               <p style={{ color: "#475569", fontSize: 13, marginBottom: 18, lineHeight: 1.5 }}>
                 {activeHelix.desc}
               </p>
-              <div style={{ display: "grid", gap: 14 }}>
-                {activeHelix.metrics.map((metric, idx) => (
+              
+              {/* Mapping Metrik berdasarkan Tahun yang Dipilih */}
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
+                {activeHelix.metrics[helixYear].map((metric, idx) => (
                   <div key={idx} style={{ background: "#fff", padding: "10px 14px", borderRadius: 8, border: "1px solid #e2e8f0" }}>
                     <div style={{ fontSize: 20, fontWeight: 800, color: activeHelix.color }}>{metric.value}</div>
-                    <div style={{ fontSize: 11, fontWeight: 700, color: "#64748b", textTransform: "uppercase", letterSpacing: "0.05em", marginTop: 2 }}>
+                    <div style={{ fontSize: 10, fontWeight: 800, color: "#64748b", textTransform: "uppercase", letterSpacing: "0.05em", marginTop: 4, lineHeight: 1.3 }}>
                       {metric.title}
                     </div>
                   </div>
@@ -356,27 +304,47 @@ function ExecutiveHome({ onOpen }) {
           </div>
           
           <p style={{ color: "#bfdbfe", fontSize: 12, lineHeight: 1.5, marginBottom: 20 }}>
-            Hilirisasi riset dan pembentukan perusahaan rintisan (spin-off) berbasis teknologi Fakultas.
+            Kendaraan komersialisasi dan hilirisasi inovasi. Fokus utama pada pendanaan kerjasama riset, disusul pembentukan perusahaan rintisan (indirect benefit).
           </p>
 
           <div style={{ display: "grid", gap: 12 }}>
-            <div style={{ background: "rgba(255,255,255,0.1)", padding: 14, borderRadius: 12, border: "1px solid rgba(255,255,255,0.1)" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 8, color: "#60a5fa", fontSize: 12, fontWeight: 700, marginBottom: 4 }}><Coins size={14}/> Dana Hilirisasi Riset</div>
-              <div style={{ fontSize: 22, fontWeight: 800, color: "#fff" }}>Rp 42.5 Miliar</div>
-            </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
-              <div style={{ background: "rgba(255,255,255,0.1)", padding: 14, borderRadius: 12, border: "1px solid rgba(255,255,255,0.1)" }}>
-                <div style={{ fontSize: 22, fontWeight: 800, color: "#fff" }}>12</div>
-                <div style={{ fontSize: 11, color: "#bfdbfe", marginTop: 4 }}>Startup / Spin-off</div>
+            
+            {/* DIRECT BENEFITS */}
+            <div style={{ background: "rgba(255,255,255,0.1)", padding: 14, borderRadius: 12, border: "1px solid rgba(255,255,255,0.15)" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#93c5fd", fontSize: 10, fontWeight: 800, marginBottom: 6, letterSpacing: "0.05em" }}>
+                <Coins size={14}/> DIRECT: DANA KERJASAMA & HILIRISASI (ERIC → LKFT)
               </div>
-              <div style={{ background: "rgba(255,255,255,0.1)", padding: 14, borderRadius: 12, border: "1px solid rgba(255,255,255,0.1)" }}>
-                <div style={{ fontSize: 22, fontWeight: 800, color: "#fff" }}>8</div>
-                <div style={{ fontSize: 11, color: "#bfdbfe", marginTop: 4 }}>Lisensi Industri</div>
+              <div style={{ fontSize: 24, fontWeight: 800, color: "#fff" }}>Rp 42.5 Miliar</div>
+              <div style={{ fontSize: 11, color: "#bfdbfe", marginTop: 4 }}>Proyek Industri, Lisensi, dan Royalti</div>
+            </div>
+            
+            <div style={{ background: "rgba(255,255,255,0.1)", padding: 14, borderRadius: 12, border: "1px solid rgba(255,255,255,0.15)" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#93c5fd", fontSize: 10, fontWeight: 800, marginBottom: 6, letterSpacing: "0.05em" }}>
+                <Building2 size={14}/> DIRECT: HIBAH & KERJASAMA PEMERINTAH
+              </div>
+              <div style={{ fontSize: 24, fontWeight: 800, color: "#fff" }}>Rp 65.2 Miliar</div>
+              <div style={{ fontSize: 11, color: "#bfdbfe", marginTop: 4 }}>DIKTI / LPDP / Lembaga Internasional (LN)</div>
+            </div>
+
+            {/* INDIRECT BENEFITS */}
+            <div style={{ background: "rgba(255,255,255,0.05)", padding: 14, borderRadius: 12, border: "1px dashed rgba(255,255,255,0.25)" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#94a3b8", fontSize: 10, fontWeight: 800, marginBottom: 8, letterSpacing: "0.05em" }}>
+                INDIRECT BENEFIT
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
+                <div>
+                  <div style={{ fontSize: 20, fontWeight: 800, color: "#f8fafc" }}>12 Unit</div>
+                  <div style={{ fontSize: 11, color: "#94a3b8", marginTop: 2 }}>Startup / Spin-off</div>
+                </div>
+                <div style={{ textAlign: "right" }}>
+                  <div style={{ fontSize: 20, fontWeight: 800, color: "#f8fafc" }}>8 Paten</div>
+                  <div style={{ fontSize: 11, color: "#94a3b8", marginTop: 2 }}>Lisensi Industri</div>
+                </div>
               </div>
             </div>
+
           </div>
         </div>
-
       </section>
 
       <section className="analytics-grid">
@@ -490,13 +458,45 @@ function ExecutiveHome({ onOpen }) {
         </div>
 
         <div className="pillar-detail">
-          <div className="pillar-detail-index">{selectedPillar.number}</div>
-          <div>
-            <div className="eyebrow">SELECTED STRATEGIC PILLAR</div>
-            <h4>{selectedPillar.title}</h4>
-            <p>{selectedPillar.description}</p>
+          
+          {/* Kolom Kiri: Deskripsi Pilar */}
+          <div className="pillar-info">
+            <div className="pillar-detail-index">{selectedPillar.number}</div>
+            <div>
+              <div className="eyebrow">SELECTED STRATEGIC PILLAR</div>
+              <h4>{selectedPillar.title}</h4>
+              <p>{selectedPillar.description}</p>
+              <span className="pillar-detail-tag">{selectedPillar.english}</span>
+            </div>
           </div>
-          <span className="pillar-detail-tag">{selectedPillar.english}</span>
+
+          {/* Kolom Kanan: Bar Chart Indikator Kinerja */}
+          <div className="pillar-indicators">
+            <div className="eyebrow" style={{ marginBottom: 16 }}>PERFORMANCE LENS & INDICATORS</div>
+            <div className="indicator-list">
+              {selectedPillar.indicators.map((ind, idx) => {
+                const percentage = Math.min(100, (ind.score / ind.target) * 100);
+                // Ubah warna bar menjadi warning (oranye) jika di bawah 75, sisanya biru UGM
+                const barColor = percentage < 75 ? "#d97706" : "#0b5ea8"; 
+                
+                return (
+                  <div className="indicator-item" key={idx}>
+                    <div className="indicator-labels">
+                      <span className="indicator-name">{ind.label}</span>
+                      <strong className="indicator-score">{ind.score} <small>/ {ind.target}</small></strong>
+                    </div>
+                    <div className="indicator-track">
+                      <div 
+                        className="indicator-fill" 
+                        style={{ width: `${percentage}%`, background: barColor }} 
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
         </div>
       </section>
 
@@ -513,23 +513,6 @@ function ExecutiveHome({ onOpen }) {
   );
 }
 
-function PlaceholderPage({ moduleId, onBack }) {
-  const module = modules.find((m) => m.id === moduleId);
-  const Icon = module?.icon || LayoutDashboard;
-  return (
-    <main className="main-content">
-      <div className={`detail-header ${module?.tone || "blue"}`}>
-        <button className="back-button" onClick={onBack}>← Executive Overview</button>
-        <div className="detail-title"><div className="detail-icon"><Icon size={32} /></div><div><div className="eyebrow">{module?.short}</div><h2>{module?.title}</h2><p>Modul berikutnya dapat dibangun menggunakan pola executive intelligence yang sama.</p></div></div>
-      </div>
-      <div className="placeholder-grid">
-        <div className="placeholder-card"><div className="eyebrow">NEXT DEVELOPMENT</div><h3>Struktur data & indikator</h3><p>Modul akan berisi KPI, filter, katalog, visualisasi, dan drill-down sesuai domain.</p></div>
-        <div className="placeholder-card"><div className="eyebrow">NAVIGATION CONCEPT</div><div className="flow"><span>Fakultas</span><b>→</b><span>Departemen</span><b>→</b><span>Unit / KBK</span><b>→</b><strong>Detail</strong></div></div>
-      </div>
-    </main>
-  );
-}
-
 function LoginPage({ onLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -537,7 +520,6 @@ function LoginPage({ onLogin }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Pengecekan hardcoded username dan password
     if (username === "triasaditya" && password === "geodesi1hati") {
       onLogin();
     } else {
@@ -556,28 +538,12 @@ function LoginPage({ onLogin }) {
         />
         <h2>Executive Dashboard</h2>
         <p>Sistem Analitik Strategis<br/>Fakultas Teknik Universitas Gadjah Mada</p>
-
         <form className="login-form" onSubmit={handleSubmit}>
           {error && <div className="login-error">Username atau password salah.</div>}
-          
           <label>Username</label>
-          <input
-            type="text"
-            className="login-input"
-            value={username}
-            onChange={(e) => {setUsername(e.target.value); setError(false);}}
-            placeholder="Masukkan username Anda"
-          />
-          
+          <input type="text" className="login-input" value={username} onChange={(e) => {setUsername(e.target.value); setError(false);}} placeholder="Masukkan username Anda" />
           <label>Password</label>
-          <input
-            type="password"
-            className="login-input"
-            value={password}
-            onChange={(e) => {setPassword(e.target.value); setError(false);}}
-            placeholder="Masukkan password Anda"
-          />
-          
+          <input type="password" className="login-input" value={password} onChange={(e) => {setPassword(e.target.value); setError(false);}} placeholder="Masukkan password Anda" />
           <button type="submit" className="login-button">Masuk ke Sistem</button>
         </form>
       </div>
@@ -589,8 +555,6 @@ function App() {
   const [active, setActive] = useState("home");
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  
-  // State untuk mengontrol munculnya modal logout
   const [showLogoutModal, setShowLogoutModal] = useState(false);
 
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
@@ -602,20 +566,15 @@ function App() {
     localStorage.setItem("auth", "true");
   };
 
-  // Fungsi yang tereksekusi HANYA jika tombol "Ya, Keluar" diklik
   const handleConfirmLogout = () => {
     setIsAuthenticated(false);
     localStorage.removeItem("auth");
     setActive("home");
-    setShowLogoutModal(false); // Tutup modal setelah logout
+    setShowLogoutModal(false);
   };
 
   useEffect(() => {
-    window.scrollTo({
-      top: 0,
-      left: 0,
-      behavior: "instant"
-    });
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
   }, [active]);
 
   const selectPage = (id) => setActive(id);
@@ -629,7 +588,6 @@ function App() {
       <Sidebar active={active} setActive={selectPage} collapsed={collapsed} setCollapsed={setCollapsed} mobileOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
       
       <div className="page-shell">
-        {/* Header sekarang memerintahkan modal untuk terbuka (true) */}
         <Header onMenu={() => setMobileOpen(true)} collapsed={collapsed} onLogout={() => setShowLogoutModal(true)} />
         
         {active === "home" && <ExecutiveHome onOpen={selectPage} />}
@@ -641,7 +599,6 @@ function App() {
         <footer className="footer"><span>© {new Date().getFullYear()} Fakultas Teknik Universitas Gadjah Mada</span><span>Executive Data Analytics</span></footer>
       </div>
 
-      {/* TAMPILAN MODAL DI ROOT APP (DI LUAR HEADER) */}
       {showLogoutModal && (
         <div className="modal-backdrop" onClick={() => setShowLogoutModal(false)}>
           <div className="logout-confirm-modal" onClick={(e) => e.stopPropagation()}>

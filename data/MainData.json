@@ -1,0 +1,139 @@
+{
+  "PROFESSOR": "Prof. Ir. Trias Aditya K.M., S.T., M.Sc., Ph.D., IPU., ASEAN Eng.",
+  "modules": [
+    { "id": "research", "number": "01", "title": "Penelitian & Riset", "short": "Research Intelligence", "description": "Katalog riset, portofolio KBK, kolaborasi lintas departemen, dan peluang pengembangan riset strategis.", "iconName": "Microscope", "tone": "blue", "metrics": ["1,248 Riset", "326 Aktif", "94 Multi-KBK"] },
+    { "id": "community", "number": "02", "title": "Pengabdian kepada Masyarakat", "short": "Community Impact", "description": "Pemantauan program pengabdian, mitra, wilayah, keterlibatan departemen, serta dampak dan keberlanjutan.", "iconName": "Users", "tone": "green", "metrics": ["186 Program", "72 Mitra", "34 Wilayah"] },
+    { "id": "teaching", "number": "03", "title": "Pengajaran", "short": "Academic Intelligence", "description": "Analitik akademik, program studi, mahasiswa, kurikulum, beban pengajaran, dan capaian pembelajaran.", "iconName": "GraduationCap", "tone": "gold", "metrics": ["29 Prodi", "9,354 Mahasiswa", "355 Dosen"] },
+    { "id": "welfare", "number": "04", "title": "Kesejahteraan", "short": "People & Wellbeing", "description": "Indikator kesejahteraan sivitas akademika, pengembangan SDM, fasilitas, dan lingkungan kerja.", "iconName": "HeartPulse", "tone": "purple", "metrics": ["355 Dosen", "322 Tendik", "24 Fasilitas"] }
+  ],
+  "sdgs": [
+    { "id": 4, "label": "Quality Education", "value": 82 },
+    { "id": 5, "label": "Gender Equality", "value": 66 },
+    { "id": 7, "label": "Affordable & Clean Energy", "value": 71 },
+    { "id": 9, "label": "Industry, Innovation & Infrastructure", "value": 88 },
+    { "id": 11, "label": "Sustainable Cities", "value": 79 },
+    { "id": 13, "label": "Climate Action", "value": 74 },
+    { "id": 17, "label": "Partnerships for the Goals", "value": 91 }
+  ],
+  "gesi": [
+    { "label": "Gender representation", "value": 58 },
+    { "label": "Accessibility & disability inclusion", "value": 76 },
+    { "label": "Inclusive learning environment", "value": 84 },
+    { "label": "Staff development access", "value": 69 }
+  ],
+  "strategicPillars": [
+    { 
+      "id": "education", 
+      "number": "01", 
+      "title": "Pendidikan Transformatif", 
+      "english": "Transformative Education & QS WUR Indicators", 
+      "description": "Pembelajaran adaptif, kurikulum relevan, dan penguatan kompetensi lulusan untuk menghadapi perubahan teknologi. Mengadopsi 10 indikator utama pemeringkatan QS World University Rankings.",
+      "indicators": [
+        { "label": "Academic Reputation (Bobot 30%)", "score": 85, "target": 100 },
+        { "label": "Citations per Faculty (Bobot 20%)", "score": 72, "target": 100 },
+        { "label": "Employer Reputation (Bobot 15%)", "score": 90, "target": 100 },
+        { "label": "Faculty Student Ratio (Bobot 10%)", "score": 78, "target": 100 },
+        { "label": "Employment Outcomes (Bobot 5%)", "score": 88, "target": 100 },
+        { "label": "International Faculty Ratio (Bobot 5%)", "score": 60, "target": 100 },
+        { "label": "International Research Network (Bobot 5%)", "score": 82, "target": 100 },
+        { "label": "International Student Ratio (Bobot 5%)", "score": 65, "target": 100 },
+        { "label": "Sustainability (Bobot 5%)", "score": 85, "target": 100 },
+        { "label": "Int. Student Diversity (Bobot 0%)", "score": 70, "target": 100 }
+      ]
+    },
+    { 
+      "id": "research", 
+      "number": "02", 
+      "title": "Riset Berdampak", 
+      "english": "Impactful Research", 
+      "description": "Riset unggul yang menghasilkan pengetahuan, inovasi, teknologi, dan solusi yang memberi dampak nyata bagi masyarakat dan industri.",
+      "indicators": [
+        { "label": "Publikasi Jurnal Internasional Bereputasi (Q1/Q2)", "score": 320, "target": 400 },
+        { "label": "Dana Hibah Riset & Kerjasama (Dalam & Luar Negeri)", "score": 85, "target": 100 },
+        { "label": "Produk Hilirisasi & Komersialisasi Riset", "score": 12, "target": 20 },
+        { "label": "Kekayaan Intelektual (Paten Granted & Hak Cipta)", "score": 45, "target": 50 }
+      ]
+    },
+    { 
+      "id": "community", 
+      "number": "03", 
+      "title": "Pengabdian Solutif", 
+      "english": "Solution-Oriented Engagement", 
+      "description": "Pengabdian yang berbasis kebutuhan, terukur dampaknya, dan berkelanjutan melalui kemitraan dengan masyarakat serta pemangku kepentingan.",
+      "indicators": [
+        { "label": "Program Desa Binaan & Komuniversitas", "score": 14, "target": 15 },
+        { "label": "Penerapan Teknologi Tepat Guna di Masyarakat", "score": 42, "target": 50 },
+        { "label": "Dana Kemitraan CSR & Alumni (Miliar Rupiah)", "score": 12, "target": 15 },
+        { "label": "Indeks Kepuasan & Dampak Masyarakat", "score": 92, "target": 100 }
+      ]
+    },
+    { 
+      "id": "global", 
+      "number": "04", 
+      "title": "Keterlibatan Global", 
+      "english": "Global Engagement", 
+      "description": "Perluasan jejaring internasional melalui kolaborasi akademik, mobilitas, joint research, partnership, dan pengakuan global.",
+      "indicators": [
+        { "label": "Double/Joint Degree & Fastrack Programs", "score": 28, "target": 35 },
+        { "label": "Inbound & Outbound Student Mobility", "score": 150, "target": 200 },
+        { "label": "Visiting Professor & International Scholar", "score": 45, "target": 50 },
+        { "label": "Akreditasi Internasional (IABEE, ABET, dll)", "score": 100, "target": 100 }
+      ]
+    },
+    { 
+      "id": "governance", 
+      "number": "05", 
+      "title": "Tata Kelola Lincah", 
+      "english": "Agile Governance", 
+      "description": "Pengambilan keputusan berbasis data, proses yang adaptif, transparan, dan terintegrasi untuk meningkatkan responsivitas organisasi.",
+      "indicators": [
+        { "label": "Integrasi Sistem & Transformasi Digital (SSOT)", "score": 85, "target": 100 },
+        { "label": "Indeks Kesejahteraan Sivitas Akademika", "score": 81, "target": 100 },
+        { "label": "Serapan Anggaran & Efisiensi Operasional", "score": 94, "target": 100 },
+        { "label": "Rasio Tendik Tersertifikasi Kompetensi", "score": 68, "target": 100 }
+      ]
+    }
+  ],
+  "pentahelixData": [
+    { 
+      "id": "dudi", "label": "Dunia Usaha & Industri", "iconName": "Factory", "color": "#d97706", "desc": "Kemitraan strategis, hilirisasi produk, dan pendanaan riset industri.", 
+      "metrics": {
+        "2024": [ { "value": "85", "title": "Mitra Aktif" }, { "value": "Rp 60 M", "title": "Dana Kerjasama & Lisensi" }, { "value": "25", "title": "Inovasi Diterapkan DUDI" } ],
+        "2025": [ { "value": "102", "title": "Mitra Aktif" }, { "value": "Rp 72 M", "title": "Dana Kerjasama & Lisensi" }, { "value": "34", "title": "Inovasi Diterapkan DUDI" } ],
+        "2026": [ { "value": "120+", "title": "Mitra Aktif" }, { "value": "Rp 85 M", "title": "Dana Kerjasama & Lisensi" }, { "value": "45", "title": "Inovasi Diterapkan DUDI" } ]
+      } 
+    },
+    { 
+      "id": "gov", "label": "Regulator / Pemerintah", "iconName": "Building2", "color": "#059669", "desc": "Perumusan kebijakan, standar nasional, dan proyek strategis pemerintah.", 
+      "metrics": {
+        "2024": [ { "value": "22", "title": "Mitra Aktif Institusi" }, { "value": "15", "title": "Studi Kebijakan Publik" }, { "value": "6", "title": "Standarisasi & Peraturan" } ],
+        "2025": [ { "value": "28", "title": "Mitra Aktif Institusi" }, { "value": "20", "title": "Studi Kebijakan Publik" }, { "value": "9", "title": "Standarisasi & Peraturan" } ],
+        "2026": [ { "value": "34", "title": "Mitra Aktif Institusi" }, { "value": "25", "title": "Studi Kebijakan Publik" }, { "value": "12", "title": "Standarisasi & Peraturan" } ]
+      } 
+    },
+    { 
+      "id": "pt", "label": "Perguruan Tinggi", "iconName": "GraduationCap", "color": "#2563eb", "desc": "Kolaborasi akademik lintas PT, mobilitas, dan pengakuan global sesuai standar Dikti.", 
+      "metrics": {
+        "2024": [ { "value": "15", "title": "Fastrack Master PT-LN" }, { "value": "8", "title": "Doktor Join Supervision" }, { "value": "25", "title": "Magang PT Dalam Negeri" } ],
+        "2025": [ { "value": "22", "title": "Fastrack Master PT-LN" }, { "value": "12", "title": "Doktor Join Supervision" }, { "value": "36", "title": "Magang PT Dalam Negeri" } ],
+        "2026": [ { "value": "28", "title": "Fastrack Master PT-LN" }, { "value": "15", "title": "Doktor Join Supervision" }, { "value": "45", "title": "Magang PT Dalam Negeri" } ]
+      } 
+    },
+    { 
+      "id": "com", "label": "Masyarakat Umum", "iconName": "Users", "color": "#4f46e5", "desc": "Pemberdayaan desa, aplikasi teknologi tepat guna, dan dampak langsung sosial.", 
+      "metrics": {
+        "2024": [ { "value": "8", "title": "Desa Binaan FT UGM" }, { "value": "8.5K", "title": "Penerima Program/Manfaat" }, { "value": "24", "title": "Jumlah Inovasi Diterapkan" } ],
+        "2025": [ { "value": "11", "title": "Desa Binaan FT UGM" }, { "value": "10.2K", "title": "Penerima Program/Manfaat" }, { "value": "33", "title": "Jumlah Inovasi Diterapkan" } ],
+        "2026": [ { "value": "14", "title": "Desa Binaan FT UGM" }, { "value": "12.5K", "title": "Penerima Program/Manfaat" }, { "value": "42", "title": "Jumlah Inovasi Diterapkan" } ]
+      } 
+    },
+    { 
+      "id": "exp", "label": "Expert & Media", "iconName": "Network", "color": "#be123c", "desc": "Diseminasi publik, sertifikasi kepakaran, dan advokasi media massa.", 
+      "metrics": {
+        "2024": [ { "value": "55", "title": "Sertifikasi Kepakaran" }, { "value": "12", "title": "Visiting Expert/Scholar" }, { "value": "20+", "title": "Opini Publik & Media" } ],
+        "2025": [ { "value": "70", "title": "Sertifikasi Kepakaran" }, { "value": "18", "title": "Visiting Expert/Scholar" }, { "value": "30+", "title": "Opini Publik & Media" } ],
+        "2026": [ { "value": "85", "title": "Sertifikasi Kepakaran" }, { "value": "24", "title": "Visiting Expert/Scholar" }, { "value": "40+", "title": "Opini Publik & Media" } ]
+      } 
+    }
+  ]
+}
