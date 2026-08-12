@@ -356,12 +356,12 @@ function ExecutiveHome({ onOpen }) {
           </div>
           
           <p style={{ color: "#bfdbfe", fontSize: 12, lineHeight: 1.5, marginBottom: 20 }}>
-            Hilirisasi riset, Matching Fund (Kedaireka), dan pembentukan perusahaan rintisan (spin-off) berbasis teknologi Fakultas.
+            Hilirisasi riset dan pembentukan perusahaan rintisan (spin-off) berbasis teknologi Fakultas.
           </p>
 
           <div style={{ display: "grid", gap: 12 }}>
             <div style={{ background: "rgba(255,255,255,0.1)", padding: 14, borderRadius: 12, border: "1px solid rgba(255,255,255,0.1)" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 8, color: "#60a5fa", fontSize: 12, fontWeight: 700, marginBottom: 4 }}><Coins size={14}/> Matching Fund Kedaireka</div>
+              <div style={{ display: "flex", alignItems: "center", gap: 8, color: "#60a5fa", fontSize: 12, fontWeight: 700, marginBottom: 4 }}><Coins size={14}/> Dana Hilirisasi Riset</div>
               <div style={{ fontSize: 22, fontWeight: 800, color: "#fff" }}>Rp 42.5 Miliar</div>
             </div>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>

@@ -338,7 +338,7 @@ function ResearchPage({ onBack }) {
             <div className="eyebrow" style={{ color: "#059669" }}>REKA VENTURA · COMMERCIAL PROSPECT</div>
             <h2 style={{ fontSize: 24, margin: "8px 0" }}>{selectedResearch.title}</h2>
             <p style={{ fontSize: 14, color: "#475569", lineHeight: 1.6 }}>
-              Riset ini telah mencapai tingkat kematangan teknologi (TRL) tingkat lanjut. Kami membuka peluang <strong>Matching Fund Kedaireka</strong> atau lisensi komersial untuk hilirisasi produk bersama mitra DUDI.
+              Riset ini telah mencapai tingkat kematangan teknologi (TRL) tingkat lanjut. Kami membuka peluang <strong>Hilirisasi Riset</strong> menjadi lisensi komersial untuk hilirisasi produk bersama mitra DUDI.
             </p>
             
             <div style={{ background: "#f8fafc", padding: 16, borderRadius: 12, border: "1px solid #e2e8f0", marginTop: 20 }}>
