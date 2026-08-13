@@ -63,31 +63,31 @@
     { "code": "Fis101", "name": "Fisika Dasar", "program": "Teknik Fisika", "sks": 3, "students": 110, "classes": 3 }
   ],
   "workload": [
-    { "name": "Prof. Dr. Ir. Harintaka, S.T., M.T., IPU., ASEAN Eng.", "department": "Teknik Geodesi", "sks": 17.2, "target": 12, "classes": 6, "students": 185, "load": 143.3 },
-    { "name": "Prof. Ir. Nurrohmat Widjajanti, M.T., Ph.D., IPU., ASEAN Eng.", "department": "Teknik Geodesi", "sks": 10.0, "target": 12, "classes": 3, "students": 110, "load": 83.3 },
-    { "name": "Dr. Ir. Catur Aries Rokhmana, S.T., M.T.", "department": "Teknik Geodesi", "sks": 18.85, "target": 12, "classes": 6, "students": 195, "load": 157.1 },
-    { "name": "Dr. Ir. Yulaikhah, S.T., M.T., IPU.", "department": "Teknik Geodesi", "sks": 23.0, "target": 12, "classes": 8, "students": 240, "load": 191.7 },
-    { "name": "Prof. Ir. Leni Sophia Heliani, S.T., M.Sc., D.Sc., IPU.", "department": "Teknik Geodesi", "sks": 12.0, "target": 12, "classes": 4, "students": 130, "load": 100.0 },
-    { "name": "Dr. Ir. Bilal Ma’ruf, S.T., M.T.", "department": "Teknik Geodesi", "sks": 25.0, "target": 12, "classes": 8, "students": 260, "load": 208.3 },
-    { "name": "Prof. Ir. Trias Aditya K.M., S.T., M.Sc., Ph.D., IPU.", "department": "Teknik Geodesi", "sks": 10.5, "target": 12, "classes": 3, "students": 105, "load": 87.5 },
-    { "name": "Ir. Rochmad Muryamto, M.Eng. Sc.", "department": "Teknik Geodesi", "sks": 0.0, "target": 12, "classes": 0, "students": 0, "load": 0.0 },
-    { "name": "Dr. Ir. Diyono, S.T., M.T., IPU.", "department": "Teknik Geodesi", "sks": 20.5, "target": 12, "classes": 7, "students": 215, "load": 170.8 },
-    { "name": "Ir. Abdul Basith, S.T., M.Si., Ph.D.", "department": "Teknik Geodesi", "sks": 16.5, "target": 12, "classes": 5, "students": 160, "load": 137.5 },
-    { "name": "Ir. Heri Sutanta, S.T., M.Sc., Ph.D.", "department": "Teknik Geodesi", "sks": 19.5, "target": 12, "classes": 6, "students": 190, "load": 162.5 },
-    { "name": "Dr.Eng. Ir. Purnama Budi Santosa, ST, M.App.Sc., IPM.", "department": "Teknik Geodesi", "sks": 27.55, "target": 12, "classes": 9, "students": 280, "load": 229.6 },
-    { "name": "Ir. I Made Andi Arsana, S.T., ME., Ph.D", "department": "Teknik Geodesi", "sks": 19.6, "target": 12, "classes": 6, "students": 200, "load": 163.3 },
-    { "name": "Ir. Ruli Andaru, S.T., M.Eng., Ph.D.", "department": "Teknik Geodesi", "sks": 13.875, "target": 12, "classes": 5, "students": 145, "load": 115.6 },
-    { "name": "Dr. Ir. Dwi Lestari, S.T., M.E., IPM.", "department": "Teknik Geodesi", "sks": 20.95, "target": 12, "classes": 7, "students": 220, "load": 174.6 },
-    { "name": "Dr. Dedi Atunggal S.P., S.T., M.Sc.", "department": "Teknik Geodesi", "sks": 21.75, "target": 12, "classes": 7, "students": 225, "load": 181.3 },
-    { "name": "Dr. Ir. Bambang Kun Cahyono, S.T., M.Sc., IPU.", "department": "Teknik Geodesi", "sks": 18.0, "target": 12, "classes": 6, "students": 185, "load": 150.0 },
-    { "name": "Cecep Pratama, S.Si., M.Si., D.Sc.", "department": "Teknik Geodesi", "sks": 16.0, "target": 12, "classes": 5, "students": 160, "load": 133.3 },
-    { "name": "Calvin Wijaya, S.T., M.Eng", "department": "Teknik Geodesi", "sks": 14.375, "target": 12, "classes": 5, "students": 150, "load": 119.8 },
-    { "name": "Dany Puguh Laksono, S.T., M.Eng", "department": "Teknik Geodesi", "sks": 24.0, "target": 12, "classes": 8, "students": 250, "load": 200.0 },
-    { "name": "Ir. Hilmiyati Ulinnuha, S.T., M.Eng.", "department": "Teknik Geodesi", "sks": 24.0, "target": 12, "classes": 8, "students": 250, "load": 200.0 },
-    { "name": "Ir. Maritsa Faridatunnisa, S.T., M.Eng.", "department": "Teknik Geodesi", "sks": 24.0, "target": 12, "classes": 8, "students": 250, "load": 200.0 },
-    { "name": "Ressy Fitria, S.T., M.Sc.Eng.", "department": "Teknik Geodesi", "sks": 24.0, "target": 12, "classes": 8, "students": 250, "load": 200.0 },
-    { "name": "Ir. Febrian Fitryanik Susanta, S.T., M.Eng.", "department": "Teknik Geodesi", "sks": 24.0, "target": 12, "classes": 8, "students": 250, "load": 200.0 },
-    { "name": "Mohamad Bagas Setiawan, S.T., M.Eng.", "department": "Teknik Geodesi", "sks": 24.0, "target": 12, "classes": 8, "students": 250, "load": 200.0 }
+    { "name": "Prof. Dr. Ir. Harintaka, S.T., M.T., IPU., ASEAN Eng.", "department": "Departemen Teknik Geodesi", "sks": 14.85, "target": 12, "max": 16, "classes": 5, "students": 150, "load": 92.8 },
+    { "name": "Prof. Ir. Nurrohmat Widjajanti, M.T., Ph.D., IPU., ASEAN Eng.", "department": "Departemen Teknik Geodesi", "sks": 14.5, "target": 12, "max": 16, "classes": 5, "students": 145, "load": 90.6 },
+    { "name": "Dr. Ir. Catur Aries Rokhmana, S.T., M.T.", "department": "Departemen Teknik Geodesi", "sks": 15.425, "target": 12, "max": 16, "classes": 5, "students": 155, "load": 96.4 },
+    { "name": "Dr. Ir. Yulaikhah, S.T., M.T., IPU.", "department": "Departemen Teknik Geodesi", "sks": 15.025, "target": 12, "max": 16, "classes": 5, "students": 150, "load": 93.9 },
+    { "name": "Prof. Ir. Leni Sophia Heliani, S.T., M.Sc., D.Sc., IPU.", "department": "Departemen Teknik Geodesi", "sks": 15.85, "target": 12, "max": 16, "classes": 5, "students": 160, "load": 99.1 },
+    { "name": "Dr. Ir. Bilal Ma’ruf, S.T., M.T.", "department": "Departemen Teknik Geodesi", "sks": 15.15, "target": 12, "max": 16, "classes": 5, "students": 150, "load": 94.7 },
+    { "name": "Prof. Ir. Trias Aditya K.M., S.T., M.Sc., Ph.D., IPU.", "department": "Departemen Teknik Geodesi", "sks": 12.8, "target": 12, "max": 16, "classes": 4, "students": 130, "load": 80.0 },
+    { "name": "Ir. Rochmad Muryamto, M.Eng. Sc.", "department": "Departemen Teknik Geodesi", "sks": 12.263, "target": 12, "max": 16, "classes": 4, "students": 100, "load": 76.64 },
+    { "name": "Dr. Ir. Diyono, S.T., M.T., IPU.", "department": "Departemen Teknik Geodesi", "sks": 15.625, "target": 12, "max": 16, "classes": 5, "students": 155, "load": 97.7 },
+    { "name": "Ir. Abdul Basith, S.T., M.Si., Ph.D.", "department": "Departemen Teknik Geodesi", "sks": 15.35, "target": 12, "max": 16, "classes": 5, "students": 150, "load": 95.9 },
+    { "name": "Ir. Heri Sutanta, S.T., M.Sc., Ph.D.", "department": "Departemen Teknik Geodesi", "sks": 14.5, "target": 12, "max": 16, "classes": 5, "students": 145, "load": 90.6 },
+    { "name": "Dr.Eng. Ir. Purnama Budi Santosa, ST, M.App.Sc., IPM.", "department": "Departemen Teknik Geodesi", "sks": 15.625, "target": 12, "max": 16, "classes": 5, "students": 155, "load": 97.7 },
+    { "name": "Ir. I Made Andi Arsana, S.T., ME., Ph.D", "department": "Departemen Teknik Geodesi", "sks": 14.12, "target": 12, "max": 16, "classes": 4, "students": 140, "load": 88.3 },
+    { "name": "Ir. Ruli Andaru, S.T., M.Eng., Ph.D.", "department": "Departemen Teknik Geodesi", "sks": 15.24, "target": 12, "max": 16, "classes": 5, "students": 150, "load": 95.3 },
+    { "name": "Dr. Ir. Dwi Lestari, S.T., M.E., IPM.", "department": "Departemen Teknik Geodesi", "sks": 14.97, "target": 12, "max": 16, "classes": 5, "students": 150, "load": 93.6 },
+    { "name": "Dr. Dedi Atunggal S.P., S.T., M.Sc.", "department": "Departemen Teknik Geodesi", "sks": 13.82, "target": 12, "max": 16, "classes": 4, "students": 140, "load": 86.4 },
+    { "name": "Dr. Ir. Bambang Kun Cahyono, S.T., M.Sc., IPU.", "department": "Departemen Teknik Geodesi", "sks": 12.1, "target": 12, "max": 16, "classes": 4, "students": 120, "load": 75.6 },
+    { "name": "Cecep Pratama, S.Si., M.Si., D.Sc.", "department": "Departemen Teknik Geodesi", "sks": 14.2, "target": 12, "max": 16, "classes": 4, "students": 140, "load": 88.8 },
+    { "name": "Calvin Wijaya, S.T., M.Eng", "department": "Departemen Teknik Geodesi", "sks": 15.39, "target": 12, "max": 16, "classes": 5, "students": 150, "load": 96.2 },
+    { "name": "Dany Puguh Laksono, S.T., M.Eng", "department": "Departemen Teknik Geodesi", "sks": 12.0, "target": 12, "max": 16, "classes": 4, "students": 120, "load": 75.0 },
+    { "name": "Ir. Hilmiyati Ulinnuha, S.T., M.Eng.", "department": "Departemen Teknik Geodesi", "sks": 12.0, "target": 12, "max": 16, "classes": 4, "students": 120, "load": 75.0 },
+    { "name": "Ir. Maritsa Faridatunnisa, S.T., M.Eng.", "department": "Departemen Teknik Geodesi", "sks": 12.0, "target": 12, "max": 16, "classes": 4, "students": 120, "load": 75.0 },
+    { "name": "Ressy Fitria, S.T., M.Sc.Eng.", "department": "Departemen Teknik Geodesi", "sks": 12.0, "target": 12, "max": 16, "classes": 4, "students": 120, "load": 75.0 },
+    { "name": "Ir. Febrian Fitryanik Susanta, S.T., M.Eng.", "department": "Departemen Teknik Geodesi", "sks": 12.0, "target": 12, "max": 16, "classes": 4, "students": 120, "load": 75.0 },
+    { "name": "Mohamad Bagas Setiawan, S.T., M.Eng.", "department": "Departemen Teknik Geodesi", "sks": 12.0, "target": 12, "max": 16, "classes": 4, "students": 120, "load": 75.0 }
   ],
   "outcomes": [
     ["Teknik Sipil", 98, 100],
@@ -133,8 +133,8 @@
       { "trait": "Neuroticism", "pre": 6.2, "post": 4.5, "desc": "Stabilitas emosi (Skor rendah = Lebih baik)" }
     ],
     "capstoneParticipation": 88,
-    "masaTunggu": 2.4,
-    "kesesuaianBidang": 84
+    "masaTunggu": 0.5,
+    "kesesuaianBidang": 91
   },
   "metricsBreakdown": {
     "capstone": [
@@ -155,10 +155,16 @@
       { "label": "Teknik Sumber Daya Air", "value": 93 }
     ],
     "masaTunggu": [
-      { "label": "1 Bulan", "value": 45 }, { "label": "2-3 Bulan", "value": 35 }, { "label": "4-6 Bulan", "value": 15 }, { "label": "> 6 Bulan", "value": 5 }
+      { "label": "Sebelum Lulus / 0 bln", "value": 46 },
+      { "label": "1 Bulan", "value": 14 },
+      { "label": "2-3 Bulan", "value": 17 },
+      { "label": "4-6 Bulan", "value": 17 },
+      { "label": "> 6 Bulan", "value": 6 }
     ],
     "kesesuaianBidang": [
-      { "label": "Sangat Sesuai", "value": 65 }, { "label": "Sesuai (Teknis/Manajerial)", "value": 19 }, { "label": "Kurang Sesuai", "value": 16 }
+      { "label": "Sangat Sesuai", "value": 69 },
+      { "label": "Sesuai (Teknis/Manajerial)", "value": 22 },
+      { "label": "Kurang Sesuai", "value": 9 }
     ]
   }
 }

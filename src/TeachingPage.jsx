@@ -381,43 +381,75 @@ export default function TeachingPage({ onBack }) {
                </div>
             ) : (
               filteredWorkload.map((d, idx) => {
+                // Logika Status: Overload (>16), Ideal (12-16), Underperform (<12)
                 const isOverload = d.sks > 16;
-                const barColor = isOverload ? "#d97706" : "#2563eb";
+                const isUnderperform = d.sks < 12;
+                
+                // Warna: Merah/Orange (Overload), Abu-abu/Kuning (Underperform), Biru (Ideal)
+                const barColor = isOverload ? "#d97706" : isUnderperform ? "#94a3b8" : "#2563eb";
+                const textColor = isOverload ? "#9a3412" : isUnderperform ? "#475569" : "#0f172a";
+
                 return (
                   <div key={idx} style={{ padding: "12px 0", borderBottom: "1px solid #f1f5f9" }}>
                     <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 8 }}>
                       <div>
-                        <strong style={{ fontSize: 14, color: isOverload ? "#9a3412" : "#0f172a" }}>{d.name}</strong>
+                        <strong style={{ fontSize: 14, color: textColor }}>{d.name}</strong>
                         <div style={{ ...muted, marginTop: 4 }}>{d.department} · {d.classes} kelas · {d.students} mhs</div>
                       </div>
                       <div style={{ textAlign: "right" }}>
-                        <strong style={{ fontSize: 14, color: isOverload ? "#d97706" : "#0f172a" }}>{d.sks} SKS</strong>
-                        <div style={{ ...muted, marginTop: 4 }}>target {d.target}</div>
+                        <strong style={{ fontSize: 14, color: textColor }}>{d.sks} SKS</strong>
+                        <div style={{ ...muted, marginTop: 4 }}>Maksimal {d.max} SKS</div>
                       </div>
                     </div>
-                    <Progress value={d.load} max={150} color={barColor} />
-                    <div style={{ marginTop: 6, fontSize: 11, color: isOverload ? "#d97706" : "#64748b", fontWeight: isOverload ? 700 : 400 }}>
-                      {d.load.toFixed(1)}% dari baseline
+                    {/* Progress Bar (Maksimal Dihitung Berdasarkan 16 SKS) */}
+                    <Progress value={d.load} max={100} color={barColor} />
+                    
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 6 }}>
+                      <span style={{ fontSize: 11, color: barColor, fontWeight: 700 }}>
+                        {isOverload ? "Overload (>16 SKS)" : isUnderperform ? "Underperform (<12 SKS)" : "Beban Ideal"}
+                      </span>
+                      <span style={{ fontSize: 11, color: "#64748b" }}>
+                        {d.load.toFixed(1)}% dari batas maksimal
+                      </span>
                     </div>
                   </div>
                 );
               })
             )}
           </div>
+
           <div style={{ background: "#f8fafc", borderRadius: 13, padding: 22, height: "fit-content" }}>
             <div style={{ ...muted, fontSize: 11, fontWeight: 700, letterSpacing: "0.05em" }}>EXECUTIVE INSIGHT</div>
-            <h3 style={{ margin: "8px 0 12px" }}>Redistribusi beban pengajaran</h3>
-            <p style={{ color: "#475569", lineHeight: 1.6, fontSize: 13 }}>Dosen dengan beban tinggi ({'>'}16 SKS) dapat menjadi kandidat redistribusi kelas, team teaching, atau penguatan dosen pengampu lain.</p>
-            <div style={{ display: "grid", gap: 10, marginTop: 16 }}>
-              <div style={{ background: "#fff", padding: 14, borderRadius: 10, border: "1px solid #e2e8f0" }}>
-                <strong style={{ fontSize: 16, color: "#d97706" }}>{overloadDosen} dosen</strong>
-                <div style={muted}>Melebihi batas ideal 16 SKS</div>
-              </div>
-              <div style={{ background: "#fff", padding: 14, borderRadius: 10, border: "1px solid #e2e8f0" }}>
-                <strong style={{ fontSize: 16, color: "#059669" }}>{workload.length - overloadDosen} dosen</strong>
-                <div style={muted}>Berada di beban wajar / rendah</div>
-              </div>
-            </div>
+            <h3 style={{ margin: "8px 0 12px" }}>Evaluasi Beban Pengajaran</h3>
+            <p style={{ color: "#475569", lineHeight: 1.6, fontSize: 13 }}>
+              Target mengajar minimal adalah 12 SKS dan batas maksimal adalah 16 SKS. Dosen yang berada di luar rentang ini membutuhkan evaluasi.
+            </p>
+            
+            {/* Hitung Insight Berdasarkan Filter yang Aktif */}
+            {(() => {
+              const overloadCount = filteredWorkload.filter(d => d.sks > 16).length;
+              const underCount = filteredWorkload.filter(d => d.sks < 12).length;
+              const idealCount = filteredWorkload.length - overloadCount - underCount;
+
+              return (
+                <div style={{ display: "grid", gap: 10, marginTop: 16 }}>
+                  <div style={{ background: "#fff", padding: 14, borderRadius: 10, border: "1px solid #e2e8f0" }}>
+                    <strong style={{ fontSize: 16, color: "#059669" }}>{idealCount} dosen</strong>
+                    <div style={muted}>Beban Ideal (12 - 16 SKS)</div>
+                  </div>
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
+                    <div style={{ background: "#fff", padding: 14, borderRadius: 10, border: "1px solid #e2e8f0" }}>
+                      <strong style={{ fontSize: 16, color: "#d97706" }}>{overloadCount} dosen</strong>
+                      <div style={muted}>Overload ({'>'}16 SKS)</div>
+                    </div>
+                    <div style={{ background: "#fff", padding: 14, borderRadius: 10, border: "1px solid #e2e8f0" }}>
+                      <strong style={{ fontSize: 16, color: "#64748b" }}>{underCount} dosen</strong>
+                      <div style={muted}>Underperform ({'<'}12)</div>
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
           </div>
         </div>
       </section>
