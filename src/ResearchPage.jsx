@@ -389,35 +389,131 @@ function DepartmentKbkView() {
 }
 
 function CollaborationMatrix() {
+  const [useBubbles, setUseBubbles] = useState(true);
+
   const matrix = [
-    ["Desain Arsitektur", "—", "●", "○", "○", "●", "○", "○", "○"],
-    ["Energi Listrik Cerdas", "●", "—", "●", "●", "○", "●", "○", "●"],
-    ["Integrasi Manufaktur", "○", "●", "—", "●", "●", "○", "○", "○"],
-    ["Struktur & Infrastruktur", "○", "●", "●", "—", "○", "●", "●", "○"],
-    ["Advanced Material", "●", "○", "●", "○", "—", "●", "○", "●"],
-    ["Geoinformatika", "○", "●", "○", "●", "●", "—", "●", "○"],
-    ["Eksplorasi Panas Bumi", "○", "○", "○", "●", "○", "●", "—", "●"],
-    ["Energi Nuklir", "○", "●", "○", "○", "●", "○", "●", "—"]
+    ["Desain Arsitektur", 0, 14, 3, 2, 12, 4, 1, 2],
+    ["Energi Listrik Cerdas", 14, 0, 8, 16, 5, 9, 3, 18],
+    ["Integrasi Manufaktur", 3, 8, 0, 11, 15, 6, 2, 4],
+    ["Struktur & Infrastruktur", 2, 16, 11, 0, 4, 14, 10, 5],
+    ["Advanced Material", 12, 5, 15, 4, 0, 7, 5, 16],
+    ["Geoinformatika", 4, 9, 6, 14, 7, 0, 12, 3],
+    ["Eksplorasi Panas Bumi", 1, 3, 2, 10, 5, 12, 0, 14],
+    ["Energi Nuklir", 2, 18, 4, 5, 16, 3, 14, 0]
   ];
+  
   const headers = ["Arsitektur", "Elektro", "Mesin", "Sipil", "Kimia", "Geodesi", "Geologi", "Nuklir"];
 
   return (
     <section className="panel matrix-panel">
-      <div className="panel-heading"><div><div className="eyebrow">CROSS-DISCIPLINARY INTELLIGENCE</div><h3>Matriks Kolaborasi Antar-KBK Strategis</h3></div><span className="panel-chip">Top KBKs</span></div>
-      <p className="matrix-intro">Menampilkan sampel irisan kolaborasi riset antar-KBK unggulan dari 8 Departemen.</p>
-      <div className="matrix-wrap">
-        <table className="matrix-table">
-          <thead><tr><th>Top KBK per Dept.</th>{headers.map((h) => <th key={h}>{h}</th>)}</tr></thead>
+      <div className="panel-heading" style={{ marginBottom: 16 }}>
+        <div>
+          <div className="eyebrow">CROSS-DISCIPLINARY INTELLIGENCE</div>
+          <h3>Matriks Kolaborasi Antar-KBK Strategis</h3>
+        </div>
+        
+        {/* TOGGLE ON/OFF BUBBLE VISUALIZATION */}
+        <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+          <span style={{ fontSize: 12, color: '#64748b', fontWeight: 600 }}>Visualisasi Proporsional</span>
+          <button 
+            onClick={() => setUseBubbles(!useBubbles)}
+            style={{ 
+              width: 44, height: 24, borderRadius: 20, 
+              background: useBubbles ? '#059669' : '#cbd5e1', 
+              position: 'relative', border: 'none', cursor: 'pointer', transition: '0.3s' 
+            }}
+            title="Toggle visualisasi proporsional"
+          >
+            <div 
+              style={{ 
+                width: 18, height: 18, borderRadius: '50%', background: '#fff', 
+                position: 'absolute', top: 3, left: useBubbles ? 23 : 3, 
+                transition: '0.3s', boxShadow: '0 1px 3px rgba(0,0,0,0.2)' 
+              }} 
+            />
+          </button>
+        </div>
+      </div>
+      
+      <p className="matrix-intro" style={{ marginBottom: 20 }}>
+        Menampilkan volume irisan kolaborasi riset antar-KBK unggulan dari 8 Departemen. 
+        {useBubbles ? " Semakin besar dan biru lingkaran, semakin intensif kolaborasi yang terjalin." : " Angka menunjukkan jumlah proyek lintas disiplin."}
+      </p>
+      
+      <div className="matrix-wrap" style={{ overflowX: "auto" }}>
+        <table className="matrix-table" style={{ width: '100%', textAlign: 'center', borderCollapse: 'collapse' }}>
+          <thead>
+            <tr>
+              <th style={{ textAlign: 'left', paddingBottom: 16 }}>Top KBK per Dept.</th>
+              {headers.map((h) => <th key={h} style={{ paddingBottom: 16, fontSize: 11, color: '#475569' }}>{h}</th>)}
+            </tr>
+          </thead>
           <tbody>
-            {matrix.map((row) => (
-              <tr key={row[0]}>
-                <th>{row[0]}</th>
-                {row.slice(1).map((cell, j) => (<td key={j}><button className={`matrix-cell ${cell === "●" ? "strong" : cell === "○" ? "potential" : "none"}`}>{cell}</button></td>))}
+            {matrix.map((row, i) => (
+              <tr key={row[0]} style={{ borderTop: "1px solid #f1f5f9" }}>
+                <th style={{ textAlign: 'left', whiteSpace: 'nowrap', padding: "12px 16px 12px 0", fontSize: 12, color: '#1e293b' }}>
+                  {row[0]}
+                </th>
+                {row.slice(1).map((val, j) => {
+                  const isSelf = i === j;
+                  const bubbleSize = val === 0 ? 0 : 16 + (val * 1.3);
+                  
+                  // Tentukan status kolaborasi untuk pewarnaan
+                  const isStrong = val > 10;
+                  const bubbleClass = isStrong ? "bubble-strong" : "bubble-potential";
+                  const textColor = isStrong ? "#0b5ea8" : "#d97706";
+                  
+                  return (
+                    <td key={j} style={{ height: 48, minWidth: 48, verticalAlign: 'middle' }}>
+                      {isSelf ? (
+                        <span style={{ color: '#cbd5e1', fontWeight: 800 }}>—</span>
+                      ) : useBubbles ? (
+                        <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                          {val > 0 ? (
+                            <div 
+                              title={`${row[0]} & ${headers[j]}: ${val} Kolaborasi`}
+                              className={`hover-bubble ${bubbleClass}`}
+                              style={{
+                                width: bubbleSize, 
+                                height: bubbleSize, 
+                                fontSize: val > 5 ? 11 : 0, 
+                                fontWeight: 800,
+                              }}
+                            >
+                              {val > 5 ? val : ''}
+                            </div>
+                          ) : (
+                            <span style={{ color: '#e2e8f0', fontSize: 10 }}>0</span>
+                          )}
+                        </div>
+                      ) : (
+                        <strong style={{ color: textColor, fontSize: 13 }}>
+                          {val}
+                        </strong>
+                      )}
+                    </td>
+                  );
+                })}
               </tr>
             ))}
           </tbody>
         </table>
       </div>
+      
+      {/* Legend Dinamis dengan Warna */}
+      {useBubbles && (
+        <div className="matrix-legend" style={{ marginTop: 24, padding: "12px 16px", background: "#f8fafc", borderRadius: 8, display: "flex", gap: 20 }}>
+          <span style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12, color: '#475569' }}>
+            <div style={{ width: 28, height: 28, borderRadius: '50%', background: 'rgba(11, 94, 168, 0.15)', border: '1px solid rgba(11, 94, 168, 0.5)' }}/> Kolaborasi Kuat ({'>'}10)
+          </span>
+          <span style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12, color: '#475569' }}>
+            <div style={{ width: 16, height: 16, borderRadius: '50%', background: 'rgba(217, 119, 6, 0.15)', border: '1px solid rgba(217, 119, 6, 0.5)' }}/> Potensi / Minor (1-10)
+          </span>
+          <span style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 12, color: '#475569' }}>
+            <span style={{ color: '#cbd5e1', fontWeight: 800 }}>—</span> Tidak Ada / Self
+          </span>
+        </div>
+      )}
     </section>
   );
 }

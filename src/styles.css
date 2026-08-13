@@ -2429,3 +2429,65 @@ button,input,select{font:inherit}button{cursor:pointer}
     gap: 28px;
   }
 }
+
+/* =========================================================
+   BUBBLE MATRIX HOVER EFFECTS & COLORS
+   ========================================================= */
+
+.hover-bubble {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Biru untuk Kolaborasi Kuat (>10) */
+.bubble-strong {
+  background: rgba(11, 94, 168, 0.15);
+  border: 1px solid rgba(11, 94, 168, 0.5);
+  color: #0b5ea8;
+}
+
+.bubble-strong:hover {
+  background: rgba(11, 94, 168, 0.3) !important;
+  transform: scale(1.2) !important;
+  box-shadow: 0 4px 10px rgba(11, 94, 168, 0.2) !important;
+  z-index: 10;
+}
+
+/* Emas/Kuning untuk Kolaborasi Minor/Potensial (1-10) */
+.bubble-potential {
+  background: rgba(217, 119, 6, 0.15);
+  border: 1px solid rgba(217, 119, 6, 0.5);
+  color: #d97706;
+}
+
+.bubble-potential:hover {
+  background: rgba(217, 119, 6, 0.3) !important;
+  transform: scale(1.2) !important;
+  box-shadow: 0 4px 10px rgba(217, 119, 6, 0.2) !important;
+  z-index: 10;
+}
+
+/* =========================================================
+   EXECUTIVE METRICS HOVER EFFECT (TEACHING PAGE)
+   ========================================================= */
+
+.metric-hover-card {
+  padding: 18px;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background: #fff;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.metric-hover-card:hover {
+  transform: translateY(-4px);
+  border-color: #93c5fd;
+  box-shadow: 0 10px 20px rgba(11, 94, 168, 0.1);
+  background: #f8fafc;
+}
