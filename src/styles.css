@@ -2491,3 +2491,63 @@ button,input,select{font:inherit}button{cursor:pointer}
   box-shadow: 0 10px 20px rgba(11, 94, 168, 0.1);
   background: #f8fafc;
 }
+
+/* =========================================================
+   REKA VENTURA CARDS HOVER EFFECT
+   ========================================================= */
+
+.rv-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-align: left;
+  width: 100%;
+  display: block;
+}
+
+.rv-card:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #60a5fa;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================================================
+   REKA VENTURA PROFESSIONAL DROPDOWN
+   ========================================================= */
+
+.rv-year-select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: rgba(255, 255, 255, 0.1) url("data:image/svg+xml;utf8,<svg fill='%2393c5fd' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") no-repeat;
+  background-position: right 8px top 50%;
+  border: 1px solid rgba(147, 197, 253, 0.3);
+  color: #ffffff;
+  padding: 6px 36px 6px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.rv-year-select:hover, .rv-year-select:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(147, 197, 253, 0.8);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Mengatur warna opsi dropdown agar terbaca saat diklik */
+.rv-year-select option {
+  background-color: #0f172a;
+  color: #ffffff;
+  font-weight: 600;
+}

@@ -14,6 +14,7 @@ import ResearchPage from "./ResearchPage";
 
 // IMPORT DATA DARI JSON
 import MainData from "../data/MainData.json";
+import RekaVenturaData from "../data/RekaVentura.json";
 const { PROFESSOR, modules, sdgs, gesi, strategicPillars, pentahelixData } = MainData;
 
 // KAMUS IKON
@@ -133,6 +134,25 @@ function ExecutiveHome({ onOpen }) {
   const [selectedPillar, setSelectedPillar] = useState(strategicPillars[0]);
   const [activeHelix, setActiveHelix] = useState(pentahelixData[0]);
   const [helixYear, setHelixYear] = useState("2026");
+  const [rvYear, setRvYear] = useState("2025");
+  const [showRvModal, setShowRvModal] = useState(false);
+  const [hoveredRvYear, setHoveredRvYear] = useState(null);
+
+  const rvDana = RekaVenturaData.danaKerjasama[rvYear] || { kegiatan: 0, nilai: 0 };
+  const rvHibah = RekaVenturaData.hibahPemerintah[rvYear] || { nilai: 0 };
+  const rvIndirect = RekaVenturaData.indirectBenefit[rvYear] || { startup: 0, lisensi: 0 };
+
+  // Fungsi format miliar
+  const formatMiliar = (val) => `Rp ${(val / 1000000000).toFixed(1)} Miliar`;
+  const formatRupiah = (val) => new Intl.NumberFormat('id-ID', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 }).format(val);
+  
+  // Data array untuk grafik modal
+  const sortedYearsAsc = [...RekaVenturaData.years].sort((a, b) => a - b);
+  const chartData = sortedYearsAsc.map(y => ({
+    year: y,
+    keg: RekaVenturaData.danaKerjasama[y].kegiatan,
+    val: RekaVenturaData.danaKerjasama[y].nilai
+  }));
 
   return (
     <main className="main-content">
@@ -293,56 +313,75 @@ function ExecutiveHome({ onOpen }) {
 
         {/* REKA VENTURA */}
         <div className="panel rekaventura-panel">
-          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 12 }}>
-            <div style={{ width: 40, height: 40, background: "rgba(255,255,255,0.15)", borderRadius: 12, display: "grid", placeItems: "center" }}>
-              <Rocket size={20} color="#fff" />
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: 12 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+              <div style={{ width: 40, height: 40, background: "rgba(255,255,255,0.15)", borderRadius: 12, display: "grid", placeItems: "center" }}>
+                <Rocket size={20} color="#fff" />
+              </div>
+              <div>
+                <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: "0.15em", color: "#93c5fd" }}>INNOVATION HUB</div>
+                <h3 style={{ margin: 0, fontSize: 18, color: "#fff" }}>Reka Ventura</h3>
+              </div>
             </div>
-            <div>
-              <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: "0.15em", color: "#93c5fd" }}>INNOVATION HUB</div>
-              <h3 style={{ margin: 0, fontSize: 18, color: "#fff" }}>Reka Ventura</h3>
-            </div>
+            {/* DROPDOWN TAHUN */}
+            <select 
+              value={rvYear} 
+              onChange={e => setRvYear(e.target.value)} 
+              className="rv-year-select"
+            >
+              {[...RekaVenturaData.years].sort((a, b) => b - a).map(y => (
+                <option key={y} value={y}>{y}</option>
+              ))}
+            </select>
           </div>
           
           <p style={{ color: "#bfdbfe", fontSize: 12, lineHeight: 1.5, marginBottom: 20 }}>
-            Kendaraan komersialisasi dan hilirisasi inovasi. Fokus utama pada pendanaan kerjasama riset, disusul pembentukan perusahaan rintisan (indirect benefit).
+            Kendaraan komersialisasi dan hilirisasi inovasi. Klik panel <strong>DIRECT</strong> di bawah ini untuk melihat matriks pertumbuhan komprehensif.
           </p>
 
           <div style={{ display: "grid", gap: 12 }}>
-            
-            {/* DIRECT BENEFITS */}
-            <div style={{ background: "rgba(255,255,255,0.1)", padding: 14, borderRadius: 12, border: "1px solid rgba(255,255,255,0.15)" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#93c5fd", fontSize: 10, fontWeight: 800, marginBottom: 6, letterSpacing: "0.05em" }}>
-                <Coins size={14}/> DIRECT: DANA KERJASAMA & HILIRISASI (ERIC → LKFT)
+            {/* DIRECT BENEFITS (CLICKABLE) */}
+            <button className="rv-card" onClick={() => setShowRvModal(true)}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#93c5fd", fontSize: 10, fontWeight: 800, marginBottom: 6, letterSpacing: "0.05em" }}>
+                  <Coins size={14}/> DIRECT: DANA KERJASAMA & HILIRISASI (ERIC → LKFT)
+                </div>
+                <ArrowRight size={14} color="#93c5fd" />
               </div>
-              <div style={{ fontSize: 24, fontWeight: 800, color: "#fff" }}>Rp 42.5 Miliar</div>
-              <div style={{ fontSize: 11, color: "#bfdbfe", marginTop: 4 }}>Proyek Industri, Lisensi, dan Royalti</div>
-            </div>
-            
-            <div style={{ background: "rgba(255,255,255,0.1)", padding: 14, borderRadius: 12, border: "1px solid rgba(255,255,255,0.15)" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#93c5fd", fontSize: 10, fontWeight: 800, marginBottom: 6, letterSpacing: "0.05em" }}>
-                <Building2 size={14}/> DIRECT: HIBAH & KERJASAMA PEMERINTAH
+              <div style={{ display: "flex", alignItems: "flex-end", gap: 12 }}>
+                <div style={{ fontSize: 24, fontWeight: 800, color: "#fff" }}>{formatMiliar(rvDana.nilai)}</div>
+                <div style={{ fontSize: 13, color: "#fcd34d", fontWeight: 700, marginBottom: 4 }}>{rvDana.kegiatan} Kegiatan</div>
               </div>
-              <div style={{ fontSize: 24, fontWeight: 800, color: "#fff" }}>Rp 65.2 Miliar</div>
-              <div style={{ fontSize: 11, color: "#bfdbfe", marginTop: 4 }}>DIKTI / LPDP / Lembaga Internasional (LN)</div>
-            </div>
+              <div style={{ fontSize: 11, color: "#bfdbfe", marginTop: 4 }}>Proyek Industri, Lisensi, dan Royalti Tahun {rvYear}</div>
+            </button>
+            
+            <button className="rv-card" onClick={() => setShowRvModal(true)}>
+               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#93c5fd", fontSize: 10, fontWeight: 800, marginBottom: 6, letterSpacing: "0.05em" }}>
+                  <Building2 size={14}/> DIRECT: HIBAH & KERJASAMA PEMERINTAH
+                </div>
+                <ArrowRight size={14} color="#93c5fd" />
+              </div>
+              <div style={{ fontSize: 24, fontWeight: 800, color: "#fff" }}>{formatMiliar(rvHibah.nilai)}</div>
+              <div style={{ fontSize: 11, color: "#bfdbfe", marginTop: 4 }}>DIKTI / LPDP / Lembaga Internasional (LN) Tahun {rvYear}</div>
+            </button>
 
             {/* INDIRECT BENEFITS */}
             <div style={{ background: "rgba(255,255,255,0.05)", padding: 14, borderRadius: 12, border: "1px dashed rgba(255,255,255,0.25)" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#94a3b8", fontSize: 10, fontWeight: 800, marginBottom: 8, letterSpacing: "0.05em" }}>
-                INDIRECT BENEFIT
+                INDIRECT BENEFIT ({rvYear})
               </div>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
                 <div>
-                  <div style={{ fontSize: 20, fontWeight: 800, color: "#f8fafc" }}>12 Unit</div>
+                  <div style={{ fontSize: 20, fontWeight: 800, color: "#f8fafc" }}>{rvIndirect.startup} Unit</div>
                   <div style={{ fontSize: 11, color: "#94a3b8", marginTop: 2 }}>Startup / Spin-off</div>
                 </div>
                 <div style={{ textAlign: "right" }}>
-                  <div style={{ fontSize: 20, fontWeight: 800, color: "#f8fafc" }}>8 Paten</div>
+                  <div style={{ fontSize: 20, fontWeight: 800, color: "#f8fafc" }}>{rvIndirect.lisensi} Paten</div>
                   <div style={{ fontSize: 11, color: "#94a3b8", marginTop: 2 }}>Lisensi Industri</div>
                 </div>
               </div>
             </div>
-
           </div>
         </div>
       </section>
@@ -509,6 +548,223 @@ function ExecutiveHome({ onOpen }) {
         </div>
         <div className="decision-flow"><span>DATA</span><i>→</i><span>INSIGHT</span><i>→</i><strong>DECISION</strong></div>
       </section>
+
+      {/* MODAL GRAFIK REKA VENTURA */}
+      {showRvModal && (
+        <div className="modal-backdrop" onClick={() => setShowRvModal(false)} style={{ zIndex: 1000, padding: 20 }}>
+          <div className="research-modal" style={{ maxWidth: 1100, width: "100%", maxHeight: "90vh", overflowY: "auto", background: "#f8fafc", padding: 30 }} onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setShowRvModal(false)}><X size={20} /></button>
+            
+            <div style={{ textAlign: "center", marginBottom: 20 }}>
+              <h2 style={{ fontSize: 22, color: "#0f172a", margin: 0 }}>Capaian Nilai Kontrak dan Jumlah Kerjasama LKFT</h2>
+              <div style={{ fontSize: 14, color: "#64748b", fontWeight: 600, marginTop: 4 }}>Tahun 2018 - 2025</div>
+            </div>
+
+            {/* LEGENDA GRAFIK */}
+            <div style={{ display: "flex", justifyContent: "center", gap: 32, marginBottom: 24 }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <div style={{ width: 16, height: 16, background: "#f97316", borderRadius: 4 }}></div>
+                <span style={{ fontSize: 13, fontWeight: 700, color: "#334155" }}>Total Nilai Kontrak (Bar)</span>
+              </div>
+              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                <div style={{ width: 24, height: 3, background: "#2563eb", position: "relative" }}>
+                   <div style={{ width: 10, height: 10, background: "#fff", border: "2.5px solid #2563eb", borderRadius: "50%", position: "absolute", top: -3.5, left: 7 }}></div>
+                </div>
+                <span style={{ fontSize: 13, fontWeight: 700, color: "#334155" }}>Jumlah Kegiatan Kerjasama (Garis)</span>
+              </div>
+            </div>
+
+            {/* MAIN CHART (COMBINED BAR & LINE) DENGAN HOVER EFFECT */}
+            <div style={{ background: "#fff", padding: 20, borderRadius: 12, border: "1px solid #e2e8f0", marginBottom: 24, position: "relative", height: 350 }}>
+              <div style={{ position: "absolute", left: -30, top: "45%", transform: "rotate(-90deg)", fontSize: 11, fontWeight: 800, color: "#f97316" }}>Total Nilai Kontrak (milyar)</div>
+              <div style={{ position: "absolute", right: -30, top: "45%", transform: "rotate(-90deg)", fontSize: 11, fontWeight: 800, color: "#2563eb" }}>Jumlah Kegiatan Kerjasama</div>
+              
+              <svg width="100%" height="100%" viewBox="0 0 1000 300" preserveAspectRatio="none">
+                {/* Garis Grid Horizontal */}
+                {[0, 1, 2, 3, 4, 5].map(i => (
+                  <line key={i} x1="50" y1={50 + (i*40)} x2="950" y2={50 + (i*40)} stroke="#e2e8f0" strokeWidth="1" />
+                ))}
+                
+                {/* Render Garis Biru Lebih Dulu (Di Background) */}
+                {chartData.map((d, i) => {
+                  const xBase = 50 + (i * 110) + 55;
+                  const lineY = 250 - ((d.keg / 325) * 200);
+                  const nextD = chartData[i+1];
+                  const nextX = nextD ? 50 + ((i+1) * 110) + 55 : null;
+                  const nextY = nextD ? 250 - ((nextD.keg / 325) * 200) : null;
+                  
+                  if (!nextD) return null;
+                  return (
+                    <line 
+                      key={`line-${d.year}`} 
+                      x1={xBase} y1={lineY} x2={nextX} y2={nextY} 
+                      stroke="#2563eb" 
+                      strokeWidth="3" 
+                      style={{ opacity: hoveredRvYear ? 0.3 : 1, transition: "opacity 0.3s" }} 
+                    />
+                  );
+                })}
+
+                {/* Render Bar & Titik (Interaktif) */}
+                {chartData.map((d, i) => {
+                  const xBase = 50 + (i * 110) + 55;
+                  const barHeight = (d.val / 250000000000) * 200; // Skala max 250 Miliar
+                  const lineY = 250 - ((d.keg / 325) * 200); // Skala max 325 Kegiatan
+                  
+                  const isHovered = hoveredRvYear === d.year;
+                  const isDimmed = hoveredRvYear && !isHovered;
+
+                  // PERBAIKAN: Hitung lebar dan X secara dinamis agar batang membesar tepat dari tengah
+                  const barWidth = isHovered ? 50 : 40;
+                  const barX = xBase - (barWidth / 2);
+
+                  return (
+                    <g 
+                      key={d.year}
+                      onMouseEnter={() => setHoveredRvYear(d.year)}
+                      onMouseLeave={() => setHoveredRvYear(null)}
+                      style={{ 
+                        opacity: isDimmed ? 0.3 : 1, 
+                        transition: "opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                        cursor: "pointer" 
+                      }}
+                    >
+                      {/* Transparan Hover Area (Agar deteksi kursor lebih responsif) */}
+                      <rect x={xBase - 35} y="30" width="70" height="240" fill="transparent" />
+
+                      {/* Bar (Nilai Kontrak) - Menggunakan perhitungan barX dan barWidth */}
+                      <rect 
+                        x={barX} y={250 - barHeight} width={barWidth} height={barHeight} 
+                        fill={isHovered ? "#ea580c" : "#f97316"} rx="2" 
+                        style={{ transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)" }} 
+                      />
+                      
+                      {/* Teks Bar (Nilai Rupiah) */}
+                      <text x={xBase} y={250 - barHeight - 10} fontSize={isHovered ? "12" : "10"} fontWeight="bold" fill={isHovered ? "#ea580c" : "#0f172a"} textAnchor="middle" style={{ transition: "all 0.2s" }}>
+                        Rp{(d.val/1e9).toFixed(0)} M
+                      </text>
+                      
+                      {/* Titik Line (Kegiatan) */}
+                      <circle cx={xBase} cy={lineY} r={isHovered ? "7" : "5"} fill="#fff" stroke="#2563eb" strokeWidth={isHovered ? "3" : "2"} style={{ transition: "all 0.2s" }} />
+                      
+                      {/* Teks Line (Angka Kegiatan) */}
+                      <text x={xBase} y={lineY - 14} fontSize={isHovered ? "14" : "12"} fontWeight="bold" fill="#2563eb" textAnchor="middle" style={{ transition: "all 0.2s" }}>
+                        {d.keg}
+                      </text>
+                      
+                      {/* Label Tahun (Sumbu X) */}
+                      <text x={xBase} y={270} fontSize={isHovered ? "14" : "12"} fontWeight="bold" fill={isHovered ? "#0f172a" : "#64748b"} textAnchor="middle" style={{ transition: "all 0.2s" }}>
+                        {d.year}
+                      </text>
+                    </g>
+                  );
+                })}
+              </svg>
+            </div>
+
+            {/* BOTTOM SECTION: TABLE & MINI CHARTS */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+              
+              {/* Data Table */}
+              <div style={{ background: "#fff", borderRadius: 12, border: "1px solid #e2e8f0", overflow: "hidden" }}>
+                <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12, textAlign: "right" }}>
+                  <thead style={{ background: "#f1f5f9" }}>
+                    <tr>
+                      <th style={{ padding: "12px", borderBottom: "1px solid #cbd5e1", textAlign: "center" }}>Tahun</th>
+                      <th style={{ padding: "12px", borderBottom: "1px solid #cbd5e1" }}>Total Keg</th>
+                      <th style={{ padding: "12px", borderBottom: "1px solid #cbd5e1" }}>Nilai Kontrak (Rp)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {chartData.map((d, idx) => {
+                      const isHovered = hoveredRvYear === d.year;
+                      return (
+                        <tr 
+                          key={d.year} 
+                          onMouseEnter={() => setHoveredRvYear(d.year)}
+                          onMouseLeave={() => setHoveredRvYear(null)}
+                          style={{ 
+                            background: isHovered ? "#e0f2fe" : (idx % 2 === 0 ? "#fff" : "#f8fafc"),
+                            transition: "background 0.2s",
+                            cursor: "pointer"
+                          }}
+                        >
+                          <td style={{ padding: "10px 12px", textAlign: "center", fontWeight: isHovered ? 800 : 700, color: isHovered ? "#0b5ea8" : "#000" }}>{d.year}</td>
+                          <td style={{ padding: "10px 12px", fontWeight: isHovered ? 700 : 400, color: isHovered ? "#2563eb" : "#000" }}>{d.keg}</td>
+                          <td style={{ padding: "10px 12px", fontFamily: "monospace", fontWeight: isHovered ? 700 : 400, color: isHovered ? "#ea580c" : "#000" }}>{formatRupiah(d.val)}</td>
+                        </tr>
+                      );
+                    })}
+                  </tbody>
+                </table>
+              </div>
+
+              {/* 2 Mini Charts Dark Mode DENGAN HOVER EFFECT */}
+              <div style={{ display: "grid", gridTemplateRows: "1fr 1fr", gap: 16 }}>
+                
+                {/* Mini Chart 1: Total Dana */}
+                <div style={{ background: "linear-gradient(to bottom, #334155, #0f172a)", padding: "16px 20px", borderRadius: 12, color: "#fff" }}>
+                  <div style={{ textAlign: "center", fontSize: 13, marginBottom: 16 }}>Total Dana Kerjasama Melalui LKFT</div>
+                  <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", height: 120 }}>
+                    {chartData.map(d => {
+                      const isHovered = hoveredRvYear === d.year;
+                      const isDimmed = hoveredRvYear && !isHovered;
+                      return (
+                        <div 
+                          key={d.year} 
+                          onMouseEnter={() => setHoveredRvYear(d.year)}
+                          onMouseLeave={() => setHoveredRvYear(null)}
+                          style={{ 
+                            display: "flex", flexDirection: "column", alignItems: "center", width: "10%",
+                            opacity: isDimmed ? 0.3 : 1,
+                            transform: isHovered ? "scale(1.1) translateY(-4px)" : "scale(1)",
+                            transition: "all 0.3s ease",
+                            cursor: "pointer"
+                          }}
+                        >
+                          <div style={{ fontSize: 9, color: isHovered ? "#bae6fd" : "#cbd5e1", marginBottom: 4, fontWeight: isHovered ? 800 : 400 }}>{(d.val/1e9).toFixed(0)}M</div>
+                          <div style={{ width: "100%", height: `${(d.val/250000000000)*100}px`, background: isHovered ? "linear-gradient(to right, #7dd3fc, #0ea5e9)" : "linear-gradient(to right, #38bdf8, #0284c7)", borderTop: "1px solid #fff", borderRight: "1px solid #000", boxShadow: isHovered ? "0 4px 10px rgba(56, 189, 248, 0.4)" : "none" }}></div>
+                          <div style={{ fontSize: 10, color: isHovered ? "#fff" : "#fcd34d", marginTop: 6, fontWeight: isHovered ? 800 : 400 }}>{d.year}</div>
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+
+                {/* Mini Chart 2: Total Kegiatan */}
+                <div style={{ background: "linear-gradient(to bottom, #334155, #0f172a)", padding: "16px 20px", borderRadius: 12, color: "#fff" }}>
+                  <div style={{ textAlign: "center", fontSize: 13, marginBottom: 16 }}>Jumlah Kegiatan Kerjasama Melalui LKFT</div>
+                  <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", height: 120 }}>
+                    {chartData.map(d => {
+                      const isHovered = hoveredRvYear === d.year;
+                      const isDimmed = hoveredRvYear && !isHovered;
+                      return (
+                        <div 
+                          key={d.year} 
+                          onMouseEnter={() => setHoveredRvYear(d.year)}
+                          onMouseLeave={() => setHoveredRvYear(null)}
+                          style={{ 
+                            display: "flex", flexDirection: "column", alignItems: "center", width: "10%",
+                            opacity: isDimmed ? 0.3 : 1,
+                            transform: isHovered ? "scale(1.1) translateY(-4px)" : "scale(1)",
+                            transition: "all 0.3s ease",
+                            cursor: "pointer"
+                          }}
+                        >
+                          <div style={{ fontSize: 10, color: isHovered ? "#93c5fd" : "#fff", marginBottom: 4, fontWeight: 700 }}>{d.keg}</div>
+                          <div style={{ width: "100%", height: `${(d.keg/325)*100}px`, background: isHovered ? "linear-gradient(to right, #93c5fd, #2563eb)" : "linear-gradient(to right, #60a5fa, #1d4ed8)", borderTop: "1px solid #fff", borderRight: "1px solid #000", boxShadow: isHovered ? "0 4px 10px rgba(96, 165, 250, 0.4)" : "none" }}></div>
+                        </div>
+                      )
+                    })}
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      )}
     </main>
   );
 }
