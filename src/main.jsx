@@ -4,7 +4,8 @@ import {
   ArrowRight, BarChart3, ChevronDown, ChevronLeft, ChevronRight,
   GraduationCap, HeartPulse, Home, LayoutDashboard, LogOut,
   Menu, X, Microscope, Network, Settings, Users,
-  Factory, Building2, Rocket, Coins
+  Factory, Building2, Rocket, Coins,
+  Search
 } from "lucide-react";
 import "./styles.css";
 import CommunityPage from "./CommunityPage";
@@ -128,15 +129,142 @@ function Header({ onMenu, collapsed, onLogout }) {
   );
 }
 
+// KOMPONEN 3D PIE CHART
+function ProfessionalDonutChart({ data, dataKey, title, valueKey, valuePrefix = "", valueSuffix = "" }) {
+  const CIRCUMFERENCE = 2 * Math.PI * 40; 
+  let cumulativePercent = 0;
+  const [hoveredIdx, setHoveredIdx] = useState(null);
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <h4 style={{ textAlign: 'center', marginBottom: 20, color: '#1e293b', fontSize: 14, height: 34, maxWidth: 300 }}>{title}</h4>
+      <div style={{ position: "relative", width: 260, height: 260 }}>
+        {/* Putaran SVG dimulai dari arah jam 12 (-90deg) */}
+        <svg viewBox="0 0 100 100" style={{ transform: "rotate(-90deg)", width: "100%", height: "100%", filter: "drop-shadow(0px 8px 16px rgba(0,0,0,0.15))" }}>
+          {data.map((item, idx) => {
+            const pct = item[dataKey];
+            const dashValue = (pct / 100) * CIRCUMFERENCE;
+            const gapValue = CIRCUMFERENCE - dashValue;
+            const offsetValue = -(cumulativePercent / 100) * CIRCUMFERENCE;
+            cumulativePercent += pct;
+            
+            const isHovered = hoveredIdx === idx;
+            
+            return (
+              <circle 
+                key={item.id}
+                cx="50" cy="50" r="40"
+                fill="none" /* <--- PERBAIKAN 1: Gunakan "none", bukan "transparent" */
+                stroke={item.color}
+                strokeWidth={isHovered ? "22" : "18"}
+                strokeDasharray={`${dashValue} ${gapValue}`}
+                strokeDashoffset={offsetValue}
+                onMouseEnter={() => setHoveredIdx(idx)}
+                onMouseLeave={() => setHoveredIdx(null)}
+                style={{
+                  transition: "all 0.2s cubic-bezier(0.4, 0, 0.2, 1)",
+                  cursor: "pointer",
+                  pointerEvents: "stroke" /* <--- PERBAIKAN 2: Pastikan hanya garis warna yang mendeteksi kursor */
+                }}
+              />
+            );
+          })}
+        </svg>
+        
+        {/* Tooltip Dinamis di Tengah Donut */}
+        <div style={{ 
+          position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', 
+          textAlign: 'center', pointerEvents: 'none', width: 150,
+          opacity: hoveredIdx !== null ? 1 : 0, transition: '0.2s'
+        }}>
+          {hoveredIdx !== null && (
+            <>
+              <div style={{ fontSize: 11, fontWeight: 700, color: '#64748b', lineHeight: 1.2 }}>{data[hoveredIdx].label}</div>
+              <div style={{ fontSize: 24, fontWeight: 800, color: data[hoveredIdx].color, marginTop: 4 }}>{data[hoveredIdx][dataKey]}%</div>
+              <div style={{ fontSize: 12, fontWeight: 800, color: '#0f172a', marginTop: 4 }}>
+                {valuePrefix}{data[hoveredIdx][valueKey].toLocaleString('id-ID')}{valueSuffix}
+              </div>
+            </>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function ExecutiveHome({ onOpen }) {
   const [selectedSdg, setSelectedSdg] = useState(sdgs[3]);
   const [selectedGesi, setSelectedGesi] = useState(null);
   const [selectedPillar, setSelectedPillar] = useState(strategicPillars[0]);
   const [activeHelix, setActiveHelix] = useState(pentahelixData[0]);
   const [helixYear, setHelixYear] = useState("2026");
+  // === STATE REKA VENTURA ===
   const [rvYear, setRvYear] = useState("2025");
   const [showRvModal, setShowRvModal] = useState(false);
-  const [hoveredRvYear, setHoveredRvYear] = useState(null);
+  const [hoveredRvYear, setHoveredRvYear] = useState(null); 
+  const [showHibahModal, setShowHibahModal] = useState(false);
+
+// === TAMBAHAN STATE UNTUK TABEL RAW DATA ===
+  const [searchTable, setSearchTable] = useState("");
+  const [filterMitra, setFilterMitra] = useState("Semua Jenis Mitra");
+  
+  // State untuk Paginasi
+  const [tablePage, setTablePage] = useState(1);
+  const ITEMS_PER_PAGE = 50;
+
+  // Reset halaman ke 1 setiap kali pimpinan mengetik pencarian atau mengganti filter
+  useEffect(() => {
+    setTablePage(1);
+  }, [searchTable, filterMitra]);
+
+  // Fungsi Pemetaan Kategori Spesifik ke Kategori Umum
+  const getKategoriUmum = (jenisSpesifik) => {
+    const pt = ["Perguruan Tinggi Swasta", "Perguruan Tinggi Negeri (Institusi Pendidikan DN)"];
+    const pem = ["Pemerintah Pusat", "Pemerintah Daerah", "Instansi Pemerintah"];
+    const bumn = ["BUMN", "BUMN/BUMD", "Bank/Lembaga Keuangan BUMN"];
+    const swasta = ["Industri Swasta", "Institusi Swasta", "Rumah Sakit Swasta", "Perusahaan Swasta"];
+    
+    if (pt.includes(jenisSpesifik)) return "Perguruan Tinggi Dalam Negeri";
+    if (bumn.includes(jenisSpesifik)) return "BUMN dan BUMD";
+    if (pem.includes(jenisSpesifik)) return "Pemerintah Pusat dan Daerah";
+    if (swasta.includes(jenisSpesifik)) return "Perusahaan dan Institusi Swasta";
+    return jenisSpesifik; 
+  };
+
+  // Filter Data Tabel Keseluruhan
+  const filteredRawProjects = (RekaVenturaData.rawProjects || []).filter(p => {
+    const catUmum = getKategoriUmum(p.jenisMitra);
+    const matchFilter = filterMitra === "Semua Jenis Mitra" || catUmum === filterMitra;
+    const matchSearch = p.judul.toLowerCase().includes(searchTable.toLowerCase()) || p.namaMitra.toLowerCase().includes(searchTable.toLowerCase());
+    return matchFilter && matchSearch;
+  });
+
+  // Potong Data (Slice) Hanya 50 Baris Sesuai Halaman Saat Ini
+  const totalPages = Math.ceil(filteredRawProjects.length / ITEMS_PER_PAGE);
+  const paginatedProjects = filteredRawProjects.slice((tablePage - 1) * ITEMS_PER_PAGE, tablePage * ITEMS_PER_PAGE);
+
+  // Fungsi Export ke CSV
+  const handleExportCSV = () => {
+    if (filteredRawProjects.length === 0) return;
+    // ... (kode export CSV biarkan sama persis seperti sebelumnya) ...
+    const headers = ["No", "Judul Kerja Sama", "Jenis Mitra", "Nama Mitra", "Prodi", "Nominal (Rp)", "Tahun"];
+    const csvContent = [
+      headers.join(","),
+      ...filteredRawProjects.map(p => 
+        `"${p.no}","${p.judul.replace(/"/g, '""')}","${p.jenisMitra}","${p.namaMitra}","${p.prodi}","${p.nominal}","${p.tahun}"`
+      )
+    ].join("\n");
+
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(blob);
+    link.setAttribute("href", url);
+    link.setAttribute("download", `Data_Kerjasama_PK_LKFT_${filterMitra}.csv`);
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   const rvDana = RekaVenturaData.danaKerjasama[rvYear] || { kegiatan: 0, nilai: 0 };
   const rvHibah = RekaVenturaData.hibahPemerintah[rvYear] || { nilai: 0 };
@@ -355,7 +483,7 @@ function ExecutiveHome({ onOpen }) {
               <div style={{ fontSize: 11, color: "#bfdbfe", marginTop: 4 }}>Proyek Industri, Lisensi, dan Royalti Tahun {rvYear}</div>
             </button>
             
-            <button className="rv-card" onClick={() => setShowRvModal(true)}>
+            <button className="rv-card" onClick={() => setShowHibahModal(true)}>
                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#93c5fd", fontSize: 10, fontWeight: 800, marginBottom: 6, letterSpacing: "0.05em" }}>
                   <Building2 size={14}/> DIRECT: HIBAH & KERJASAMA PEMERINTAH
@@ -759,6 +887,242 @@ function ExecutiveHome({ onOpen }) {
                   </div>
                 </div>
 
+              </div>
+            </div>
+
+          </div>
+        </div>
+      )}
+
+      {/* MODAL CHART (HIBAH & KERJASAMA PEMERINTAH) */}
+      {showHibahModal && (
+        <div className="modal-backdrop" onClick={() => setShowHibahModal(false)} style={{ zIndex: 1000, padding: 20 }}>
+          <div className="research-modal" style={{ maxWidth: 1000, width: "100%", maxHeight: "90vh", overflowY: "auto", background: "#f8fafc", padding: 30 }} onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setShowHibahModal(false)}><X size={20} /></button>
+            
+            <div style={{ textAlign: "center", marginBottom: 40 }}>
+              <div className="eyebrow" style={{ color: "#059669" }}>ANALISIS KEMITRAAN PK-LKFT</div>
+              <h2 style={{ fontSize: 24, color: "#0f172a", margin: "4px 0 0" }}>Distribusi Hibah & Kerjasama Pemerintah (2018 - 2025)</h2>
+            </div>
+
+            {/* AREA 2 DONUT CHART BERSEBELAHAN */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 40, marginBottom: 40 }}>
+              <ProfessionalDonutChart 
+                data={RekaVenturaData.mitraPemerintah} 
+                dataKey="pctNilai" 
+                valueKey="nilai"
+                valuePrefix="Rp "
+                title="Besar Nilai Kontrak berdasarkan Jenis Mitra" 
+              />
+              <ProfessionalDonutChart 
+                data={RekaVenturaData.mitraPemerintah} 
+                dataKey="pctKegiatan" 
+                valueKey="kegiatan"
+                valueSuffix=" Kegiatan"
+                title="Banyaknya Kegiatan berdasarkan Jenis Mitra" 
+              />
+            </div>
+
+            {/* LEGENDA WARNA */}
+            <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "16px 24px", marginBottom: 30, padding: "16px", background: "#fff", borderRadius: 12, border: "1px solid #e2e8f0" }}>
+              {RekaVenturaData.mitraPemerintah.map(m => (
+                <div key={m.id} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <div style={{ width: 14, height: 14, background: m.color, borderRadius: 4 }}></div>
+                  <span style={{ fontSize: 12, fontWeight: 600, color: "#334155" }}>{m.label}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* TABEL DATA REKAPITULASI */}
+            <div style={{ background: "#fff", borderRadius: 12, border: "1px solid #e2e8f0", overflow: "hidden" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13, textAlign: "left" }}>
+                <thead style={{ background: "#f1f5f9" }}>
+                  <tr>
+                    <th style={{ padding: "14px 16px", borderBottom: "1px solid #cbd5e1", color: "#334155" }}>Jenis Mitra</th>
+                    <th style={{ padding: "14px 16px", borderBottom: "1px solid #cbd5e1", textAlign: "right", color: "#334155" }}>Jumlah Kegiatan</th>
+                    <th style={{ padding: "14px 16px", borderBottom: "1px solid #cbd5e1", textAlign: "right", color: "#334155" }}>Nilai Kontrak (Rp)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {RekaVenturaData.mitraPemerintah.map((m, idx) => (
+                    <tr key={m.id} style={{ background: idx % 2 === 0 ? "#fff" : "#f8fafc", transition: "background 0.2s" }} onMouseEnter={e => e.currentTarget.style.background = "#e0f2fe"} onMouseLeave={e => e.currentTarget.style.background = idx % 2 === 0 ? "#fff" : "#f8fafc"}>
+                      <td style={{ padding: "12px 16px", fontWeight: 600, color: "#0f172a" }}>
+                        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                          <div style={{ width: 12, height: 12, background: m.color, borderRadius: "50%" }}></div>
+                          {m.label}
+                        </div>
+                      </td>
+                      <td style={{ padding: "12px 16px", textAlign: "right", color: "#475569", fontWeight: 600 }}>{m.kegiatan}</td>
+                      <td style={{ padding: "12px 16px", textAlign: "right", fontFamily: "monospace", fontWeight: 700, color: "#ea580c" }}>{formatRupiah(m.nilai)}</td>
+                    </tr>
+                  ))}
+                  <tr style={{ background: "#e2e8f0", fontWeight: 800, color: "#0f172a" }}>
+                    <td style={{ padding: "14px 16px" }}>Total Keseluruhan</td>
+                    <td style={{ padding: "14px 16px", textAlign: "right" }}>{RekaVenturaData.mitraTotal.kegiatan}</td>
+                    <td style={{ padding: "14px 16px", textAlign: "right", fontFamily: "monospace", color: "#b45309" }}>{formatRupiah(RekaVenturaData.mitraTotal.nilai)}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            {/* AREA BREAKDOWN SUB-MITRA (GRAFIK BAR HORIZONTAL) */}
+            <div style={{ marginTop: 40, borderTop: "2px dashed #cbd5e1", paddingTop: 30 }}>
+              <div style={{ textAlign: "center", marginBottom: 24 }}>
+                <h3 style={{ fontSize: 20, color: "#0f172a", margin: 0 }}>Rincian Lanjutan per Jenis Mitra</h3>
+                <p style={{ fontSize: 13, color: "#64748b", margin: "4px 0 0" }}>Distribusi jumlah kegiatan dan nilai kontrak pada masing-masing sub-kategori mitra.</p>
+              </div>
+
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 24 }}>
+                {RekaVenturaData.mitraPemerintah.map((m) => (
+                  <div key={m.id} style={{ background: "#fff", border: "1px solid #e2e8f0", borderRadius: 12, padding: 20, boxShadow: "0 2px 8px rgba(0,0,0,0.02)" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 16, borderBottom: "1px solid #f1f5f9", paddingBottom: 12 }}>
+                      <div style={{ width: 14, height: 14, background: m.color, borderRadius: "50%" }}></div>
+                      <strong style={{ fontSize: 15, color: "#0f172a" }}>{m.label}</strong>
+                    </div>
+                    
+                    <div style={{ display: "grid", gap: 16 }}>
+                      {m.breakdown.map((sub, sIdx) => {
+                        const pctKeg = (sub.kegiatan / m.kegiatan) * 100;
+                        const pctVal = (sub.nilai / m.nilai) * 100;
+                        return (
+                          <div key={sIdx}>
+                            <div style={{ display: "flex", justifyContent: "space-between", fontSize: 12, marginBottom: 6 }}>
+                              <strong style={{ color: "#334155" }}>{sub.label}</strong>
+                            </div>
+                            
+                            {/* Bar Kegiatan */}
+                            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 4 }}>
+                              <span style={{ fontSize: 10, color: "#64748b", width: 65 }}>Kegiatan</span>
+                              <div style={{ flex: 1, height: 6, background: "#f1f5f9", borderRadius: 4 }}>
+                                <div style={{ width: `${pctKeg}%`, height: "100%", background: "#2563eb", borderRadius: 4 }}></div>
+                              </div>
+                              <span style={{ fontSize: 11, fontWeight: 700, color: "#0f172a", width: 30, textAlign: "right" }}>{sub.kegiatan}</span>
+                            </div>
+
+                            {/* Bar Nilai */}
+                            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                              <span style={{ fontSize: 10, color: "#64748b", width: 65 }}>Nilai (Rp)</span>
+                              <div style={{ flex: 1, height: 6, background: "#f1f5f9", borderRadius: 4 }}>
+                                <div style={{ width: `${pctVal}%`, height: "100%", background: "#ea580c", borderRadius: 4 }}></div>
+                              </div>
+                              <span style={{ fontSize: 11, fontWeight: 700, color: "#0f172a", width: 110, textAlign: "right" }}>{formatRupiah(sub.nilai)}</span>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* AREA TABEL RAW DATA (DRILL-DOWN) */}
+            <div style={{ marginTop: 50, borderTop: "2px solid #e2e8f0", paddingTop: 30 }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 20, flexWrap: "wrap", gap: 16 }}>
+                <div>
+                  <h3 style={{ fontSize: 20, color: "#0f172a", margin: 0 }}>Database Master Kerja Sama PK-LKFT</h3>
+                  <p style={{ fontSize: 13, color: "#64748b", margin: "4px 0 0" }}>
+                    Menampilkan <strong>{filteredRawProjects.length}</strong> data dokumen berdasarkan filter pencarian.
+                  </p>
+                </div>
+                
+                {/* Search, Filter & Export */}
+                <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
+                  <div style={{ position: "relative" }}>
+                    <Search size={14} color="#64748b" style={{ position: "absolute", left: 10, top: 10 }} />
+                    <input 
+                      type="text" 
+                      placeholder="Cari Judul / Nama Mitra..." 
+                      value={searchTable}
+                      onChange={e => setSearchTable(e.target.value)}
+                      style={{ padding: "8px 12px 8px 32px", border: "1px solid #cbd5e1", borderRadius: 8, fontSize: 12, width: 220, outline: "none" }}
+                    />
+                  </div>
+                  
+                  <select 
+                    value={filterMitra} 
+                    onChange={e => setFilterMitra(e.target.value)}
+                    style={{ padding: "8px 12px", border: "1px solid #cbd5e1", borderRadius: 8, fontSize: 12, outline: "none", cursor: "pointer", background: "#fff" }}
+                  >
+                    <option value="Semua Jenis Mitra">Semua Jenis Mitra</option>
+                    <option value="Perguruan Tinggi Dalam Negeri">Perguruan Tinggi Dalam Negeri</option>
+                    <option value="BUMN dan BUMD">BUMN dan BUMD</option>
+                    <option value="Pemerintah Pusat dan Daerah">Pemerintah Pusat dan Daerah</option>
+                    <option value="Perusahaan dan Institusi Swasta">Perusahaan dan Institusi Swasta</option>
+                    <option value="Organisasi">Organisasi</option>
+                    <option value="Mitra Luar Negeri">Mitra Luar Negeri</option>
+                  </select>
+
+                  <button 
+                    onClick={handleExportCSV}
+                    style={{ display: "flex", alignItems: "center", gap: 6, background: "#059669", color: "#fff", padding: "8px 14px", borderRadius: 8, border: "none", fontSize: 12, fontWeight: 700, cursor: "pointer", transition: "all 0.2s" }}
+                    onMouseOver={e => e.currentTarget.style.background = "#047857"} 
+                    onMouseOut={e => e.currentTarget.style.background = "#059669"}
+                  >
+                    <ArrowRight size={14} style={{ transform: "rotate(90deg)" }} /> Export CSV
+                  </button>
+                </div>
+              </div>
+
+              {/* Tabel Scrollable dengan Paginasi */}
+              <div style={{ background: "#fff", borderRadius: 12, border: "1px solid #e2e8f0", overflowX: "auto", display: "flex", flexDirection: "column" }}>
+                <div style={{ maxHeight: 400, overflowY: "auto" }}>
+                  <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12, textAlign: "left", minWidth: 900 }}>
+                    <thead style={{ background: "#f8fafc", position: "sticky", top: 0, zIndex: 10, boxShadow: "0 1px 2px rgba(0,0,0,0.05)" }}>
+                      <tr>
+                        <th style={{ padding: "12px", borderBottom: "1px solid #cbd5e1", color: "#334155", width: 40 }}>No</th>
+                        <th style={{ padding: "12px", borderBottom: "1px solid #cbd5e1", color: "#334155" }}>Judul Kerja Sama</th>
+                        <th style={{ padding: "12px", borderBottom: "1px solid #cbd5e1", color: "#334155", width: 140 }}>Jenis Mitra</th>
+                        <th style={{ padding: "12px", borderBottom: "1px solid #cbd5e1", color: "#334155", width: 140 }}>Nama Mitra</th>
+                        <th style={{ padding: "12px", borderBottom: "1px solid #cbd5e1", color: "#334155", width: 100 }}>Prodi</th>
+                        <th style={{ padding: "12px", borderBottom: "1px solid #cbd5e1", textAlign: "right", color: "#334155", width: 130 }}>Nominal (Rp)</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {paginatedProjects.length === 0 ? (
+                        <tr>
+                          <td colSpan="6" style={{ padding: "30px", textAlign: "center", color: "#64748b" }}>Tidak ada data yang sesuai dengan pencarian atau filter.</td>
+                        </tr>
+                      ) : (
+                        paginatedProjects.map((p, idx) => (
+                          <tr key={idx} style={{ borderBottom: "1px solid #f1f5f9" }} onMouseEnter={e => e.currentTarget.style.background = "#f8fafc"} onMouseLeave={e => e.currentTarget.style.background = "transparent"}>
+                            <td style={{ padding: "10px 12px", color: "#64748b" }}>{p.no}</td>
+                            <td style={{ padding: "10px 12px", fontWeight: 600, color: "#0f172a", lineHeight: 1.4 }}>{p.judul}</td>
+                            <td style={{ padding: "10px 12px", color: "#475569" }}><span style={{ background: "#e2e8f0", padding: "2px 6px", borderRadius: 4, fontSize: 10 }}>{p.jenisMitra}</span></td>
+                            <td style={{ padding: "10px 12px", color: "#0f172a" }}>{p.namaMitra}</td>
+                            <td style={{ padding: "10px 12px", color: "#475569" }}>{p.prodi}</td>
+                            <td style={{ padding: "10px 12px", textAlign: "right", fontFamily: "monospace", fontWeight: 700, color: "#ea580c" }}>{formatRupiah(p.nominal)}</td>
+                          </tr>
+                        ))
+                      )}
+                    </tbody>
+                  </table>
+                </div>
+
+                {/* Kontrol Paginasi */}
+                {filteredRawProjects.length > 0 && (
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "12px 16px", background: "#f8fafc", borderTop: "1px solid #e2e8f0" }}>
+                    <span style={{ fontSize: 12, color: "#64748b", fontWeight: 600 }}>
+                      Menampilkan {(tablePage - 1) * ITEMS_PER_PAGE + 1} - {Math.min(tablePage * ITEMS_PER_PAGE, filteredRawProjects.length)} dari total {filteredRawProjects.length} data
+                    </span>
+                    <div style={{ display: "flex", gap: 8 }}>
+                      <button 
+                        disabled={tablePage === 1} 
+                        onClick={() => setTablePage(tablePage - 1)} 
+                        style={{ padding: "6px 12px", borderRadius: 6, border: "1px solid #cbd5e1", background: tablePage === 1 ? "#f1f5f9" : "#fff", color: tablePage === 1 ? "#94a3b8" : "#0f172a", cursor: tablePage === 1 ? "not-allowed" : "pointer", fontSize: 12, fontWeight: 600, transition: "0.2s" }}
+                      >
+                        Sebelumnya
+                      </button>
+                      <button 
+                        disabled={tablePage === totalPages} 
+                        onClick={() => setTablePage(tablePage + 1)} 
+                        style={{ padding: "6px 12px", borderRadius: 6, border: "1px solid #cbd5e1", background: tablePage === totalPages ? "#f1f5f9" : "#fff", color: tablePage === totalPages ? "#94a3b8" : "#0f172a", cursor: tablePage === totalPages ? "not-allowed" : "pointer", fontSize: 12, fontWeight: 600, transition: "0.2s" }}
+                      >
+                        Selanjutnya
+                      </button>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
 
