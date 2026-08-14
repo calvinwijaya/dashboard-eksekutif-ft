@@ -14266,5 +14266,28 @@
             "nominal": 2282434000,
             "tahun": 2018
         }
-    ]
+    ],
+    "dpiDepartemen": [
+    { "id": "DTGL", "label": "Teknik Geologi", "nilai": 1452626311 },
+    { "id": "DTGD", "label": "Teknik Geodesi", "nilai": 1066211094 },
+    { "id": "DTETI", "label": "Teknik Elektro dan TI", "nilai": 659394699 },
+    { "id": "DTSL", "label": "Teknik Sipil dan Lingkungan", "nilai": 619277355 },
+    { "id": "DTMI", "label": "Teknik Mesin dan Industri", "nilai": 475557862 },
+    { "id": "DTK", "label": "Teknik Kimia", "nilai": 242700253 },
+    { "id": "DTAP", "label": "Teknik Arsitektur dan Perencanaan", "nilai": 176842244 },
+    { "id": "DTNTF", "label": "Teknik Nuklir dan Teknik Fisika", "nilai": 74482582 },
+    { "id": "Non-Dept", "label": "Non-Departemen", "nilai": 24976152 }
+  ],
+  "sebaranKerjasama": [
+    { "id": "sipil", "label": "Teknik Sipil", "kegiatan": 213, "pctKegiatan": 18.7, "color": "#1f77b4" },
+    { "id": "geologi", "label": "Teknik Geologi", "kegiatan": 157, "pctKegiatan": 13.8, "color": "#ff7f0e" },
+    { "id": "mesin", "label": "Teknik Mesin", "kegiatan": 106, "pctKegiatan": 9.3, "color": "#2ca02c" },
+    { "id": "elektro", "label": "Teknik Elektro", "kegiatan": 103, "pctKegiatan": 9.1, "color": "#d62728" },
+    { "id": "kimia", "label": "Teknik Kimia", "kegiatan": 102, "pctKegiatan": 9.0, "color": "#9467bd" },
+    { "id": "arsitektur", "label": "Arsitektur", "kegiatan": 82, "pctKegiatan": 7.2, "color": "#8c564b" },
+    { "id": "geodesi", "label": "Teknik Geodesi", "kegiatan": 76, "pctKegiatan": 6.7, "color": "#e377c2" },
+    { "id": "pwk", "label": "Magister PWK", "kegiatan": 47, "pctKegiatan": 4.1, "color": "#7f7f7f" },
+    { "id": "kosong", "label": "Tidak diisi", "kegiatan": 43, "pctKegiatan": 3.8, "color": "#bcbd22" },
+    { "id": "nuklir", "label": "Teknik Nuklir", "kegiatan": 33, "pctKegiatan": 2.9, "color": "#17becf" }
+  ]
 }

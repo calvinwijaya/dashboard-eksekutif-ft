@@ -204,6 +204,8 @@ function ExecutiveHome({ onOpen }) {
   const [hoveredRvYear, setHoveredRvYear] = useState(null); 
   const [showHibahModal, setShowHibahModal] = useState(false);
 
+  const [showDpiModal, setShowDpiModal] = useState(false);
+
 // === TAMBAHAN STATE UNTUK TABEL RAW DATA ===
   const [searchTable, setSearchTable] = useState("");
   const [filterMitra, setFilterMitra] = useState("Semua Jenis Mitra");
@@ -494,22 +496,20 @@ function ExecutiveHome({ onOpen }) {
               <div style={{ fontSize: 11, color: "#bfdbfe", marginTop: 4 }}>DIKTI / LPDP / Lembaga Internasional (LN) Tahun {rvYear}</div>
             </button>
 
-            {/* INDIRECT BENEFITS */}
-            <div style={{ background: "rgba(255,255,255,0.05)", padding: 14, borderRadius: 12, border: "1px dashed rgba(255,255,255,0.25)" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#94a3b8", fontSize: 10, fontWeight: 800, marginBottom: 8, letterSpacing: "0.05em" }}>
-                INDIRECT BENEFIT ({rvYear})
-              </div>
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
-                <div>
-                  <div style={{ fontSize: 20, fontWeight: 800, color: "#f8fafc" }}>{rvIndirect.startup} Unit</div>
-                  <div style={{ fontSize: 11, color: "#94a3b8", marginTop: 2 }}>Startup / Spin-off</div>
+            {/* INTERNAL: DPI & SEBARAN */}
+            <button className="rv-card" onClick={() => setShowDpiModal(true)}>
+               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 6, color: "#cbd5e1", fontSize: 10, fontWeight: 800, marginBottom: 6, letterSpacing: "0.05em" }}>
+                  <LayoutDashboard size={14}/> INTERNAL: DANA PENGEMBANGAN INSTITUSI (DPI) & SEBARAN
                 </div>
-                <div style={{ textAlign: "right" }}>
-                  <div style={{ fontSize: 20, fontWeight: 800, color: "#f8fafc" }}>{rvIndirect.lisensi} Paten</div>
-                  <div style={{ fontSize: 11, color: "#94a3b8", marginTop: 2 }}>Lisensi Industri</div>
-                </div>
+                <ArrowRight size={14} color="#cbd5e1" />
               </div>
-            </div>
+              <div style={{ display: "flex", alignItems: "flex-end", gap: 12 }}>
+                <div style={{ fontSize: 24, fontWeight: 800, color: "#f8fafc" }}>Rp 4.79 Miliar</div>
+                <div style={{ fontSize: 13, color: "#6ee7b7", fontWeight: 700, marginBottom: 4 }}>DPI Departemen</div>
+              </div>
+              <div style={{ fontSize: 11, color: "#94a3b8", marginTop: 4 }}>Klik untuk melihat rincian kontribusi per Departemen & Bidang Ilmu.</div>
+            </button>
           </div>
         </div>
       </section>
@@ -1126,6 +1126,88 @@ function ExecutiveHome({ onOpen }) {
               </div>
             </div>
 
+          </div>
+        </div>
+      )}
+
+      {/* MODAL DPI & SEBARAN BIDANG ILMU */}
+      {showDpiModal && (
+        <div className="modal-backdrop" onClick={() => setShowDpiModal(false)} style={{ zIndex: 1000, padding: 20 }}>
+          <div className="research-modal" style={{ maxWidth: 1000, width: "100%", maxHeight: "90vh", overflowY: "auto", background: "#f8fafc", padding: 30 }} onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setShowDpiModal(false)}><X size={20} /></button>
+            
+            <div style={{ textAlign: "center", marginBottom: 30 }}>
+              <div className="eyebrow" style={{ color: "#059669" }}>INTERNAL PERFORMANCE</div>
+              <h2 style={{ fontSize: 24, color: "#0f172a", margin: "4px 0 0" }}>Dana Pengembangan Institusi (DPI) & Sebaran Ilmu</h2>
+            </div>
+
+            {/* TOP KPI CARDS */}
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 20, marginBottom: 30 }}>
+              <div style={{ background: "#fff", border: "1px solid #e2e8f0", padding: 20, borderRadius: 12, boxShadow: "0 2px 4px rgba(0,0,0,0.02)" }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: "#64748b", marginBottom: 6 }}>TOTAL NILAI TRANSAKSI (2025)</div>
+                <div style={{ fontSize: 24, fontWeight: 800, color: "#0f172a" }}>Rp 186.2 Miliar</div>
+              </div>
+              <div style={{ background: "#fff", border: "1px solid #e2e8f0", padding: 20, borderRadius: 12, boxShadow: "0 2px 4px rgba(0,0,0,0.02)" }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: "#64748b", marginBottom: 6 }}>TOTAL NILAI DPI UGM 10% (2025)</div>
+                <div style={{ fontSize: 24, fontWeight: 800, color: "#0ea5e9" }}>Rp 15.97 Miliar</div>
+              </div>
+              <div style={{ background: "linear-gradient(to right, #065f46, #059669)", padding: 20, borderRadius: 12, boxShadow: "0 4px 10px rgba(5,150,105,0.2)" }}>
+                <div style={{ fontSize: 11, fontWeight: 700, color: "#a7f3d0", marginBottom: 6 }}>TOTAL DPI DEPARTEMEN</div>
+                <div style={{ fontSize: 24, fontWeight: 800, color: "#fff" }}>Rp 4.79 Miliar</div>
+              </div>
+            </div>
+
+            {/* CHARTS AREA */}
+            <div style={{ display: 'grid', gridTemplateColumns: '1.2fr 1fr', gap: 30, alignItems: "start" }}>
+              
+              {/* HORIZONTAL BAR CHART: DPI PER DEPARTEMEN */}
+              <div style={{ background: "#fff", padding: 24, borderRadius: 12, border: "1px solid #e2e8f0" }}>
+                <h3 style={{ fontSize: 16, color: "#0f172a", margin: "0 0 20px" }}>Distribusi DPI per Departemen</h3>
+                <div style={{ display: "grid", gap: 14 }}>
+                  {RekaVenturaData.dpiDepartemen.map((d, idx) => {
+                    const maxVal = 1452626311; // Nilai tertinggi (DTGL)
+                    const pct = (d.nilai / maxVal) * 100;
+                    return (
+                      <div key={d.id} style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                        <div style={{ width: 45, fontSize: 12, fontWeight: 700, color: "#475569" }}>#{idx + 1} {d.id}</div>
+                        <div style={{ flex: 1, position: "relative", height: 28, background: "#f1f5f9", borderRadius: 6, overflow: "hidden" }}>
+                          <div 
+                            style={{ 
+                              width: `${pct}%`, height: "100%", 
+                              background: idx < 3 ? "#0ea5e9" : "#64748b", // Highlight Top 3
+                              borderRadius: 6, transition: "width 0.5s ease-out" 
+                            }} 
+                          />
+                          <span style={{ position: "absolute", left: 10, top: "50%", transform: "translateY(-50%)", fontSize: 11, fontWeight: 700, color: pct > 15 ? "#fff" : "#0f172a", zIndex: 2 }}>
+                            {formatRupiah(d.nilai)}
+                          </span>
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+
+              {/* DONUT CHART: SEBARAN BIDANG ILMU */}
+              <div style={{ background: "#fff", padding: 24, borderRadius: 12, border: "1px solid #e2e8f0", display: "flex", flexDirection: "column", alignItems: "center" }}>
+                <ProfessionalDonutChart 
+                  data={RekaVenturaData.sebaranKerjasama} 
+                  dataKey="pctKegiatan" 
+                  valueKey="kegiatan"
+                  valueSuffix=" Kegiatan"
+                  title="Sebaran Bidang Ilmu Kerja Sama (2021-2025)" 
+                />
+                <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "8px 12px", marginTop: 20 }}>
+                  {RekaVenturaData.sebaranKerjasama.map(m => (
+                    <div key={m.id} style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                      <div style={{ width: 10, height: 10, background: m.color, borderRadius: "50%" }}></div>
+                      <span style={{ fontSize: 11, color: "#475569" }}>{m.label} ({m.pctKegiatan}%)</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+            </div>
           </div>
         </div>
       )}

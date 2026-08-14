@@ -47,6 +47,7 @@ function ResearchPage({ onBack }) {
   const [pubPage, setPubPage] = useState(1);
   const [sciPage, setSciPage] = useState(1);
   const [showPitchModal, setShowPitchModal] = useState(false);
+  const [showFundingModal, setShowFundingModal] = useState(false);
 
   // Reset pagination jika filter Karsa-Teknika diubah
   useEffect(() => { setPortPage(1); }, [typeFilter, statusFilter, departmentFilter, kbkFilter, search]);
@@ -256,7 +257,29 @@ function ResearchPage({ onBack }) {
           <p>Tinjauan strategis terhadap hilirisasi inovasi, pemanfaatan HKI, dan kolaborasi industri bernilai tinggi.</p>
         </div>
         <div className="kpi-grid">
-          <div className="kpi-card"><div className="kpi-value" style={{color:'#1e3a8a'}}>Rp 128 Jt</div><div className="kpi-label">Rasio Dana per Dosen</div><div className="kpi-sub">Baseline FT: Target Rp 150 Juta/dosen</div></div>
+          {/* KARTU PENDANAAN RISET YANG BISA DIKLIK */}
+          <button 
+            className="kpi-card metric-hover-card" 
+            onClick={() => setShowFundingModal(true)}
+            style={{ textAlign: "left", cursor: "pointer", border: "1px solid #e2e8f0", background: "#fff", display: "block", width: "100%" }}
+          >
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
+              <div className="kpi-value" style={{ color: '#1e3a8a' }}>Rp {ResearchData.fundingMetrics.faculty.median} Jt</div>
+              <div style={{ fontSize: 11, color: "#64748b", fontWeight: 700, marginBottom: 8 }}>MEDIAN</div>
+            </div>
+            <div className="kpi-label" style={{ marginTop: 4 }}>Rasio Dana Riset per Dosen</div>
+            <div className="kpi-sub" style={{ display: "flex", flexDirection: "column", gap: 4, marginTop: 8 }}>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <span>Rata-rata (Mean):</span>
+                <strong style={{ color: "#334155" }}>Rp {ResearchData.fundingMetrics.faculty.mean} Jt</strong>
+              </div>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <span>Target FT:</span>
+                <strong style={{ color: "#059669" }}>Rp {ResearchData.fundingMetrics.faculty.target} Jt</strong>
+              </div>
+            </div>
+          </button>
+          
           <div className="kpi-card"><div className="kpi-value" style={{color:'#059669'}}>+24.5%</div><div className="kpi-label">Kenaikan Royalti HKI</div><div className="kpi-sub">Dibandingkan tahun 2025 (12%)</div></div>
           <div className="kpi-card"><div className="kpi-value" style={{color:'#d97706'}}>12 Kontrak</div><div className="kpi-label">Jumlah PKS di atas Rp 1 M</div><div className="kpi-sub">Naik 3 kontrak dari tahun sebelumnya</div></div>
           <div className="kpi-card"><div className="kpi-value" style={{color:'#4338ca'}}>Rp 85.4 M</div><div className="kpi-label">Total Nilai PKS Industri</div><div className="kpi-sub">Akumulasi dari 85 kontrak aktif</div></div>
@@ -358,6 +381,66 @@ function ResearchPage({ onBack }) {
               <button style={{ background: "#102a43", color: "#fff", padding: "10px 16px", borderRadius: 8, border: "none", fontWeight: 700, cursor: "pointer" }}>Generate Pitch Deck (PDF)</button>
               <button style={{ background: "#fff", color: "#102a43", padding: "10px 16px", borderRadius: 8, border: "1px solid #cbd5e1", fontWeight: 700, cursor: "pointer" }}>Hubungi Inventor</button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* MODAL RASIONALISASI PENDANAAN RISET */}
+      {showFundingModal && (
+        <div className="modal-backdrop" onClick={() => setShowFundingModal(false)} style={{ zIndex: 1000, padding: 20 }}>
+          <div className="research-modal" style={{ maxWidth: 850, width: "100%", maxHeight: "90vh", overflowY: "auto", background: "#f8fafc", padding: 30 }} onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setShowFundingModal(false)}><X size={20} /></button>
+            
+            <div style={{ marginBottom: 24 }}>
+              <div className="eyebrow" style={{ color: "#059669" }}>EVALUASI STRATEGIS & RASIONALISASI</div>
+              <h2 style={{ fontSize: 22, color: "#0f172a", margin: "4px 0 8px" }}>Sebaran Dana Riset per Departemen</h2>
+              <p style={{ fontSize: 13, color: "#475569", lineHeight: 1.5, margin: 0 }}>
+                Penggunaan <strong>Nilai Tengah (Median)</strong> memberikan gambaran riil kondisi pendanaan mayoritas dosen, menghilangkan bias dari segelintir hibah bernilai raksasa yang mendistorsi nilai <strong>Rata-rata (Mean)</strong>.
+              </p>
+            </div>
+
+            <div style={{ background: "#fff", borderRadius: 12, border: "1px solid #e2e8f0", overflow: "hidden" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 12, textAlign: "left" }}>
+                <thead style={{ background: "#f1f5f9" }}>
+                  <tr>
+                    <th style={{ padding: "14px 16px", borderBottom: "1px solid #cbd5e1", color: "#334155" }}>Departemen</th>
+                    <th style={{ padding: "14px 16px", borderBottom: "1px solid #cbd5e1", textAlign: "right", color: "#334155" }}>Rata-rata (Mean)</th>
+                    <th style={{ padding: "14px 16px", borderBottom: "1px solid #cbd5e1", textAlign: "right", color: "#1e3a8a", fontWeight: 800 }}>Nilai Tengah (Median)</th>
+                    <th style={{ padding: "14px 16px", borderBottom: "1px solid #cbd5e1", textAlign: "right", color: "#334155" }}>Target</th>
+                    <th style={{ padding: "14px 16px", borderBottom: "1px solid #cbd5e1", color: "#334155", width: "25%" }}>Capaian (Median vs Target)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {ResearchData.fundingMetrics.departments.map((d, idx) => {
+                    const achievement = Math.min(100, (d.median / d.target) * 100);
+                    const statusColor = achievement < 40 ? "#dc2626" : achievement < 60 ? "#d97706" : "#059669";
+                    
+                    return (
+                      <tr key={d.id} style={{ borderBottom: "1px solid #f1f5f9" }} onMouseEnter={e => e.currentTarget.style.background = "#f8fafc"} onMouseLeave={e => e.currentTarget.style.background = "transparent"}>
+                        <td style={{ padding: "12px 16px", fontWeight: 600, color: "#0f172a" }}>
+                          <div style={{ fontSize: 11, color: "#64748b", fontWeight: 700, marginBottom: 2 }}>{d.id}</div>
+                          {d.name}
+                        </td>
+                        <td style={{ padding: "12px 16px", textAlign: "right", color: "#64748b" }}>Rp {d.mean} Jt</td>
+                        <td style={{ padding: "12px 16px", textAlign: "right", color: "#1e3a8a", fontWeight: 800, fontSize: 14 }}>Rp {d.median} Jt</td>
+                        <td style={{ padding: "12px 16px", textAlign: "right", color: "#059669", fontWeight: 700 }}>Rp {d.target} Jt</td>
+                        <td style={{ padding: "12px 16px" }}>
+                          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                            <div style={{ flex: 1, height: 6, background: "#f1f5f9", borderRadius: 4, overflow: "hidden" }}>
+                              <div style={{ width: `${achievement}%`, height: "100%", background: statusColor, borderRadius: 4 }}></div>
+                            </div>
+                            <span style={{ fontSize: 11, fontWeight: 700, color: statusColor, width: 35, textAlign: "right" }}>
+                              {achievement.toFixed(0)}%
+                            </span>
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+
           </div>
         </div>
       )}

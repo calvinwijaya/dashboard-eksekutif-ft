@@ -3740,7 +3740,487 @@
     { "rank": 25, "title": "PGIS for Tiered Participatory Development Planning", "author": "Anggara E.D., Aditya T., Sutanta H.", "journal": "International Review for Spatial Planning and Sustainable Development", "year": 2025, "citations": 5 },
     { "rank": 26, "title": "Optimized Artificial Intelligence-Based Algorithm for Groundwater Potential Mapping in Trenggalek Regency, Indonesia", "author": "Ummah M.H., Diyono D.", "journal": "Forum Geografi", "year": 2025, "citations": 5 },
     { "rank": 27, "title": "A Model for Implementing the UN-IGIF in Geospatial Information Infrastructure Development for Indonesian Local Governments", "author": "Utama I.R., Sutanta H.", "journal": "International Journal of Geoinformatics", "year": 2025, "citations": 4 },
-    { "rank": 28, "title": "Utilizing High-Definition Maps and Simulation Software to Enhance Autonomous Vehicle Safety", "author": "Li Y.-T., Kuo P.-F., Chiang K.-W., Putra B., Susanta F.F.", "journal": "International Archives of the Photogrammetry Remote Sensing and Spatial Information Sciences ISPRS Archives", "year": 2025, "citations": 4 }
+    { "rank": 28, "title": "Utilizing High-Definition Maps and Simulation Software to Enhance Autonomous Vehicle Safety", "author": "Li Y.-T., Kuo P.-F., Chiang K.-W., Putra B., Susanta F.F.", "journal": "International Archives of the Photogrammetry Remote Sensing and Spatial Information Sciences ISPRS Archives", "year": 2025, "citations": 4 },
+    {
+        "rank": 29,
+        "title": "Marginalized Modern Architectural Heritage in Indonesia: The case of transformator huisje (gardu listrik) architecture of the Nederlandsche Indisch era",
+        "author": "Ikaputra, Widyastuti D.T.",
+        "journal": "Frontiers of Architectural Research",
+        "year": 2025,
+        "citations": 27
+    },
+    {
+        "rank": 30,
+        "title": "Landscape Features Restorative Value and Sensory Dimension In Educational Institution's Green Public Spaces",
+        "author": "Marcillia S.R., Adiputri K.A., Fadhillah N., Almadina A.F.",
+        "journal": "International Review for Spatial Planning and Sustainable Development",
+        "year": 2026,
+        "citations": 45
+    },
+    {
+        "rank": 31,
+        "title": "Soundscapes experience at spiritual tourism area of Goa Maria Sendangsono, Yogyakarta, Indonesia",
+        "author": "Marcillia S.R., Adiputri K.A., Vicaningrum I., Farhani C.A.M.",
+        "journal": "Journal of Outdoor Recreation and Tourism",
+        "year": 2026,
+        "citations": 29
+    },
+    {
+        "rank": 32,
+        "title": "Change in and continuity of traditional village architecture: the Bali Aga village of Tenganan Pegringsingan, Bali, Indonesia",
+        "author": "Rahmi D.H.",
+        "journal": "Built Heritage",
+        "year": 2025,
+        "citations": 42
+    },
+    {
+        "rank": 33,
+        "title": "The impacts of perceived access to public open spaces on non-physical wellbeing: focused on international graduate students in Seoul",
+        "author": "Manifesty O.R., Lee G.",
+        "journal": "Journal of Asian Architecture and Building Engineering",
+        "year": 2025,
+        "citations": 30
+    },
+    {
+        "rank": 34,
+        "title": "Assessing justice in sustainable mobility transitions: narratives from transport policies in Jakarta",
+        "author": "Hidayati I., Tan W.",
+        "journal": "Journal of Environmental Policy and Planning",
+        "year": 2025,
+        "citations": 21
+    },
+    {
+        "rank": 35,
+        "title": "The Long and Winding Road of Urban Growth: The Case of Small Cities along Trans-Java Toll Road",
+        "author": "Anindito D.B., Ramadhani A.K., Hidayati I., Siagian A.T.T., Iskandar D.A.",
+        "journal": "Urban Policy and Research",
+        "year": 2025,
+        "citations": 42
+    },
+    {
+        "rank": 36,
+        "title": "Daily needs stores in the collective memory and living heritage of Malioboro, Yogyakarta city, Indonesia",
+        "author": "Pramitasari D., Anggi M., Isnaemi L.D., Gultom Y.Z.",
+        "journal": "Journal of Asian Architecture and Building Engineering",
+        "year": 2025,
+        "citations": 41
+    },
+    {
+        "rank": 37,
+        "title": "Resilient Distributed V2G Control for PEV Aggregation: A Novel Decentralized Algorithm Robust to Network Fragmentation, Vehicle Heterogeneity, and Renewable Variability",
+        "author": "Cahyadi A.I., Wijaya F.D., Ali H.R.",
+        "journal": "IEEE Access",
+        "year": 2026,
+        "citations": 27
+    },
+    {
+        "rank": 38,
+        "title": "Heterogeneous Multi-agent Coverage Control Through Adaptive Weighting and Corrective Potential Function",
+        "author": "Cahyadi A.I., Nugroho P., Ardiyanto I., Adinugroho H.",
+        "journal": "Journal of Control, Automation and Electrical Systems",
+        "year": 2026,
+        "citations": 41
+    },
+    {
+        "rank": 39,
+        "title": "Cognitive load classification during online shopping using deep learning on time series eye movement indices",
+        "author": "Wibirama S., Fikri M.A., Aliza I.K., Nugraha K.A., Alfarizi S.A.I., Suhari N.A.A.R., Kusrohmaniah S.",
+        "journal": "Array",
+        "year": 2026,
+        "citations": 42
+    },
+    {
+        "rank": 40,
+        "title": "LORNet: lightweight unstructured off-road segmentation on embedded devices for mobile robotic and intelligent vehicle",
+        "author": "Ardiyanto I., Takahama M., Miura J.",
+        "journal": "Journal of Real-Time Image Processing",
+        "year": 2026,
+        "citations": 45
+    },
+    {
+        "rank": 41,
+        "title": "Gastric Pain Early Detection by Conductivity-pH Dispersion (CpH-d) Score Based on 3D-Gastric Impedance Tomography",
+        "author": "Wicaksono R., Setiawan N.A., Sun B., Takei M.",
+        "journal": "IEEE Sensors Journal",
+        "year": 2026,
+        "citations": 34
+    },
+    {
+        "rank": 42,
+        "title": "Review of HVDC technologies for weak grid interconnectors",
+        "author": "Irnawan R., Mochamad R.F., da Silva F.F., Zhang Q., Sarjiya, Bak C.L., Haryadi E.",
+        "journal": "Electrical Engineering",
+        "year": 2025,
+        "citations": 47
+    },
+    {
+        "rank": 43,
+        "title": "Hybrid pair programming in distributed software development",
+        "author": "Ferdiana R., Syahputri I.W.",
+        "journal": "International Journal of Agile Systems and Management",
+        "year": 2026,
+        "citations": 26
+    },
+    {
+        "rank": 44,
+        "title": "Energy-Efficient and Fair Computation Offloading for Multi-user MEC with EH Devices",
+        "author": "Mustika I.W., Triyanto D., Halimah N.S., Pavarangkoon P.",
+        "journal": "Journal of Communications",
+        "year": 2025,
+        "citations": 28
+    },
+    {
+        "rank": 45,
+        "title": "Design of GAMA-SHP microreactor for outer space application: Neutronic study",
+        "author": "Harto A.W., Kusnanto, Agung A., Putra M.Y.A., N. D.A.A.",
+        "journal": "Nuclear Engineering and Design",
+        "year": 2025,
+        "citations": 22
+    },
+    {
+        "rank": 46,
+        "title": "Dynamic modeling and simulation of the GAMA-AHR",
+        "author": "Harto A.W., Kusnanto, Agung A., Kanaya D.J., Putra M.Y.A.",
+        "journal": "Nuclear Engineering and Design",
+        "year": 2025,
+        "citations": 32
+    },
+    {
+        "rank": 47,
+        "title": "Advancing bioacoustic monitoring: implementing acoustic indices and sonotyping methods in artificial ecosystems with IoT–integrated data dashboards",
+        "author": "Utami S.S., Haidar M.T., Pradaningrum P.N., Susilohadi, Islami M.Z., Hidayat R., Setyonugroho W.",
+        "journal": "Bioacoustics",
+        "year": 2026,
+        "citations": 27
+    },
+    {
+        "rank": 48,
+        "title": "Identifying eruption types from the recent explosive eruptions of Anak Krakatau volcano in the Sunda Strait, Indonesia: Insights from ash morphology and geochemistry",
+        "author": "Wibowo H.E., Suhendro I., Darmawan H., Harijoko A., Jovian A.H., Mutaqin B.W.",
+        "journal": "Journal of Asian Earth Sciences",
+        "year": 2026,
+        "citations": 39
+    },
+    {
+        "rank": 49,
+        "title": "Organic petrological and geochemical controls on critical element distribution in peat influenced by rhyolitic basement rocks from the Sebangau Peatland, Central Kalimantan: An analogue model for critical element enrichment in coals",
+        "author": "Anggara F., Dai S., Moore T.A., Muhammad A.I., Moroeng O.M., Liu J., Fahrialam A., Petrus H.T.B.M., Patria A.A.",
+        "journal": "International Journal of Coal Geology",
+        "year": 2026,
+        "citations": 20
+    },
+    {
+        "rank": 50,
+        "title": "Active fault map and paleoseismology results from the Aceh Fault in North Sumatra, Indonesia: Unravelling faulting dynamics along the Great Sumatran Fault system",
+        "author": "Marliyani G.I., Klinger Y., Hady A.K., Setianto A., Yao W., Helmi H., Kurniawan T., Kambali R.A.P., Sugito Z., Jihad A., Setiawan Y., Rusdin A.A., Nugraha J., Rohadi S., Triyono R., Karnawati D.",
+        "journal": "Tectonophysics",
+        "year": 2025,
+        "citations": 29
+    },
+    {
+        "rank": 51,
+        "title": "Lithium recovery from mixed spent LFP-NMC batteries through atmospheric water leaching",
+        "author": "Perdana I., Aprilianto D.R., Fadillah F.A., Fadli R., Petrus H.T.B.M., Astuti W., Muflikhun M.A., Nilasary H., Oktaviano H.S., Fathoni F., Raihan E., Muzayanha S.U.",
+        "journal": "Scientific Reports",
+        "year": 2025,
+        "citations": 46
+    },
+    {
+        "rank": 52,
+        "title": "Biogas potential for sustainable power generation in Indonesia: opportunity and techno-economic analysis",
+        "author": "Cahyono R.B., Nugraha M.G., Pratama A.R., Insani V.F.S., Irianto D., Anugia Z., Sasmita F.A., Hadiyati K.R., Ariyanto T.",
+        "journal": "Bioresource Technology Reports",
+        "year": 2025,
+        "citations": 42
+    },
+    {
+        "rank": 53,
+        "title": "Pyrolysis of pulp and paper mill sludge: Mechanistic effects of process conditions and feldspar catalysis on product formation and biochar carbon permanence",
+        "author": "Sudibyo H., Duran-Jimenez G., Sudiyani Y., Cahyani A., Jupesta J., Sadewo B.R., Budhijanto, Budiman A.",
+        "journal": "Journal of Analytical and Applied Pyrolysis",
+        "year": 2026,
+        "citations": 29
+    },
+    {
+        "rank": 54,
+        "title": "Enhancing machine learning prediction of biomass pyrolysis yields through taxonomy-based preprocessing and rigorous model tuning",
+        "author": "Kristanto J., Azis M.M., Purwono S.",
+        "journal": "Biomass and Bioenergy",
+        "year": 2026,
+        "citations": 50
+    },
+    {
+        "rank": 55,
+        "title": "Optimization of pyrolysis temperature and Fe-doped K-feldspar catalysis for enhancing sp2-carbon network and soil CO2 capture of biochar",
+        "author": "Sudibyo H., Duran-Jimenez G., Sapaat M., Oktian R.C., Budhijanto, Budiman A.",
+        "journal": "Journal of Analytical and Applied Pyrolysis",
+        "year": 2026,
+        "citations": 41
+    },
+    {
+        "rank": 56,
+        "title": "Reaction pathways and kinetics of hydrothermal liquefaction of plastics and food waste macromolecules under partially oxidative conditions",
+        "author": "Sudibyo H., Hardhianti M.P.W., Anwar M., Prasetyo D.J., Supriyanto C.J., Budhijanto",
+        "journal": "Journal of Environmental Chemical Engineering",
+        "year": 2025,
+        "citations": 42
+    },
+    {
+        "rank": 57,
+        "title": "Mathematical modelling and experimental validation of nutrient release from polyurethane coated controlled release fertilizer",
+        "author": "Kusumastuti Y., Bagusantara F., Timotius D., Wicaksono A.R., Nugraha M.G., Rochmadi",
+        "journal": "Results in Engineering",
+        "year": 2026,
+        "citations": 38
+    },
+    {
+        "rank": 58,
+        "title": "Kinetics of Laterite Ore Reduction Using Low-Rank Coal and Palm Oil Empty Fruit Bunch (EFB) Biochar",
+        "author": "Fahrurrozi M., Petrus H.T.B.M., Anjani A.R., Khikmah M., Prameswara G., Prihanto Y., Kurniawan A.",
+        "journal": "JOM",
+        "year": 2026,
+        "citations": 27
+    },
+    {
+        "rank": 59,
+        "title": "Plasma polymerized hexamethyldisilazane thin films for enhanced corrosion resistance and thermal aging stability on titanium and stainless-steel interfaces",
+        "author": "Hartanto D.T., Shirosaki Y., Kusumastuti Y., Lin B.W.P., Wang M.J.",
+        "journal": "Surfaces and Interfaces",
+        "year": 2026,
+        "citations": 31
+    },
+    {
+        "rank": 60,
+        "title": "Microwave plasma treated Sn/SnO2 and graphite nanocomposites to synergistically promote electrochemical sensing performance toward dopamine and uric acid",
+        "author": "Hartanto D.T., Tung J.Y., Aziz G.D.A., Kusumastuti Y., Shirosaki Y., Wang M.J.",
+        "journal": "Analytica Chimica Acta",
+        "year": 2025,
+        "citations": 49
+    },
+    {
+        "rank": 61,
+        "title": "The Influence of Mordanting Process Variables on the Cotton Fabric Dyeing with Yellow Natural Dye from Extract of Arcangelisia flava (L.) Merr Stem",
+        "author": "Rahayuningsih E., Fatimah W.S., Miladatussholihah N.",
+        "journal": "Fibers and Polymers",
+        "year": 2025,
+        "citations": 45
+    },
+    {
+        "rank": 62,
+        "title": "Textile coloring with Indonesian tropical plants",
+        "author": "Rahayuningsih E., Permana A.D.C.",
+        "journal": "Research Journal of Textile and Apparel",
+        "year": 2026,
+        "citations": 42
+    },
+    {
+        "rank": 63,
+        "title": "Household recycling behavior and community-based waste management: An agent-based modeling of socioeconomic heterogeneity in urban Indonesia",
+        "author": "Asih A.M.S., Prasetyo D.H., Sopha B.M.",
+        "journal": "Journal of Environmental Management",
+        "year": 2026,
+        "citations": 23
+    },
+    {
+        "rank": 64,
+        "title": "Exploring carbon scheme scenarios for retrofitted coal-fired power plants with carbon capture system in Indonesia",
+        "author": "Sopha B.M., Ma'mun S., Wibisono M.A., Kim I.",
+        "journal": "Cleaner Energy Systems",
+        "year": 2026,
+        "citations": 28
+    },
+    {
+        "rank": 65,
+        "title": "A two-stage improved variable neighborhood search-sine cosine algorithm for the multi-row layout problem with safety consideration",
+        "author": "Rifai A.P., Sari W.P.",
+        "journal": "Scientific Reports",
+        "year": 2025,
+        "citations": 39
+    },
+    {
+        "rank": 66,
+        "title": "Classification of single origin Indonesian coffee beans using convolutional neural network",
+        "author": "Rifai A.P., Sari W.P., Rabbani H., Safitri T.H., Hajad M., Sutoyo E., Nguyen H.T.",
+        "journal": "IAES International Journal of Artificial Intelligence",
+        "year": 2025,
+        "citations": 49
+    },
+    {
+        "rank": 67,
+        "title": "Does nature’s sounds make me feel more refreshed? Investigation of nature sound stimulus as a micro-refresh during intellectual work",
+        "author": "Dianita O., Higashimaki T., Abe R., Ueda K., Ishii H., Shimoda H., Obayashi F.",
+        "journal": "Cognition, Technology & Work",
+        "year": 2026,
+        "citations": 44
+    },
+    {
+        "rank": 68,
+        "title": "Systematic visual stimuli micro-refresh Evaluation on cognitive work performance",
+        "author": "Dianita O., Nomura K., Higashimaki T., Abe R., Ueda K., Ishii H., Shimoda H., Obayashi F.",
+        "journal": "Displays",
+        "year": 2025,
+        "citations": 41
+    },
+    {
+        "rank": 69,
+        "title": "Fabrication of Microfiltration-Inspired Layered Microfilter Structures Using Additive Manufacturing for Water Treatment",
+        "author": "Sari W.P., Mastrisiswadi H., Perdana M.D.P., Arbianti L., Yasier A., Baroroh D.K., Herianto, Covington J.A.",
+        "journal": "Additive Manufacturing Letters",
+        "year": 2026,
+        "citations": 44
+    },
+    {
+        "rank": 70,
+        "title": "Practical Precooling Methods for Alleviating Heat Strain during Occupational Heat Exposure",
+        "author": "Wijayanto T., Huda L.N., Rizalmi S.R.",
+        "journal": "Journal of Engineering and Technological Sciences",
+        "year": 2025,
+        "citations": 50
+    },
+    {
+        "rank": 71,
+        "title": "Characterization of 3D printed multi-material soft pneumatic actuator",
+        "author": "Herianto, Mastrisiswadi H., Atsani S.I., Sari W.P., Tontowi A.E.",
+        "journal": "International Journal of Intelligent Robotics and Applications",
+        "year": 2025,
+        "citations": 50
+    },
+    {
+        "rank": 72,
+        "title": "Machine learning for predicting the public adoption of partial and fully automated vehicle in Indonesia",
+        "author": "Rifai A.P., Trapsilawati F., Agung E.S., Widyanti A., Woodman R., Sutarto A.P., Ansori N.",
+        "journal": "Case Studies on Transport Policy",
+        "year": 2026,
+        "citations": 34
+    },
+    {
+        "rank": 73,
+        "title": "Effect of Adding Nanocrystalline Cellulose on Reducing Micro-Crack of Three-Dimensional Printed Hydroxyapatite/Collagen Composite",
+        "author": "Herliansyah M.K., Nurbaiti N., Tontowi A.E., Widiastuti M.G., van Hoten H.",
+        "journal": "International Journal of Engineering Transactions B Applications",
+        "year": 2025,
+        "citations": 35
+    },
+    {
+        "rank": 74,
+        "title": "Defect and failure detection in laser powder bed fusion: a comprehensive review and experimental validation on AlSi10Mg metal blade",
+        "author": "Muflikhun M.A.",
+        "journal": "International Journal of Advanced Manufacturing Technology",
+        "year": 2026,
+        "citations": 40
+    },
+    {
+        "rank": 75,
+        "title": "Ergonomic evaluation of passive lower-limb exoskeletons in simulated industrial tasks at non-optimal workstations",
+        "author": "Ardiyanto A., et al.",
+        "journal": "Work",
+        "year": 2026,
+        "citations": 45
+    },
+    {
+        "rank": 76,
+        "title": "The mechanical behavior of multidirectional finned circular hollow steel damper: Analytical and numerical approach",
+        "author": "Awaludin A., Emilidardi A.M., Setiawan A.F., Satyarno I.",
+        "journal": "Steel and Composite Structures",
+        "year": 2025,
+        "citations": 38
+    },
+    {
+        "rank": 77,
+        "title": "The Behavior of Glued-in Threaded Steel Rod Joints in Bangkirai Timber Beams under Flexural Loading: Experimental and Numerical Investigations",
+        "author": "Awaludin A., Akbar M.K.",
+        "journal": "Journal of Engineering and Technological Sciences",
+        "year": 2026,
+        "citations": 29
+    },
+    {
+        "rank": 78,
+        "title": "Transition to electric motorcycle-based ride-hailing: User heterogeneity, perception, and pro-environmental habits",
+        "author": "Irawan M.Z., Rizki M., Belgiawan P.F., Joewono T.B., Kato H.",
+        "journal": "Travel Behaviour and Society",
+        "year": 2026,
+        "citations": 33
+    },
+    {
+        "rank": 79,
+        "title": "TEMPERATURE-DEPENDENT RELATIONSHIP BETWEEN INDIRECT TENSILE STRENGTH AND STIFFNESS MODULUS OF SBS-MODIFIED ASPHALT MIXTURES",
+        "author": "Suparma L.B., Rahman T.",
+        "journal": "Journal of Applied Engineering Science",
+        "year": 2026,
+        "citations": 49
+    },
+    {
+        "rank": 80,
+        "title": "Recent developments in mitigating clogging in permeable pavements: a state-of-the-art review",
+        "author": "Rahman T., Tajudin A.N., Wulaningtyas A.H., Andika N., Irawan M.Z., Widyatmoko I.",
+        "journal": "Innovative Infrastructure Solutions",
+        "year": 2025,
+        "citations": 29
+    },
+    {
+        "rank": 81,
+        "title": "Buton Rock Asphalt (BRA/Asbuton): a systematic review of the characteristics, performance, sustainability, and future research directions",
+        "author": "Rahman T., Widyatmoko I., Rachman A., Nurhidayati Z.A.",
+        "journal": "Road Materials and Pavement Design",
+        "year": 2025,
+        "citations": 40
+    },
+    {
+        "rank": 82,
+        "title": "Small-scale green public open spaces for healthy aging in dense urban settlements of Yogyakarta, Indonesia",
+        "author": "Pramitasari D., et al.",
+        "journal": "Journal of Asian Architecture and Building Engineering",
+        "year": 2026,
+        "citations": 50
+    },
+    {
+        "rank": 83,
+        "title": "Catalyst- and temperature-driven variations in chemistry, carbon permanence, and agronomic performance of hydrochar from hydrothermal processing of biomass waste",
+        "author": "Sudibyo H., Pangestu R.A., Athalia A.T., Salsabila R., Mahannada A., et al.",
+        "journal": "Environmental Research",
+        "year": 2026,
+        "citations": 48
+    },
+    {
+        "rank": 84,
+        "title": "Integrated biomass-assisted carbothermal reduction and staged hydrometallurgical extraction for selective multi-element recovery from red mud",
+        "author": "Sudibyo H., Salsabila R., Oktian R.C., Sapaat M., Majid A.I., Pratama A.A., et al.",
+        "journal": "Journal of Analytical and Applied Pyrolysis",
+        "year": 2026,
+        "citations": 27
+    },
+    {
+        "rank": 85,
+        "title": "Valorization of spent activated carbon for polycyclic aromatic hydrocarbon adsorption and graphene quantum dot synthesis",
+        "author": "Ariyanto T., et al.",
+        "journal": "Case Studies in Chemical and Environmental Engineering",
+        "year": 2026,
+        "citations": 43
+    },
+    {
+        "rank": 86,
+        "title": "Unlocking bioenergy for electricity generation in Indonesia: A Resource-economic assessment",
+        "author": "Asih A.M.S., Ariyanto T., Prasetyo B.A., Insani V.F.S., Irianto D., Hadiyati K.R., et al.",
+        "journal": "Sustainable Futures",
+        "year": 2025,
+        "citations": 29
+    },
+    {
+        "rank": 87,
+        "title": "Non-destructive testing of CFRP laminates for aerospace structures: Acoustic emission and ultrasonic longitudinal wave (ULW) evaluation under Mode II loading with destructive validation",
+        "author": "Muflikhun M.A., et al.",
+        "journal": "Results in Engineering",
+        "year": 2026,
+        "citations": 46
+    },
+    {
+        "rank": 88,
+        "title": "Analysis of Visible-Light Image and Flashover Voltage on the Cap-and-Pin Insulator With Fan-Shaped Pollution Distribution",
+        "author": "Wahyudi M., et al.",
+        "journal": "IEEE Access",
+        "year": 2026,
+        "citations": 26
+    }
   ],
   "scientists": [
     { "name": "Prof. Himawan Tri Bayu Murti Petrus", "field": "Mineral & Energy Conservation", "impact": "Top 5%" },
@@ -3752,5 +4232,18 @@
     { "name": "Widyawan, Ph.D.", "field": "Big Data", "impact": "Top 5%" },
     { "name": "Prof. Kusmono", "field": "Engineering Materials", "impact": "Top 5%" },
     { "name": "Dr. I Wayan Mustika", "field": "IoT & Telecommunication", "impact": "Top 5%" }
-  ]
+  ],
+  "fundingMetrics": {
+    "faculty": { "mean": 128, "median": 45, "target": 150 },
+    "departments": [
+      { "id": "DTAP", "name": "Teknik Arsitektur dan Perencanaan", "mean": 95, "median": 35, "target": 120 },
+      { "id": "DTETI", "name": "Teknik Elektro dan TI", "mean": 145, "median": 65, "target": 150 },
+      { "id": "DTMI", "name": "Teknik Mesin dan Industri", "mean": 130, "median": 50, "target": 150 },
+      { "id": "DTSL", "name": "Teknik Sipil dan Lingkungan", "mean": 140, "median": 60, "target": 150 },
+      { "id": "DTK", "name": "Teknik Kimia", "mean": 135, "median": 55, "target": 150 },
+      { "id": "DTGD", "name": "Teknik Geodesi", "mean": 110, "median": 40, "target": 130 },
+      { "id": "DTGL", "name": "Teknik Geologi", "mean": 115, "median": 45, "target": 130 },
+      { "id": "DTNTF", "name": "Teknik Nuklir dan Teknik Fisika", "mean": 105, "median": 38, "target": 130 }
+    ]
+  }
 }
