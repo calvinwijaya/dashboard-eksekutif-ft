@@ -381,13 +381,15 @@ export default function TeachingPage({ onBack }) {
                </div>
             ) : (
               filteredWorkload.map((d, idx) => {
-                // Logika Status: Overload (>16), Ideal (12-16), Underperform (<12)
+                // Logika Status BKD (Tri Dharma):
+                // Pengajaran saja > 16 SKS = Overload
+                // Pengajaran < 9 SKS = Diasumsikan sisa BKD dipenuhi dari Riset/Pengabdian
                 const isOverload = d.sks > 16;
-                const isUnderperform = d.sks < 12;
+                const isResearchFocused = d.sks < 9;
                 
-                // Warna: Merah/Orange (Overload), Abu-abu/Kuning (Underperform), Biru (Ideal)
-                const barColor = isOverload ? "#d97706" : isUnderperform ? "#94a3b8" : "#2563eb";
-                const textColor = isOverload ? "#9a3412" : isUnderperform ? "#475569" : "#0f172a";
+                // Warna: Merah/Orange (Overload), Abu-abu (Fokus Riset), Biru (Dominan Pengajaran)
+                const barColor = isOverload ? "#d97706" : isResearchFocused ? "#94a3b8" : "#2563eb";
+                const textColor = isOverload ? "#9a3412" : isResearchFocused ? "#475569" : "#0f172a";
 
                 return (
                   <div key={idx} style={{ padding: "12px 0", borderBottom: "1px solid #f1f5f9" }}>
@@ -398,18 +400,18 @@ export default function TeachingPage({ onBack }) {
                       </div>
                       <div style={{ textAlign: "right" }}>
                         <strong style={{ fontSize: 14, color: textColor }}>{d.sks} SKS</strong>
-                        <div style={{ ...muted, marginTop: 4 }}>Maksimal {d.max} SKS</div>
+                        <div style={{ ...muted, marginTop: 4 }}>Maksimal 16 SKS</div>
                       </div>
                     </div>
                     {/* Progress Bar (Maksimal Dihitung Berdasarkan 16 SKS) */}
-                    <Progress value={d.load} max={100} color={barColor} />
+                    <Progress value={(d.sks / 16) * 100} max={100} color={barColor} />
                     
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: 6 }}>
                       <span style={{ fontSize: 11, color: barColor, fontWeight: 700 }}>
-                        {isOverload ? "Overload (>16 SKS)" : isUnderperform ? "Underperform (<12 SKS)" : "Beban Ideal"}
+                        {isOverload ? "Overload Pengajaran (>16 SKS)" : isResearchFocused ? "Fokus Riset / Lainnya (<9 SKS)" : "Dominan Pengajaran (9-16 SKS)"}
                       </span>
                       <span style={{ fontSize: 11, color: "#64748b" }}>
-                        {d.load.toFixed(1)}% dari batas maksimal
+                        {((d.sks / 16) * 100).toFixed(1)}% dari batas maksimal
                       </span>
                     </div>
                   </div>
@@ -422,20 +424,20 @@ export default function TeachingPage({ onBack }) {
             <div style={{ ...muted, fontSize: 11, fontWeight: 700, letterSpacing: "0.05em" }}>EXECUTIVE INSIGHT</div>
             <h3 style={{ margin: "8px 0 12px" }}>Evaluasi Beban Pengajaran</h3>
             <p style={{ color: "#475569", lineHeight: 1.6, fontSize: 13 }}>
-              Target mengajar minimal adalah 12 SKS dan batas maksimal adalah 16 SKS. Dosen yang berada di luar rentang ini membutuhkan evaluasi.
+              Sesuai aturan BKD, total beban ideal adalah 12-16 SKS (mencakup Pendidikan, Penelitian, Pengabdian, dan Penunjang), dengan komponen Pendidikan + Penelitian minimal 9 SKS. Dosen dengan beban pengajaran yang rendah diekspektasikan memiliki porsi capaian riset atau pengabdian yang tinggi.
             </p>
             
             {/* Hitung Insight Berdasarkan Filter yang Aktif */}
             {(() => {
               const overloadCount = filteredWorkload.filter(d => d.sks > 16).length;
-              const underCount = filteredWorkload.filter(d => d.sks < 12).length;
-              const idealCount = filteredWorkload.length - overloadCount - underCount;
+              const researchCount = filteredWorkload.filter(d => d.sks < 9).length;
+              const teachingCount = filteredWorkload.length - overloadCount - researchCount;
 
               return (
                 <div style={{ display: "grid", gap: 10, marginTop: 16 }}>
                   <div style={{ background: "#fff", padding: 14, borderRadius: 10, border: "1px solid #e2e8f0" }}>
-                    <strong style={{ fontSize: 16, color: "#059669" }}>{idealCount} dosen</strong>
-                    <div style={muted}>Beban Ideal (12 - 16 SKS)</div>
+                    <strong style={{ fontSize: 16, color: "#059669" }}>{teachingCount} dosen</strong>
+                    <div style={muted}>Dominan Pengajaran (9 - 16 SKS)</div>
                   </div>
                   <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
                     <div style={{ background: "#fff", padding: 14, borderRadius: 10, border: "1px solid #e2e8f0" }}>
@@ -443,8 +445,8 @@ export default function TeachingPage({ onBack }) {
                       <div style={muted}>Overload ({'>'}16 SKS)</div>
                     </div>
                     <div style={{ background: "#fff", padding: 14, borderRadius: 10, border: "1px solid #e2e8f0" }}>
-                      <strong style={{ fontSize: 16, color: "#64748b" }}>{underCount} dosen</strong>
-                      <div style={muted}>Underperform ({'<'}12)</div>
+                      <strong style={{ fontSize: 16, color: "#64748b" }}>{researchCount} dosen</strong>
+                      <div style={muted}>Fokus Riset ({'<'}9 SKS)</div>
                     </div>
                   </div>
                 </div>

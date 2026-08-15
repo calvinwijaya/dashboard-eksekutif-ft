@@ -87,7 +87,4037 @@
     { "name": "Ir. Maritsa Faridatunnisa, S.T., M.Eng.", "department": "Departemen Teknik Geodesi", "sks": 12.0, "target": 12, "max": 16, "classes": 4, "students": 120, "load": 75.0 },
     { "name": "Ressy Fitria, S.T., M.Sc.Eng.", "department": "Departemen Teknik Geodesi", "sks": 12.0, "target": 12, "max": 16, "classes": 4, "students": 120, "load": 75.0 },
     { "name": "Ir. Febrian Fitryanik Susanta, S.T., M.Eng.", "department": "Departemen Teknik Geodesi", "sks": 12.0, "target": 12, "max": 16, "classes": 4, "students": 120, "load": 75.0 },
-    { "name": "Mohamad Bagas Setiawan, S.T., M.Eng.", "department": "Departemen Teknik Geodesi", "sks": 12.0, "target": 12, "max": 16, "classes": 4, "students": 120, "load": 75.0 }
+    { "name": "Mohamad Bagas Setiawan, S.T., M.Eng.", "department": "Departemen Teknik Geodesi", "sks": 12.0, "target": 12, "max": 16, "classes": 4, "students": 120, "load": 75.0 },
+    {
+        "name": "Prof. Ir. Achmad Djunaedi, MURP., Ph.D.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 8.86,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 127,
+        "load": 55.375
+    },
+    {
+        "name": "Ir. Ar. Adi Utomo Hatmoko, M.Arch., IAI., AA.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 6.27,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 100,
+        "load": 39.1875
+    },
+    {
+        "name": "Ir. Agam Marsoyo, M.Sc., Ph.D.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 19.86,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 118,
+        "load": 124.125
+    },
+    {
+        "name": "Dr.Eng. Agus Hariyadi, S.T., M.Sc.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 13.38,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 118,
+        "load": 83.625
+    },
+    {
+        "name": "Dr. Eng. Ir. Ahmad Sarwadi, M.Eng., IPM.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 11.14,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 137,
+        "load": 69.625
+    },
+    {
+        "name": "Dr.Eng., Ar. Alexander Rani Suryandono, S.T., M.Arch., IAI.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 14.2,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 132,
+        "load": 88.75
+    },
+    {
+        "name": "Ananda Prima Yurista, S.H, M.H.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 0.86,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 126,
+        "load": 5.375
+    },
+    {
+        "name": "Ardhya Nareswari, S.T., M.T., Ph.D.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 18.33,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 145,
+        "load": 114.5625
+    },
+    {
+        "name": "Ar. Arief Isrefidianto, S.T., MAUD., IAI.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 5.94,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 128,
+        "load": 37.125
+    },
+    {
+        "name": "Dr. Ir. Arif Kusumawanto, M.T., IAI, IPU",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 16.93,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 120,
+        "load": 105.8125
+    },
+    {
+        "name": "Ar. Arwan Suryanto, S.T., M.Sc., IAI",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 7.07,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 140,
+        "load": 44.1875
+    },
+    {
+        "name": "Atrida Hadianti, S.T., M.Sc., Ph.D.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 15.05,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 138,
+        "load": 94.0625
+    },
+    {
+        "name": "Prof. Ir. Bakti Setiawan, M.A., Ph.D.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 4.89,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 108,
+        "load": 30.5625
+    },
+    {
+        "name": "Prof. Ir. Bambang Hari Wibisono, MUP., M.Sc., Ph.D., IPU., ASEAN Eng.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 19.07,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 144,
+        "load": 119.1875
+    },
+    {
+        "name": "Ir. Deva Fosterharoldas Swasto, S.T., M.Sc., Ph.D., IPM.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 21.11,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 124,
+        "load": 131.9375
+    },
+    {
+        "name": "Diananta Pramitasari, S.T., M.Eng., Ph.D.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 15.46,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 106,
+        "load": 96.625
+    },
+    {
+        "name": "Ir. Didik Kristiadi, MLA., M.Arch.UD.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 5.36,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 151,
+        "load": 33.5
+    },
+    {
+        "name": "Dr. Ir. Dimas Wihardyanto, S.T., M.T., IPM.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 12.68,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 101,
+        "load": 79.25
+    },
+    {
+        "name": "Doddy Aditya Iskandar, S.T, M.CP., Ph.D.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 20.82,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 151,
+        "load": 130.125
+    },
+    {
+        "name": "Dr. Ir. Dwita Hadi Rahmi, M.A.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 15.96,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 106,
+        "load": 99.75
+    },
+    {
+        "name": "Dr. Dyah Titisari Widyastuti, S.T., MUDD.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 17.1,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 142,
+        "load": 106.875
+    },
+    {
+        "name": "Effan Septa Adiwira, S.T.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 4.93,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 157,
+        "load": 30.8125
+    },
+    {
+        "name": "Prof. Dr.Ing. Ir. Eugenius Pradipto",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 16.46,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 138,
+        "load": 102.875
+    },
+    {
+        "name": "Ar. Gilang Dwi Alridho, S.Ars., IAI",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 5.79,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 123,
+        "load": 36.1875
+    },
+    {
+        "name": "Harry Kurniawan, ST., M.Sc., Ph.D.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 11.7,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 108,
+        "load": 73.125
+    },
+    {
+        "name": "Prof. Ir. Ikaputra, M.Eng., Ph.D.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 19.65,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 127,
+        "load": 122.8125
+    },
+    {
+        "name": "Irsyad Adhi Waskita Hutama, S.T., M.Sc., Ph.D.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 21.29,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 122,
+        "load": 133.0625
+    },
+    {
+        "name": "Isti Hidayati, S.T., M.Sc., Ph.D.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 18.29,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 153,
+        "load": 114.3125
+    },
+    {
+        "name": "Iwan Suharyanto, S.T., M.Sc.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 14.79,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 109,
+        "load": 92.4375
+    },
+    {
+        "name": "Ir. Ar. Jatmika Adi Suryabrata, M.Sc., Ph.D., IAI.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 8.91,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 123,
+        "load": 55.6875
+    },
+    {
+        "name": "Jimly Al Faraby, S.T., M.Sc., Ph.D.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 21.54,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 155,
+        "load": 134.625
+    },
+    {
+        "name": "Ir. Kurnia Widiastuti, S.T., M.T., IPM.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 5.79,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 119,
+        "load": 36.1875
+    },
+    {
+        "name": "Labdo Pranowo, S.T., M.Sc.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 15.75,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 107,
+        "load": 98.4375
+    },
+    {
+        "name": "Dr.Eng. Ir. Laretna Trisnantari Adishakti, M.Arch.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 9.3,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 123,
+        "load": 58.125
+    },
+    {
+        "name": "Dr. Mardhani Riasetiawan, SE Ak, M.T.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 1.43,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 107,
+        "load": 8.9375
+    },
+    {
+        "name": "Maria Ariadne Dewi Wulansari, S.T, M.T.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 5.62,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 107,
+        "load": 35.125
+    },
+    {
+        "name": "Mario Lodeweik Lionar, S.T., M.Sc., Ph.D",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 10.86,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 109,
+        "load": 67.875
+    },
+    {
+        "name": "Ir. Medy Krisnany Samedyastoety, M.Arch.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 0.98,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 156,
+        "load": 6.125
+    },
+    {
+        "name": "Dr.Eng. Ir. Muhammad Sani Roychansyah, S.T., M.Eng.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 18.5,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 160,
+        "load": 115.625
+    },
+    {
+        "name": "Dr.Eng. Nedyomukti Imam Syafii, S.T., M.Sc.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 10.25,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 103,
+        "load": 64.0625
+    },
+    {
+        "name": "Odilia Renaningtyas Manifesty, S.T., MA(UD)., Ph.D.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 17.24,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 125,
+        "load": 107.75
+    },
+    {
+        "name": "Ratna Eka Suminar, S.T., M.Sc.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 9.73,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 109,
+        "load": 60.8125
+    },
+    {
+        "name": "Retno Widodo Dwi Pramono, S.T., M.Sc., Ph.D.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 24.8,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 127,
+        "load": 155
+    },
+    {
+        "name": "Sri Tuntung Pandangwati, S.T., MUP., Ph.D.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 15.07,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 101,
+        "load": 94.1875
+    },
+    {
+        "name": "Prof. Ir. Sudaryono, M.Eng, Ph.D., IPU.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 5.89,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 155,
+        "load": 36.8125
+    },
+    {
+        "name": "Syam Rachma Marcillia, S.T., M.Eng., Ph.D.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 18.64,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 158,
+        "load": 116.5
+    },
+    {
+        "name": "Prof. Ir. Tarcicius Yoyok Wahyu Subroto, M.Eng., Ph.D., IPU.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 18.36,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 122,
+        "load": 114.75
+    },
+    {
+        "name": "Dr. Tri Mulyani Sunarharum, S.T.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 11.07,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 125,
+        "load": 69.1875
+    },
+    {
+        "name": "Ir Wahju Wulandari, MBA.,IAI,AA",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 0.76,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 146,
+        "load": 4.75
+    },
+    {
+        "name": "Widyasari Her Nugrahandika, S.T., M.Sc.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 6.43,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 140,
+        "load": 40.1875
+    },
+    {
+        "name": "Prof. Ir. Wiendu Nuryanti, M. Arch., Ph.D.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 12.82,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 154,
+        "load": 80.125
+    },
+    {
+        "name": "Wisnu Agung Hardiansyah, S.Ars., M.Arch.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 4.8,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 119,
+        "load": 30
+    },
+    {
+        "name": "Dr. Yani Rahmawati, S.T., M.T.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 17.05,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 104,
+        "load": 106.5625
+    },
+    {
+        "name": "Dr. Yori Herwangi, S.T., MURP.",
+        "department": "Departemen Teknik Arsitektur dan Perencanaan",
+        "sks": 13.54,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 160,
+        "load": 84.625
+    },
+    {
+        "name": "Ir. Addin Suwastono, S.T., M.Eng., IPM.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 8.14,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 119,
+        "load": 50.875
+    },
+    {
+        "name": "Ir. Adha Imam Cahyadi, S.T., M.Eng., D.Eng., IPM.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 10.5,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 147,
+        "load": 65.625
+    },
+    {
+        "name": "Ir. Adhistya Erna Permanasari, S.T., M.T., Ph.D., IPM.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 9.5,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 136,
+        "load": 59.375
+    },
+    {
+        "name": "Afiahayati, S.Kom., M.Cs., Ph.D",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 3,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 133,
+        "load": 18.75
+    },
+    {
+        "name": "Ir. Agus Bejo, S.T., M.Eng., D.Eng., IPM.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 10.5,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 124,
+        "load": 65.625
+    },
+    {
+        "name": "Ahmad Ataka Awwalur Rizqi, S.T., Ph.D.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 9.14,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 138,
+        "load": 57.125
+    },
+    {
+        "name": "Dr. Ir. Ahmad Nasikun, S.T., M.Sc.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 10.14,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 133,
+        "load": 63.375
+    },
+    {
+        "name": "Anugerah Galang Persada, S.T., M.Eng.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 4.93,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 146,
+        "load": 30.8125
+    },
+    {
+        "name": "Dr. Ir. Avrin Nur Widiastuti, S.T., M.Eng., IPM.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 8.57,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 135,
+        "load": 53.5625
+    },
+    {
+        "name": "Ir. Azkario Rizky Pratama, S.T., M.Eng., Ph.D., IPM.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 11.64,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 118,
+        "load": 72.75
+    },
+    {
+        "name": "Ir. Bambang Sugiyantoro, M.T.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 7.71,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 155,
+        "load": 48.1875
+    },
+    {
+        "name": "Dr. Bimo Sunarfri Hantono, S.T., M.Eng.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 8,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 136,
+        "load": 50
+    },
+    {
+        "name": "Bobby Rian Dewangga, S.T., M. Eng.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 4.93,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 141,
+        "load": 30.8125
+    },
+    {
+        "name": "Dr. dr. Ch. Tri Nuryana, M.Kes",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 0.21,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 147,
+        "load": 1.3125
+    },
+    {
+        "name": "Dani Adhipta, S.Si., M.T.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 8.5,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 109,
+        "load": 53.125
+    },
+    {
+        "name": "Dr. Deni Pranowo, S.Si., M.Si.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 6,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 120,
+        "load": 37.5
+    },
+    {
+        "name": "Dr. Dyonisius Dony Ariananda, ST., M.Sc.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 11.07,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 113,
+        "load": 69.1875
+    },
+    {
+        "name": "Dzuhri Radityo Utomo, S.T., M.S., Ph.D.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 6.29,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 135,
+        "load": 39.3125
+    },
+    {
+        "name": "Ir. Eka Firmansyah, S.T., M.Eng., Ph.D., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 10,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 126,
+        "load": 62.5
+    },
+    {
+        "name": "Enas Dhuhri Kusuma, S.T., M.Eng.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 8,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 129,
+        "load": 50
+    },
+    {
+        "name": "dr. Eryna Ayu Nugra Desita, M.Biomed",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 0.21,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 106,
+        "load": 1.3125
+    },
+    {
+        "name": "Prof. Dr. Eng. Ir. Fransisco Danang Wijaya, S.T., M.T., IPM.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 10.43,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 114,
+        "load": 65.1875
+    },
+    {
+        "name": "Dr. Ir. Guntur Dharma Putra, S.T., M.Sc.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 14.29,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 103,
+        "load": 89.3125
+    },
+    {
+        "name": "Prof. Ir. Hanung Adi Nugroho, S.T., M.Eng., Ph.D., IPM., SMIEEE.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 7.29,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 131,
+        "load": 45.5625
+    },
+    {
+        "name": "Harry Prabowo, S.T., M.T.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 5.36,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 100,
+        "load": 33.5
+    },
+    {
+        "name": "Husni Rois Ali, S.T., M.Eng., Ph.D., DIC., SMIEEE.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 8.5,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 137,
+        "load": 53.125
+    },
+    {
+        "name": "Dr. I Wayan Mustika, S.T., M.Eng.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 10,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 131,
+        "load": 62.5
+    },
+    {
+        "name": "Dr.Eng. Ir. Igi Ardiyanto, S.T., M.Eng., IPM., ASEAN Eng., SMIEEE.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 13.57,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 111,
+        "load": 84.8125
+    },
+    {
+        "name": "Dr. Indah Soesanti, S.T., M.T.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 8,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 134,
+        "load": 50
+    },
+    {
+        "name": "Dr. Indriana Hidayah, S.T., M.T.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 11.79,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 152,
+        "load": 73.6875
+    },
+    {
+        "name": "Prof. Indriana Kartini, S.Si., M.Si., Ph.D.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 1,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 109,
+        "load": 6.25
+    },
+    {
+        "name": "Dr. Iswandi, S.T., M.Eng.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 7.93,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 102,
+        "load": 49.5625
+    },
+    {
+        "name": "dr. R. Jajar Setiawan, M.Sc., Ph.D",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 0.21,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 129,
+        "load": 1.3125
+    },
+    {
+        "name": "dr. Junaedy Yunus, M.Sc., Ph.D.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 0.21,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 154,
+        "load": 1.3125
+    },
+    {
+        "name": "Ir. Lesnanto Multa Putranto, S.T., M.Eng., Ph.D., IPM., SMIEEE.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 9.43,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 135,
+        "load": 58.9375
+    },
+    {
+        "name": "dr. Likuidita Yona Ramadini, M.Biomed",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 0.21,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 131,
+        "load": 1.3125
+    },
+    {
+        "name": "Prof. Ir. Lukito Edi Nugroho, M.Sc., Ph.D.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 13.86,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 142,
+        "load": 86.625
+    },
+    {
+        "name": "Mochammad Wahyudi, S.T., M.T.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 4,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 135,
+        "load": 25
+    },
+    {
+        "name": "Dr. Ir. Mokhammad Isnaeni Bambang Setyonegoro, M.T.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 6.36,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 159,
+        "load": 39.75
+    },
+    {
+        "name": "Muhammad Nur Rizal, S.T., M.Eng., Ph.D.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 5,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 149,
+        "load": 31.25
+    },
+    {
+        "name": "Ir. Noor Akhmad Setiawan, S.T., M.T., Ph.D., IPM.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 13.21,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 109,
+        "load": 82.5625
+    },
+    {
+        "name": "dr. Nur Arfian, Ph.D",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 0.21,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 107,
+        "load": 1.3125
+    },
+    {
+        "name": "Prof. Ir. Oyas Wahyunggoro, M.T., Ph.D.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 10.21,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 160,
+        "load": 63.8125
+    },
+    {
+        "name": "Prof. Ir. Paulus Insap Santosa, M.Sc., Ph.D., IPU.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 8.57,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 150,
+        "load": 53.5625
+    },
+    {
+        "name": "Ir. Prapto Nugroho, S.T., M.Eng., D.Eng., IPM.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 9.71,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 100,
+        "load": 60.6875
+    },
+    {
+        "name": "dr. Rahmaningsih Mara Sabirin, M.Sc.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 0.21,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 125,
+        "load": 1.3125
+    },
+    {
+        "name": "dr. Ratih Yuniartha, Ph.D.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 0.21,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 115,
+        "load": 1.3125
+    },
+    {
+        "name": "dr. Reza Yorghi Junianto Kartika Seputro, M.Sc.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 0.21,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 156,
+        "load": 1.3125
+    },
+    {
+        "name": "Dr. Rian Fatah Mochamad, S.T., M.Eng.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 7.07,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 159,
+        "load": 44.1875
+    },
+    {
+        "name": "Prof. Dr. Ir. Ridi Ferdiana, S.T., M.T., IPM.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 10.5,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 149,
+        "load": 65.625
+    },
+    {
+        "name": "Ir. Ridwan Wicaksono, S.T., M.Eng., Ph.D.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 10,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 131,
+        "load": 62.5
+    },
+    {
+        "name": "Prof. Dr. Ir. Risanuri Hidayat, M.Sc., IPM.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 12.21,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 153,
+        "load": 76.3125
+    },
+    {
+        "name": "Ir. Roni Irnawan, S.T., M.Sc., Ph.D., SMIEEE.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 9.21,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 150,
+        "load": 57.5625
+    },
+    {
+        "name": "RR Eny Sukani Rahayu, S.T., M.Eng.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 4.5,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 128,
+        "load": 28.125
+    },
+    {
+        "name": "Dr. Ir. Rudy Hartanto, M.T., IPM.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 7,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 137,
+        "load": 43.75
+    },
+    {
+        "name": "dr. Santosa Budiharjo, M.Kes., PA(K).",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 0.21,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 145,
+        "load": 1.3125
+    },
+    {
+        "name": "Prof. Ir. Sarjiya, S.T., M.T., Ph.D., IPU.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 10.86,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 150,
+        "load": 67.875
+    },
+    {
+        "name": "Prof. Dr. Ir. Sasongko Pramonohadi, DEA., IPU.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 5.71,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 129,
+        "load": 35.6875
+    },
+    {
+        "name": "Prof. Ir. Selo, S.T., M.T., M.Sc., Ph.D., IPU, ASEAN Eng.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 4.5,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 127,
+        "load": 28.125
+    },
+    {
+        "name": "Ir. Sigit Basuki Wibowo, S.T., M.Eng., Ph.D., IPM.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 9.5,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 155,
+        "load": 59.375
+    },
+    {
+        "name": "Dr. Eng. Silmi Fauziati, S.T., M.T.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 6.57,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 133,
+        "load": 41.0625
+    },
+    {
+        "name": "Dra. Sri Kusrohmaniah, M.Si., Ph.D., Psikolog.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 1,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 118,
+        "load": 6.25
+    },
+    {
+        "name": "Dr. dr. Sri Lestari Sulistyo Rini, M.Sc",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 0.21,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 113,
+        "load": 1.3125
+    },
+    {
+        "name": "Ir. Sujoko Sumaryono, M.T.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 8.14,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 104,
+        "load": 50.875
+    },
+    {
+        "name": "Dr. Eng. Ir. Sunu Wibirama, S.T., M.Eng., D.Eng., IPM",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 11.07,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 143,
+        "load": 69.1875
+    },
+    {
+        "name": "Syukron Abu Ishaq Alfarozi, S.T., Ph.D.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 10.79,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 133,
+        "load": 67.4375
+    },
+    {
+        "name": "Teguh Bharata Adji, S.T., M.T., M.Eng., Ph.D.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 9.21,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 120,
+        "load": 57.5625
+    },
+    {
+        "name": "Prof. Ir. Tumiran, M.Eng., Ph.D., IPU.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 8.86,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 104,
+        "load": 55.375
+    },
+    {
+        "name": "Ir. Wahyu Dewanto, M.T.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 7.5,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 157,
+        "load": 46.875
+    },
+    {
+        "name": "Dr. Warsun Najib, S.T., M.Sc.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 11.5,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 101,
+        "load": 71.875
+    },
+    {
+        "name": "Widyawan, S.T., M.Sc., Ph.D.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 8.5,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 137,
+        "load": 53.125
+    },
+    {
+        "name": "Dr. Wijaya Yudha Atmaja, S.T., M.Eng.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 9.5,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 150,
+        "load": 59.375
+    },
+    {
+        "name": "Dr. Wing Wahyu Winarno, MAFIS.Ak.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 1.5,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 131,
+        "load": 9.375
+    },
+    {
+        "name": "Dr.-Ing. Ir. Yohan Fajar Sidik, S.T., M.Eng.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 9.5,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 139,
+        "load": 59.375
+    },
+    {
+        "name": "Dr. Ir. Yusuf Susilo Wijoyo, S.T., M.Eng.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 7.14,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 103,
+        "load": 44.625
+    },
+    {
+        "name": "Dr.dr. Zaenal Muttaqien, AIFM.",
+        "department": "Departemen Teknik Elektro dan Teknologi Informasi",
+        "sks": 2.57,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 151,
+        "load": 16.0625
+    },
+    {
+        "name": "Prof. Dr. Ir. Agung Harijoko, S.T., M.Eng., IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 12.29,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 129,
+        "load": 76.8125
+    },
+    {
+        "name": "Dr.Eng. Ir. Agung Setianto, S.T., M.Si., IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 5.71,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 109,
+        "load": 35.6875
+    },
+    {
+        "name": "Agus Hendratno, S.T., M.T.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 2.71,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 151,
+        "load": 16.9375
+    },
+    {
+        "name": "Dr.Eng. Ir. Akmaluddin, S.T., M.T., IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 10.9,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 153,
+        "load": 68.125
+    },
+    {
+        "name": "Ir. Anastasia Dewi Titisari, M.T., Ph.D., IPU.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 8.57,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 107,
+        "load": 53.5625
+    },
+    {
+        "name": "Dr.rer.nat. Ir. Arifudin Idrus, S.T., M.T., IPU.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 14.93,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 141,
+        "load": 93.3125
+    },
+    {
+        "name": "Cicilia Dwi Setyorini, S.Pd., M.Hum.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 2.57,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 150,
+        "load": 16.0625
+    },
+    {
+        "name": "Dr.Eng.Ir. Didit Hadi Barianto, S.T., M.Si., IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 8.96,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 119,
+        "load": 56
+    },
+    {
+        "name": "Dr.Ing. Ir. Donatus Hendra Amijaya, S.T., M.T., IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 10.14,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 147,
+        "load": 63.375
+    },
+    {
+        "name": "Dr.rer.nat. Ir. Doni Prakasa Eka Putra, S.T, M.T., IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 13.14,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 117,
+        "load": 82.125
+    },
+    {
+        "name": "Prof. Ir. Dwikorita Karnawati, M.Sc., Ph.D.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 5.57,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 126,
+        "load": 34.8125
+    },
+    {
+        "name": "Prof.Dr. Endang Tri Wahyuni, M.S.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 1.71,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 143,
+        "load": 10.6875
+    },
+    {
+        "name": "Ir. Esti Handini, S.T., M.Eng., D.Sc., IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 3.93,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 122,
+        "load": 24.5625
+    },
+    {
+        "name": "Fahmi Hakim, S.T., M.Sc.RWTH.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 5.79,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 148,
+        "load": 36.1875
+    },
+    {
+        "name": "Prof. Dr. Ir. Ferian Anggara, S.T., M.Eng., IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 15.29,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 149,
+        "load": 95.5625
+    },
+    {
+        "name": "Ir. Gayatri Indah Marliyani, S.T., M.Sc., Ph.D. IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 5.36,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 157,
+        "load": 33.5
+    },
+    {
+        "name": "Dr. Ir. Haryo Edi Wibowo, S.T., M.Sc., IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 10.93,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 111,
+        "load": 68.3125
+    },
+    {
+        "name": "Ir. Hendy Setiawan, S.T., M. Eng., Ph.D., IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 12.64,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 123,
+        "load": 79
+    },
+    {
+        "name": "Prof. Dr.rer.nat. Ir. Heru Hendrayana, IPU.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 12.64,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 130,
+        "load": 79
+    },
+    {
+        "name": "Ir. I Gde Budi Indrawan, S.T., M.Eng., Ph.D., IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 10.43,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 122,
+        "load": 65.1875
+    },
+    {
+        "name": "Dr.rer.nat. Ir. I Wayan Warmada, IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 8.29,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 123,
+        "load": 51.8125
+    },
+    {
+        "name": "Drs. Imam Suyanto, M.Si.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 1.14,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 133,
+        "load": 7.125
+    },
+    {
+        "name": "Ir. Jarot Setyowiyoto, M.Sc., Ph.D., IPU, ASEAN Eng.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 6,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 122,
+        "load": 37.5
+    },
+    {
+        "name": "Dr.Eng. Ir. Lucas Donny Setijadji, S.T., M.Sc., IPU.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 13.93,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 158,
+        "load": 87.0625
+    },
+    {
+        "name": "Ir. Mochammad Indra Novian, S.T., M.Eng., IPP.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 7.69,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 156,
+        "load": 48.0625
+    },
+    {
+        "name": "Ir. Nugroho Imam Setiawan, S.T., M.T., D.Sc., IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 5.29,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 152,
+        "load": 33.0625
+    },
+    {
+        "name": "Ir. Pri Utami, M.Sc., Ph.D., IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 4.71,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 154,
+        "load": 29.4375
+    },
+    {
+        "name": "Ir. Rahmadi Hidayat, S.T., M.Eng., Ph.D., IPP.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 5.8,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 137,
+        "load": 36.25
+    },
+    {
+        "name": "Dr.Sc. Robby Noor Cahyono, S.Si., M.Sc.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 2.71,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 138,
+        "load": 16.9375
+    },
+    {
+        "name": "Ir. Salahuddin, S.T., M.Sc., Ph.D., IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 5.86,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 116,
+        "load": 36.625
+    },
+    {
+        "name": "Saptono Budi Samodra, S.T., M.Sc.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 6.29,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 148,
+        "load": 39.3125
+    },
+    {
+        "name": "Dr. Ir. Sarju Winardi, S.T., M.T.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 5.43,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 160,
+        "load": 33.9375
+    },
+    {
+        "name": "Prof. Dr. Ir. Sugeng Sapto Surjono, S.T, M.T., IPU, ASEAN.Eng.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 6.79,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 125,
+        "load": 42.4375
+    },
+    {
+        "name": "Dr. Sumardi, M.Si.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 1.71,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 137,
+        "load": 10.6875
+    },
+    {
+        "name": "Ir. Wahyu Sasongko, S.T., M.T. IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 4.57,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 148,
+        "load": 28.5625
+    },
+    {
+        "name": "Prof. Dr.Eng. Ir. Wahyu Wilopo, S.T., M.Eng.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 12.14,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 120,
+        "load": 75.875
+    },
+    {
+        "name": "Dr.Eng. Ir. Wawan Budianta, S.T., M.Sc., IPM.",
+        "department": "Departemen Teknik Geologi",
+        "sks": 14.29,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 110,
+        "load": 89.3125
+    },
+    {
+        "name": "Ade Kurniawan, S.T., M.Eng., Ph.D",
+        "department": "Departemen Teknik Kimia",
+        "sks": 10.5,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 100,
+        "load": 65.625
+    },
+    {
+        "name": "Dr.rer.nat. Adhitasari Suratman, S.Si., M.Si.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 3,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 124,
+        "load": 18.75
+    },
+    {
+        "name": "Ir. Agus Prasetya, M.Eng.Sc., Ph.D.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 16.14,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 117,
+        "load": 100.875
+    },
+    {
+        "name": "Ir. Ahmad Tawfiequrrahman Yuliansyah, S.T., M.T., D.Eng., IPM.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 9.21,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 160,
+        "load": 57.5625
+    },
+    {
+        "name": "Akhmad Syoufian, Ph.D.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 2,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 122,
+        "load": 12.5
+    },
+    {
+        "name": "Prof. Dr.Eng. Ir. Arief Budiman, M.S., IPU.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 14.64,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 143,
+        "load": 91.5
+    },
+    {
+        "name": "Prof. Dr. Ir. Aswati Mindaryani, M.Sc., IPU.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 13,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 131,
+        "load": 81.25
+    },
+    {
+        "name": "Prof. Ir. Budhijanto, S.T., M.T., Ph.D., IPM.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 10.14,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 143,
+        "load": 63.375
+    },
+    {
+        "name": "Prof. Ir. Chandra Wahyu Purnomo, S.T., M.Eng., D.Eng., IPM.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 11,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 121,
+        "load": 68.75
+    },
+    {
+        "name": "Dr. Nyayu Aisyah, SST, M.T.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 2,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 114,
+        "load": 12.5
+    },
+    {
+        "name": "Dr.Eng. Agustinus Winarno, S.T., M.Eng.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 2,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 139,
+        "load": 12.5
+    },
+    {
+        "name": "Prof. Dr. Ir. Edia Rahayuningsih, M.S., IPU.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 7.5,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 151,
+        "load": 46.875
+    },
+    {
+        "name": "Dr. Eka Tarwaca Susila P, ., S.P., M.P.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 1.71,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 113,
+        "load": 10.6875
+    },
+    {
+        "name": "Fajar Inggit Pambudi, S.Si., M.Sc, Ph.D",
+        "department": "Departemen Teknik Kimia",
+        "sks": 1,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 129,
+        "load": 6.25
+    },
+    {
+        "name": "Hanifrahmawan Sudibyo, S.T., M.Eng., Ph.D.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 10.93,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 129,
+        "load": 68.3125
+    },
+    {
+        "name": "Prof. Himawan Tri Bayu Murti Petrus, S.T., M.Eng., D.Eng.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 23.79,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 109,
+        "load": 148.6875
+    },
+    {
+        "name": "Prof. Ir. I Made Bendiyasa, M.Sc., Ph.D.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 1.5,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 159,
+        "load": 9.375
+    },
+    {
+        "name": "Prof. Ir. Imam Prasetyo, M.Eng., Ph.D.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 6.5,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 101,
+        "load": 40.625
+    },
+    {
+        "name": "Prof. Ir. Indra Perdana, S.T., MT., Ph.D.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 12.29,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 128,
+        "load": 76.8125
+    },
+    {
+        "name": "Jaka Rachmadetin, S.Si., M.Eng., Ph.D.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 1.71,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 147,
+        "load": 10.6875
+    },
+    {
+        "name": "Dr. Joko Wintoko, S.T., M.Sc.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 10.86,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 126,
+        "load": 67.875
+    },
+    {
+        "name": "Dr. Jonas Kristanto, S.T.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 11.79,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 147,
+        "load": 73.6875
+    },
+    {
+        "name": "Lisendra Marbelia, S.T., M.Sc., Ph.D.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 5.43,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 111,
+        "load": 33.9375
+    },
+    {
+        "name": "Maulana Gilar Nugraha, S.T., M.Eng., Ph.D.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 9.5,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 120,
+        "load": 59.375
+    },
+    {
+        "name": "Meiga Putri Wahyu Hardhianti, S.T., M.Eng.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 7,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 136,
+        "load": 43.75
+    },
+    {
+        "name": "Ir. Moh. Fahrurrozi, M.Sc., Ph.D., IPU.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 8.5,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 137,
+        "load": 53.125
+    },
+    {
+        "name": "Ir. Muhammad Mufti Azis, S.T., M.Sc., Ph.D., IPM",
+        "department": "Departemen Teknik Kimia",
+        "sks": 15.14,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 130,
+        "load": 94.625
+    },
+    {
+        "name": "Dr. Mukmin Sapto Pamungkas, S.T., M.Eng.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 6.5,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 128,
+        "load": 40.625
+    },
+    {
+        "name": "Prof. Ir. Muslikhin Hidayat, S.T., M.T., Ph.D., IPU.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 8.5,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 123,
+        "load": 53.125
+    },
+    {
+        "name": "Dr. apt. Muthi' Ikawati, M.Sc.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 1.71,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 157,
+        "load": 10.6875
+    },
+    {
+        "name": "Nur Rofiqoh Eviana Putri, S.T., M.Eng., Ph.D.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 7.64,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 123,
+        "load": 47.75
+    },
+    {
+        "name": "Prof. Ir. Panut Mulyono, M.Eng., D.Eng., IPU., ASEAN.Eng.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 9.29,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 114,
+        "load": 58.0625
+    },
+    {
+        "name": "Ir. Rochim Bakti Cahyono, S.T., M.Sc., Ph.D., IPM.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 9,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 107,
+        "load": 56.25
+    },
+    {
+        "name": "Prof. Ir. Rochmadi, S.U., Ph.D., IPU, ASEAN Eng",
+        "department": "Departemen Teknik Kimia",
+        "sks": 5.21,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 139,
+        "load": 32.5625
+    },
+    {
+        "name": "Ir. Rr. Wahyu Hasokowati, MASc., IPM.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 5.5,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 129,
+        "load": 34.375
+    },
+    {
+        "name": "Prof. Ir. Sang Kompiang Wirawan, S.T., M.T.Ph.D.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 7,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 147,
+        "load": 43.75
+    },
+    {
+        "name": "Prof. Dr. Ir. Sarto, M.Sc., IPU., ASEAN Eng.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 12.07,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 155,
+        "load": 75.4375
+    },
+    {
+        "name": "Ir. Sofiyah, M.T.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 5,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 125,
+        "load": 31.25
+    },
+    {
+        "name": "Dr. Sri Sudiono, S.Si, M.Si.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 3,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 114,
+        "load": 18.75
+    },
+    {
+        "name": "Dr. Sugiyanto, S.T., M.Eng.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 2,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 126,
+        "load": 12.5
+    },
+    {
+        "name": "Suherman, S.Si., M.Sc. Ph.D",
+        "department": "Departemen Teknik Kimia",
+        "sks": 3,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 105,
+        "load": 18.75
+    },
+    {
+        "name": "Ir. Suprihastuti Sri Rahayu, M.Sc., IPU.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 1.5,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 111,
+        "load": 9.375
+    },
+    {
+        "name": "Prof. Ir. Suryo Purwono, M.A.Sc., Ph.D., IPU, ASEAN Eng., ACPE.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 9.57,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 117,
+        "load": 59.8125
+    },
+    {
+        "name": "Ir. Sutijan, M.T., Ph.D.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 4.86,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 127,
+        "load": 30.375
+    },
+    {
+        "name": "Dr. Ing. Ir. Teguh Ariyanto, S.T., M.Eng., IPM., ASEAN Eng",
+        "department": "Departemen Teknik Kimia",
+        "sks": 12.64,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 114,
+        "load": 79
+    },
+    {
+        "name": "Prof. Dr. Eng. Widi Astuti, S.T., M.T.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 3.43,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 104,
+        "load": 21.4375
+    },
+    {
+        "name": "Prof. Ir. Wiratni, S.T., M.T., Ph.D., IPM.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 6,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 159,
+        "load": 37.5
+    },
+    {
+        "name": "Dr. Yayat Iman Supriyatna, M.T.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 1.71,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 139,
+        "load": 10.6875
+    },
+    {
+        "name": "Ir. Yuni Kusumastuti, S.T., M.Eng., D.Eng., IPM.",
+        "department": "Departemen Teknik Kimia",
+        "sks": 13.21,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 149,
+        "load": 82.5625
+    },
+    {
+        "name": "Prof. Ir. Yuny Erwanto, S.Pt., M.P., Ph.D., IPM",
+        "department": "Departemen Teknik Kimia",
+        "sks": 1.71,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 155,
+        "load": 10.6875
+    },
+    {
+        "name": "Ir. Achmad Pratama Rifai, S.T., M.Eng., Ph.D., IPM",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 9.14,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 158,
+        "load": 57.125
+    },
+    {
+        "name": "Dr. Eng. Ir. Adhika Widyaparaga, S.T., M.Biomed.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 9,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 160,
+        "load": 56.25
+    },
+    {
+        "name": "Ir. Agus Darmawan, S.T., M.S., Ph.D., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 11.5,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 135,
+        "load": 71.875
+    },
+    {
+        "name": "Ahmad Amin, S.E., M.Sc., Ph.D.(cid:9)",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 2,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 120,
+        "load": 12.5
+    },
+    {
+        "name": "Dr. Ir. Akmal Irfan Majid, S.T., M.Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 10.07,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 123,
+        "load": 62.9375
+    },
+    {
+        "name": "Prof. Ir. Alva Edy Tontowi, M.Sc., Ph.D., IPU, ASEAN Eng",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 8.29,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 133,
+        "load": 51.8125
+    },
+    {
+        "name": "Ir. Andi Rahadiyan Wijaya, S.T., M.Sc., Ph.D., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 13.93,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 105,
+        "load": 87.0625
+    },
+    {
+        "name": "Ir. Andi Sudiarso, S.T., M.T., M.Sc., Ph.D., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 12.5,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 154,
+        "load": 78.125
+    },
+    {
+        "name": "Ir. Anna Maria Sri Asih, S.T., M.M., M.Sc., Ph.D., IPU, ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 8.36,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 157,
+        "load": 52.25
+    },
+    {
+        "name": "Ardi Wiranata, S.T., M.Eng., Ph.D., IPP",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 9.71,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 143,
+        "load": 60.6875
+    },
+    {
+        "name": "Ir. Ardiyanto, S.T., M.Sc., Ph.D., AEP., IPM.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 11.5,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 154,
+        "load": 71.875
+    },
+    {
+        "name": "Ir. Arif Widyatama, S.T., M.Eng., Ph. D",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 8.71,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 107,
+        "load": 54.4375
+    },
+    {
+        "name": "Prof. Ir. Bertha Maya Shopa, S.T., M.Sc., Ph.D., IPU, ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 8.86,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 114,
+        "load": 55.375
+    },
+    {
+        "name": "Ir. Budhi Sholeh Wibowo, S.T., M.T., PDEng., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 10,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 106,
+        "load": 62.5
+    },
+    {
+        "name": "Dr. Ir. Budi Arifvianto, S.T., M.Biotech., IPP",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 11.64,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 127,
+        "load": 72.75
+    },
+    {
+        "name": "Prof. Ir. Budi Hartono, S.T., M.Pm, Ph.D., IPU, ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 9.07,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 127,
+        "load": 56.6875
+    },
+    {
+        "name": "Ir. Dawi Karomati Baroroh, S.T., M.Sc., Ph.D., IPM",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 11.36,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 109,
+        "load": 71
+    },
+    {
+        "name": "Prof. Dr. Eng. Deendarlianto, S.T., M.Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 12.43,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 115,
+        "load": 77.6875
+    },
+    {
+        "name": "Ir. Fauzun, S.T., M.T., Ph.D., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 10.14,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 152,
+        "load": 63.375
+    },
+    {
+        "name": "Ir. Fitri Trapsilawati, S.T., Ph.D., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 11.14,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 113,
+        "load": 69.625
+    },
+    {
+        "name": "Prof. Dr. Ir. Gesang Nugroho, S.T., M.T.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 10,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 134,
+        "load": 62.5
+    },
+    {
+        "name": "Ir. Hari Agung Yuniarto, S.T., M.Sc., Ph.D., IPU., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 10.64,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 152,
+        "load": 66.5
+    },
+    {
+        "name": "Prof. Dr. Ir. Harwin Saptoadi, M.SE., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 9.64,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 141,
+        "load": 60.25
+    },
+    {
+        "name": "Prof. Dr. Eng. Ir. Herianto, S.T., M.Eng., IPU, ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 10.64,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 125,
+        "load": 66.5
+    },
+    {
+        "name": "Prof. Ir. Heru Santoso Budi Rochardjo, M.Eng., Ph.D, IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 10.07,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 146,
+        "load": 62.9375
+    },
+    {
+        "name": "Dr. Hifni Mukhtar Ariyadi, S.T., M.Sc.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 9.21,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 110,
+        "load": 57.5625
+    },
+    {
+        "name": "Ir. Hilya Mudrika Arini, S.T., M.Sc., M.Phil., Ph.D., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 11.5,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 105,
+        "load": 71.875
+    },
+    {
+        "name": "Ir. I Gusti Bagus Budi Dharma, S.T., M.Eng., Ph.D., IPU., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 8.5,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 134,
+        "load": 53.125
+    },
+    {
+        "name": "Dr. Ir. I Made Miasa, S.T., M.Sc.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 11.07,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 113,
+        "load": 69.1875
+    },
+    {
+        "name": "Prof. Dr. Ir. Indarto, DEA., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 5.07,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 148,
+        "load": 31.6875
+    },
+    {
+        "name": "Indraswari Kusumaningtyas, S.T., M.Sc., Ph.D.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 11,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 128,
+        "load": 68.75
+    },
+    {
+        "name": "Ir. Indro Pranoto, S.T., M.Eng., Ph.D., IPM, ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 9.86,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 100,
+        "load": 61.625
+    },
+    {
+        "name": "Prof. Ir. Jamasri, Ph.D., IPU., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 11.86,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 108,
+        "load": 74.125
+    },
+    {
+        "name": "Janatin Hastuti, S.Si., M.Kes., Ph.D",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 2.29,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 105,
+        "load": 14.3125
+    },
+    {
+        "name": "Ir. Janu Pardadi, M.T., IPM.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 3,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 144,
+        "load": 18.75
+    },
+    {
+        "name": "Dr. Ir. Jayan Sentanuhady, S.T., M.Eng., IPU., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 8.07,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 143,
+        "load": 50.4375
+    },
+    {
+        "name": "Ir. Joko Waluyo, M.T., Ph.D., IPM., ASEAN Eng., APEC Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 11.07,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 143,
+        "load": 69.1875
+    },
+    {
+        "name": "Dr. Ir. Khasani, S.T., M.Eng., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 9.57,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 120,
+        "load": 59.8125
+    },
+    {
+        "name": "Prof. Dr. Ir. Kusmono, S.T., M.T., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 11.07,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 144,
+        "load": 69.1875
+    },
+    {
+        "name": "Prof. Dr. Mirwan Ushada, STP., M.App.Life.Sc",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 3,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 118,
+        "load": 18.75
+    },
+    {
+        "name": "Prof. Mochammad Noer Ilman, S.T., M.Sc., Ph.D., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 11,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 151,
+        "load": 68.75
+    },
+    {
+        "name": "Dr. Eng. Ir. Muh Arif Wibisono, S.T., M.T., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 8.86,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 141,
+        "load": 55.375
+    },
+    {
+        "name": "Ir. Muhammad Agung Bramantya, S.T., M.T., M.Eng., Ph.D., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 7.79,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 136,
+        "load": 48.6875
+    },
+    {
+        "name": "Ir. Muhammad Akhsin Muflikhun, S.T., MSME., Ph.D",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 11.5,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 153,
+        "load": 71.875
+    },
+    {
+        "name": "Ir. Muhammad Kusumawan Herliansyah, S.T., M.T., Ph.D., IPU, ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 4.86,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 148,
+        "load": 30.375
+    },
+    {
+        "name": "Ir. Muhammad Waziz Wildan, M.Sc., Ph.D., IPU.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 10.36,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 151,
+        "load": 64.75
+    },
+    {
+        "name": "Ir. Muslim Mahardika, S.T., M.Eng., Ph.D., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 10.86,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 109,
+        "load": 67.875
+    },
+    {
+        "name": "Dra. Neni Trilusiana Rahmawati, M.Kes., Ph.D.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 2.71,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 112,
+        "load": 16.9375
+    },
+    {
+        "name": "Prof. Ir. Nur Aini Masruroh, S.T., M.Sc., Ph.D., IPU., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 9.36,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 131,
+        "load": 58.5
+    },
+    {
+        "name": "Ir. Nur Mayke Eka Normasari, S.T., M.Eng., Ph.D., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 8.57,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 124,
+        "load": 53.5625
+    },
+    {
+        "name": "Dr. Ir. Orchida Dianita, S.T., MBA., M.Sc., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 10.21,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 157,
+        "load": 63.8125
+    },
+    {
+        "name": "Ir. Prastowo Murti, S.Si., M.Eng., Ph.D.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 9.86,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 127,
+        "load": 61.625
+    },
+    {
+        "name": "Ir. Priyo Tri Iswanto, S.T., M.Sc., Ph.D., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 10.93,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 141,
+        "load": 68.3125
+    },
+    {
+        "name": "Dr.Eng. Ir. R. Rachmat A. Sriwijaya, S.T., M.T., IPU., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 8.36,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 142,
+        "load": 52.25
+    },
+    {
+        "name": "Ir. Rini Dharmastiti, M.Sc., Ph.D., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 12,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 150,
+        "load": 75
+    },
+    {
+        "name": "Ir. Robertus Dhimas Dhewangga Putra, S.T., M.Eng., Ph.D.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 9.71,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 145,
+        "load": 60.6875
+    },
+    {
+        "name": "Ir. Ryan Anugrah Putra, S.T., M.Sc., M. Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 9.14,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 144,
+        "load": 57.125
+    },
+    {
+        "name": "Prof. Ir. Samsul Kamal, M.Sc., Ph.D.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 1,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 142,
+        "load": 6.25
+    },
+    {
+        "name": "Ir. Sekar Sakti, S.T., M.Sc., MBA., Ph. D",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 10.14,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 152,
+        "load": 63.375
+    },
+    {
+        "name": "Ir. Sinta Rahmawidya Sulistyo, S.T., MSIE., Ph.D., IPM",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 11.29,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 120,
+        "load": 70.5625
+    },
+    {
+        "name": "Prof. Ir. Subagyo, Ph.D., IPU., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 7.79,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 140,
+        "load": 48.6875
+    },
+    {
+        "name": "Dr. Ir. Suhanan, DEA.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 3.36,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 101,
+        "load": 21
+    },
+    {
+        "name": "Dr. Sutopo, S.Si., M.Si.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 4,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 157,
+        "load": 25
+    },
+    {
+        "name": "Dr. Ir. Teguh Pudji Purwanto, M.T., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 6.71,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 139,
+        "load": 41.9375
+    },
+    {
+        "name": "Dr. Eng. Ir. Titis Wijayanto, S.T., M.Des., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 10.79,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 158,
+        "load": 67.4375
+    },
+    {
+        "name": "Uha Isnaini, S.Si., M.Sc., Ph.D",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 3,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 155,
+        "load": 18.75
+    },
+    {
+        "name": "Dr. Ir. Urip Agus Salim, S.T., M. Eng.Sc.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 9.29,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 135,
+        "load": 58.0625
+    },
+    {
+        "name": "Ir. Wangi Pandan Sari, S.T., M.Sc., Ph.D., IPM",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 12.29,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 147,
+        "load": 76.8125
+    },
+    {
+        "name": "Dr. Ir. Willie Prasidha, S.T., M.Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 8.93,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 134,
+        "load": 55.8125
+    },
+    {
+        "name": "Prof. Dr. Winarto Haryadi, M.Si.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 1.71,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 155,
+        "load": 10.6875
+    },
+    {
+        "name": "Ir. Yun Prihantina Mulyani, S.T., M.Sc., Ph.D., IPM., ASEAN Eng.",
+        "department": "Departemen Teknik Mesin dan Industri",
+        "sks": 11.29,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 145,
+        "load": 70.5625
+    },
+    {
+        "name": "Ir. Agus Arif, M.T.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 8,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 123,
+        "load": 50
+    },
+    {
+        "name": "Prof. Dr. Ir. Agus Budhie Wijatna, M.Si., IPM.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 5,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 106,
+        "load": 31.25
+    },
+    {
+        "name": "Ahmad Agus Setiawan, S.T., M.Sc., Ph.D.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 6.86,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 115,
+        "load": 42.875
+    },
+    {
+        "name": "Dr. Ir. Alexander Agung, S.T., M.Sc., IPU.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 10.93,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 159,
+        "load": 68.3125
+    },
+    {
+        "name": "Prof. Dr. Ir. Andang Widi Harto, M.T., IPU. ASEAN Eng.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 10.36,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 152,
+        "load": 64.75
+    },
+    {
+        "name": "Ir. Anung Muharini, M.T., IPM.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 8,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 136,
+        "load": 50
+    },
+    {
+        "name": "Dr.-Ing. Ir. Awang Noor Indra Wardana, S.T., M.T., M.Sc., IPM.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 9,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 132,
+        "load": 56.25
+    },
+    {
+        "name": "Ir. Ayodya Pradhipta Tenggara, S.T., M.Sc., Ph.D., IPM",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 3.07,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 119,
+        "load": 19.1875
+    },
+    {
+        "name": "dr. Didik Setyo Heriyanto, Sp.PA(K)., Ph.D",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 1.5,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 122,
+        "load": 9.375
+    },
+    {
+        "name": "Dr. Eng. Ir. Dwi Joko Suroso, S.T., M.Eng., IPP.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 10.07,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 147,
+        "load": 62.9375
+    },
+    {
+        "name": "Ir. Ester Wijayanti, M.T.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 9.07,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 145,
+        "load": 56.6875
+    },
+    {
+        "name": "Ir. Fadli Kasim, S.T., M.Sc.,ASEAN Eng.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 5.64,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 150,
+        "load": 35.25
+    },
+    {
+        "name": "Prof. Dr. Ir. Faridah, S.T., M.Sc., IPU. ASEAN Eng.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 11,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 105,
+        "load": 68.75
+    },
+    {
+        "name": "Ferdiansjah, S.T., M.Eng.Sc.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 8,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 122,
+        "load": 50
+    },
+    {
+        "name": "Fitrotun Aliyah, S.T., M.Eng., Ph.D.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 8.43,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 142,
+        "load": 52.6875
+    },
+    {
+        "name": "Dr. Gea Oswah Fatah Parikesit, S.T., M.Sc.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 8,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 113,
+        "load": 50
+    },
+    {
+        "name": "Dr. Ir. Haryono Budi Santosa, M.Sc.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 7,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 101,
+        "load": 43.75
+    },
+    {
+        "name": "Dr.Ing. Ir. Kusnanto",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 10,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 124,
+        "load": 62.5
+    },
+    {
+        "name": "Ir. Kutut Suryapratomo, M.T., M.Sc.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 8.64,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 100,
+        "load": 54
+    },
+    {
+        "name": "Lucyana Dwi Larasati, S.T., M.S",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 1,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 147,
+        "load": 6.25
+    },
+    {
+        "name": "M. Arif Efendi, S.Si., M.Sc., Ph.D",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 7.71,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 136,
+        "load": 48.1875
+    },
+    {
+        "name": "Dr. Eng. Ir. Mohammad Kholid Ridwan, S.T., M.Sc., IPU., ASEAN Eng.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 8,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 103,
+        "load": 50
+    },
+    {
+        "name": "Prof. Ir. Nazrul Effendy, S.T., M.T., Ph.D., IPM. ASEAN Eng.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 7.5,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 122,
+        "load": 46.875
+    },
+    {
+        "name": "Ir. Nopriadi, S.T., M.Sc., Ph.D., IPM.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 11.14,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 131,
+        "load": 69.625
+    },
+    {
+        "name": "Ir. Nunung Prabaningrum, M.T., Ph.D., IPU.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 10.79,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 102,
+        "load": 67.4375
+    },
+    {
+        "name": "Dr.Ir. Nur Abdillah Siddiq, S.T., IPP.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 7.93,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 126,
+        "load": 49.5625
+    },
+    {
+        "name": "Dr. Ir. Rachmawan Budiarto, S.T., M.T., IPU.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 8.14,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 137,
+        "load": 50.875
+    },
+    {
+        "name": "Ir. Sentagi Sesotya Utami, S.T., M.Sc., Ph.D., IPU.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 9.57,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 146,
+        "load": 59.8125
+    },
+    {
+        "name": "Dr. Ing. Ir. Sihana, IPU.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 9.07,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 122,
+        "load": 56.6875
+    },
+    {
+        "name": "Prof. Ir. Sunarno, M.Eng., Ph.D., IPU.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 5.29,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 108,
+        "load": 33.0625
+    },
+    {
+        "name": "Ir. Susetyo Hario Putero, M.Eng.,IPU.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 6.57,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 128,
+        "load": 41.0625
+    },
+    {
+        "name": "Susiyami Rahayuningsih, S.Si., M.Si, F.Med",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 0.5,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 147,
+        "load": 3.125
+    },
+    {
+        "name": "Umar Sahiful Hidayat, S.T., M.Eng.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 0.5,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 137,
+        "load": 3.125
+    },
+    {
+        "name": "Dr. Ir. Widya Rosita, S.T., M.T., IPU.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 9.79,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 125,
+        "load": 61.1875
+    },
+    {
+        "name": "Yakub Fahim Luckyarno, S.T., M.Eng.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 6.57,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 104,
+        "load": 41.0625
+    },
+    {
+        "name": "Yanuar Ady Setiawan, S.T., M.S.",
+        "department": "Departemen Teknik Nuklir dan Teknik Fisika",
+        "sks": 4.36,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 143,
+        "load": 27.25
+    },
+    {
+        "name": "Prof. Ir. Adam Pamudji Rahardjo, M.Sc., Ph.D., IPM.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 13.43,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 136,
+        "load": 83.9375
+    },
+    {
+        "name": "Ir. Agus Darmawan Adi, M.Sc., Ph.D., IPU.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 3.21,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 145,
+        "load": 20.0625
+    },
+    {
+        "name": "Prof. Dr. es.sc.tech. Ir. Ahmad Rifai, M.T., IPM., ASEAN.Eng.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 18.43,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 100,
+        "load": 115.1875
+    },
+    {
+        "name": "Dr. Akhmad Akbar Susamto, S.E., M.Phil",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 1.71,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 154,
+        "load": 10.6875
+    },
+    {
+        "name": "Ir. Akhmad Aminullah, S.T., M.T., Ph.D., IPU.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 11,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 126,
+        "load": 68.75
+    },
+    {
+        "name": "Prof. Ir. Ali Awaludin, S.T., M.Eng., Ph.D., IPU, ACPE.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 9.29,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 118,
+        "load": 58.0625
+    },
+    {
+        "name": "Andika Monanta Emilidardi, S.T., M.Eng.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 10.14,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 150,
+        "load": 63.375
+    },
+    {
+        "name": "Prof. Dr.-Ing. Ir. Andreas Triwiyono, . IPU.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 6.57,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 134,
+        "load": 41.0625
+    },
+    {
+        "name": "Angga Fajar Setiawan, S.T., M.Eng., Ph.D.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 10.64,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 159,
+        "load": 66.5
+    },
+    {
+        "name": "Dr. Ir. Angga Trisna Yudhistira, S.T., .M.Eng., IPM., ACPE.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 9.86,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 103,
+        "load": 61.625
+    },
+    {
+        "name": "Arief Setiawan Budi Nugroho, S.T., M.Eng., Ph.D.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 7.71,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 126,
+        "load": 48.1875
+    },
+    {
+        "name": "Ir. Ashar Saputra, S.T., M.T., Ph.D., IPM., ASEAN. Eng.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 10.86,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 125,
+        "load": 67.875
+    },
+    {
+        "name": "Prof. Dr. Ir. Bambang Agus Kironoto",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 13.93,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 109,
+        "load": 87.0625
+    },
+    {
+        "name": "Prof. Ir. Bambang Suhendro, M.Sc., Ph.D., IPU.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 8.64,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 154,
+        "load": 54
+    },
+    {
+        "name": "Prof. Dr. Ir. Bambang Supriyadi, CES., DEA., IPU., ASEAN Eng.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 8.07,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 156,
+        "load": 50.4375
+    },
+    {
+        "name": "Prof. Dr. Ir. Bambang Triatmodjo, CES., DEA.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 1.29,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 157,
+        "load": 8.0625
+    },
+    {
+        "name": "Dr.Ir. Benazir, S.T., M.Eng., IPM.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 12.86,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 116,
+        "load": 80.375
+    },
+    {
+        "name": "Dr. Ir. Budi Kamulyan, M.Eng.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 3.21,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 128,
+        "load": 20.0625
+    },
+    {
+        "name": "Prof. Dr. Ir. Budi Santoso Wignyosukarto, Dip.HE.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 3.5,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 112,
+        "load": 21.875
+    },
+    {
+        "name": "Prof. Dr. Tech. Ir. Danang Parikesit, M.Sc.(Eng)., IPU,. APEC.Eng.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 23.29,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 148,
+        "load": 145.5625
+    },
+    {
+        "name": "Dr. Ir. Dewanti, M.S.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 10.86,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 112,
+        "load": 67.875
+    },
+    {
+        "name": "Dr.Ing. Ir. Djoko Sulistyo",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 9.57,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 134,
+        "load": 59.8125
+    },
+    {
+        "name": "Dr. Dwi Ertiningsih, M.Si.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 1.5,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 146,
+        "load": 9.375
+    },
+    {
+        "name": "Dr. Dwi Satya Palupi, S.Si., M.Si.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 2,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 124,
+        "load": 12.5
+    },
+    {
+        "name": "Dra. Eko Tri Sulistyani, M.Sc.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 2,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 156,
+        "load": 12.5
+    },
+    {
+        "name": "Ir. Endita Prima Ari Pratiwi, S.T., M.Eng., Ph.D., IPM.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 10.36,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 112,
+        "load": 64.75
+    },
+    {
+        "name": "Prof. Dr. Ir. Fatchan Nurrochmad, M.Agr.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 8.79,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 109,
+        "load": 54.9375
+    },
+    {
+        "name": "Dr.Ir. Fikri Faris, S.T., M.Eng., IPM.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 18.5,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 110,
+        "load": 115.625
+    },
+    {
+        "name": "Hadrian Andradi, M.Sc., Ph.D.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 2,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 146,
+        "load": 12.5
+    },
+    {
+        "name": "Prof. Dr. Ir. Hary Christady Hardiyatmo, M.Eng., DEA.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 6,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 142,
+        "load": 37.5
+    },
+    {
+        "name": "Prof. Ir. Henricus Priyosulistyo, M.Sc., Ph.D.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 3,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 130,
+        "load": 18.75
+    },
+    {
+        "name": "Dr.Eng. Ir. Imam Muthohar, S.T., M.T., IPM.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 4.14,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 147,
+        "load": 25.875
+    },
+    {
+        "name": "Prof. Ir. Iman Satyarno, M.E., Ph.D., IPU.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 10.5,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 136,
+        "load": 65.625
+    },
+    {
+        "name": "Dr. Indarsih, S.Si., M.Si.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 1.5,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 135,
+        "load": 9.375
+    },
+    {
+        "name": "Dr. Ir. Inggar Septhia Irawati, S.T., M.T., IPM.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 10.21,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 124,
+        "load": 63.8125
+    },
+    {
+        "name": "Ir. Intan Supraba, S.T., M.Sc., Ph.D., IPM., ASEAN.Eng.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 10.64,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 145,
+        "load": 66.5
+    },
+    {
+        "name": "Dr. Irwan Endrayanto Aluicius, S.Si., M.Sc.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 1.5,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 134,
+        "load": 9.375
+    },
+    {
+        "name": "Dr. Ir. Istiarto, M.Eng., IPU.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 11,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 127,
+        "load": 68.75
+    },
+    {
+        "name": "Ir. Johan Syafri Mahathir Ahmad, S.T., M.Eng., Ph.D.,IPM.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 9.5,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 125,
+        "load": 59.375
+    },
+    {
+        "name": "Prof. Ir. Joko Sujono, M.Eng., Ph.D., IPU.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 9.07,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 110,
+        "load": 56.6875
+    },
+    {
+        "name": "Ir. Karlina, S.T., M.Eng., Ph.D., IPM.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 9.57,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 142,
+        "load": 59.8125
+    },
+    {
+        "name": "Kurniawan Putra Santoso, S.T., M.Eng.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 10.71,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 122,
+        "load": 66.9375
+    },
+    {
+        "name": "Ir. Latif Budi Suparma, M.Sc., Ph.D.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 5.79,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 154,
+        "load": 36.1875
+    },
+    {
+        "name": "Made Tantrawan, S.Si., M.Sc., Ph.D",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 2,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 138,
+        "load": 12.5
+    },
+    {
+        "name": "Mirza Satriawan, S.Si., M.Si., Ph.D.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 2,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 151,
+        "load": 12.5
+    },
+    {
+        "name": "Moh. Adhib Ulil Absor, S.Si., M.Sc., Ph.D.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 2,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 150,
+        "load": 12.5
+    },
+    {
+        "name": "Muhammad Farizqi Khaldirian, S.T., M.Eng.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 10.21,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 159,
+        "load": 63.8125
+    },
+    {
+        "name": "Prof. Dr.Eng. Ir. Muhammad Zudhy Irawan, S.T., M.T.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 6.43,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 152,
+        "load": 40.1875
+    },
+    {
+        "name": "Ir. Mukhammad Rizka Fahmi Amrozi, S.T., M.Sc., Ph.D., IPM.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 15.21,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 120,
+        "load": 95.0625
+    },
+    {
+        "name": "Ir. Neil Andika, S.T, M.Sc., Ph.D.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 11,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 156,
+        "load": 68.75
+    },
+    {
+        "name": "Ir. Ni Nyoman Nepi Marleni, S.T., M.Sc., Ph.D., IPM.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 12.14,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 136,
+        "load": 75.875
+    },
+    {
+        "name": "Prof. Ir. Nizam, DIC., M.Sc., Ph.D., IPU., ASEAN Eng.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 12.93,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 149,
+        "load": 80.8125
+    },
+    {
+        "name": "Prof. Ir. Nur Yuwono, Dip.H.E., Ph.D.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 2,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 124,
+        "load": 12.5
+    },
+    {
+        "name": "Ir. Nurul Alvia Istiqomah, ., S.T., M.Sc., Ph.D.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 11,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 127,
+        "load": 68.75
+    },
+    {
+        "name": "Prof. Dr.rer.nat Nurul Hidayat Aprilita, S.Si., M.Si.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 0.86,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 157,
+        "load": 5.375
+    },
+    {
+        "name": "Ir. Rachmad Jayadi, M.Eng., Ph.D.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 9.5,
+        "target": 12,
+        "max": 16,
+        "classes": 2,
+        "students": 118,
+        "load": 59.375
+    },
+    {
+        "name": "Prof. Ir. Radianta Triatmadja, Ph.D.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 9.5,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 141,
+        "load": 59.375
+    },
+    {
+        "name": "Dr. Rafif Zufarihsan, S.T., M.T.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 8.43,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 103,
+        "load": 52.6875
+    },
+    {
+        "name": "Dr. Richo Andi Wibowo, S.H., LL.M.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 1.71,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 112,
+        "load": 10.6875
+    },
+    {
+        "name": "Ir. Rozaqqa Noviandi, S.T., M.Agr., Ph.D.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 11.71,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 149,
+        "load": 73.1875
+    },
+    {
+        "name": "Sekar Nugraheni, S.Si, M.Sc",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 2,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 157,
+        "load": 12.5
+    },
+    {
+        "name": "Prof. Ir. Sigit Priyanto, M.Sc., Ph.D., IPM.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 5.14,
+        "target": 12,
+        "max": 16,
+        "classes": 10,
+        "students": 134,
+        "load": 32.125
+    },
+    {
+        "name": "Prof. Ir. Siti Malkhamah, M.Sc., Ph.D.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 8.29,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 111,
+        "load": 51.8125
+    },
+    {
+        "name": "Dr.Eng.Ir. Sito Ismanti, S.T., M.Eng.,IPM.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 17.21,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 153,
+        "load": 107.5625
+    },
+    {
+        "name": "Dr. Solikhatun, S.Si., M.Si.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 1.5,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 136,
+        "load": 9.375
+    },
+    {
+        "name": "Dr. Ir. Sri Puji Saraswati, DIC., M.Sc., IPM.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 10.43,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 111,
+        "load": 65.1875
+    },
+    {
+        "name": "Ir. Sudarmoko, M.Sc.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 2,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 158,
+        "load": 12.5
+    },
+    {
+        "name": "Ir. Suprapto Siswosukarto, Ph.D., IPM.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 12.64,
+        "target": 12,
+        "max": 16,
+        "classes": 5,
+        "students": 115,
+        "load": 79
+    },
+    {
+        "name": "Prof. Ir. Suryo Hapsoro Tri Utomo, Ph.D., IPU., ASEAN.Eng.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 7.71,
+        "target": 12,
+        "max": 16,
+        "classes": 8,
+        "students": 138,
+        "load": 48.1875
+    },
+    {
+        "name": "Prof. Dr. Suyanta, M.Si.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 2,
+        "target": 12,
+        "max": 16,
+        "classes": 7,
+        "students": 158,
+        "load": 12.5
+    },
+    {
+        "name": "Ir. Tantri Nastiti Handayani, S.T., M.Eng., Ph.D., IPM.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 14.86,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 103,
+        "load": 92.875
+    },
+    {
+        "name": "Ir. Taqia Rahman, S.T., M.Sc. ,Ph.D., IPM.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 11.71,
+        "target": 12,
+        "max": 16,
+        "classes": 4,
+        "students": 136,
+        "load": 73.1875
+    },
+    {
+        "name": "Taufik Abdillah Natsir, S.Si., M.Sc., Ph.D",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 1,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 117,
+        "load": 6.25
+    },
+    {
+        "name": "Prof. Ir. Teuku Faisal Fathani, .Ph.D., IPU.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 5.64,
+        "target": 12,
+        "max": 16,
+        "classes": 3,
+        "students": 140,
+        "load": 35.25
+    },
+    {
+        "name": "Dr. Toriq Arif Ghuzdewan, ST., M.Sc.E.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 8.43,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 112,
+        "load": 52.6875
+    },
+    {
+        "name": "Vemmie Nastiti Lestari, S.Si., M.Sc.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 1,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 104,
+        "load": 6.25
+    },
+    {
+        "name": "Ir. Vempi Satriya Adi Hendrawan, S.T., M.Env., Ph.D.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 10.36,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 132,
+        "load": 64.75
+    },
+    {
+        "name": "Dr. Yuli Isnadi, S.I.P., MPA.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 0.71,
+        "target": 12,
+        "max": 16,
+        "classes": 9,
+        "students": 128,
+        "load": 4.4375
+    },
+    {
+        "name": "Yunita Wulan Sari, S.Si., M.Sc.",
+        "department": "Departemen Teknik Sipil dan Lingkungan",
+        "sks": 1,
+        "target": 12,
+        "max": 16,
+        "classes": 6,
+        "students": 149,
+        "load": 6.25
+    }
   ],
   "outcomes": [
     ["Teknik Sipil", 98, 100],

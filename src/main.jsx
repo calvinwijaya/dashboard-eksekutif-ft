@@ -16,7 +16,7 @@ import ResearchPage from "./ResearchPage";
 // IMPORT DATA DARI JSON
 import MainData from "../data/MainData.json";
 import RekaVenturaData from "../data/RekaVentura.json";
-const { PROFESSOR, modules, sdgs, gesi, strategicPillars, pentahelixData } = MainData;
+const { PROFESSOR, modules, sdgs, gesi, strategicPillars, pentahelixData, kpiPerformance } = MainData;
 
 // KAMUS IKON
 const iconMap = {
@@ -206,7 +206,89 @@ function ExecutiveHome({ onOpen }) {
 
   const [showDpiModal, setShowDpiModal] = useState(false);
 
-// === TAMBAHAN STATE UNTUK TABEL RAW DATA ===
+  // === STATE PERFORMANCE INDICATOR ===
+  const [kpiYear, setKpiYear] = useState("2026");
+  const [showKpiModal, setShowKpiModal] = useState(false);
+  const [searchKpi, setSearchKpi] = useState("");
+  const [hoveredKpi, setHoveredKpi] = useState(null);
+
+  // FUNGSI CERDAS: Navigasi Polling & Auto-Scroll
+  const handleNavigateToIndicator = (route, keyword) => {
+    setShowKpiModal(false);
+    onOpen(route);
+
+    let attempts = 0;
+    const maxAttempts = 30;
+
+    const isVisible = (el) => {
+      const style = window.getComputedStyle(el);
+      const rect = el.getBoundingClientRect();
+      return (
+        style.display !== "none" &&
+        style.visibility !== "hidden" &&
+        rect.width > 0 &&
+        rect.height > 0
+      );
+    };
+
+    const findTarget = () => {
+      const normalizedKeyword = (keyword || "").trim().toLowerCase();
+      const elements = Array.from(
+        document.querySelectorAll("h1, h2, h3, h4, .eyebrow, .kpi-label, .kpi-value, strong, span")
+      ).filter(isVisible);
+
+      if (normalizedKeyword) {
+        const exact = elements.find((el) =>
+          el.textContent.trim().toLowerCase().includes(normalizedKeyword)
+        );
+        if (exact) return exact;
+      }
+
+      // Fallback jika keyword belum ada pada halaman tujuan.
+      const fallbackSelectors = {
+        research: ".impactful-research-section, .national-priorities-section, .flagship-section",
+        community: ".impactful-research-section, .community-map-section",
+        teaching: "h2, .kpi-grid",
+        welfare: "h2, .kpi-grid",
+      };
+
+      const fallback = route && fallbackSelectors[route]
+        ? Array.from(document.querySelectorAll(fallbackSelectors[route])).find(isVisible)
+        : null;
+
+      return fallback || null;
+    };
+
+    const interval = setInterval(() => {
+      attempts++;
+      const targetElement = findTarget();
+
+      if (targetElement) {
+        clearInterval(interval);
+
+        const targetY = window.scrollY + targetElement.getBoundingClientRect().top - 110;
+        window.scrollTo({ top: Math.max(0, targetY), behavior: "smooth" });
+
+        const originalBg = targetElement.style.backgroundColor;
+        const originalPadding = targetElement.style.padding;
+        const originalRadius = targetElement.style.borderRadius;
+        targetElement.style.backgroundColor = "#fef08a";
+        targetElement.style.transition = "background-color 0.5s";
+        targetElement.style.padding = "4px 8px";
+        targetElement.style.borderRadius = "4px";
+
+        setTimeout(() => {
+          targetElement.style.backgroundColor = originalBg;
+          targetElement.style.padding = originalPadding;
+          targetElement.style.borderRadius = originalRadius;
+        }, 2500);
+      } else if (attempts >= maxAttempts) {
+        clearInterval(interval);
+      }
+    }, 100);
+  };
+
+  // === TAMBAHAN STATE UNTUK TABEL RAW DATA ===
   const [searchTable, setSearchTable] = useState("");
   const [filterMitra, setFilterMitra] = useState("Semua Jenis Mitra");
   
@@ -664,6 +746,139 @@ function ExecutiveHome({ onOpen }) {
             </div>
           </div>
 
+        </div>
+      </section>
+
+      {/* =====================================================
+          KPI PERFORMANCE INDICATOR (ACTUAL VS TARGET)
+      ===================================================== */}
+      <section className="kpi-performance-section" style={{ marginTop: 40, marginBottom: 40 }}>
+        <div className="section-heading" style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
+          <div>
+            <div className="eyebrow">FACULTY SCORECARD</div>
+            <h3>Key Performance Indicators (KPI)</h3>
+            <p>Pemantauan capaian aktual terhadap target strategis fakultas. Dikelompokkan per Domain.</p>
+          </div>
+          <select 
+            value={kpiYear} 
+            onChange={e => setKpiYear(e.target.value)} 
+            style={{ padding: "8px 16px", borderRadius: 8, border: "1px solid #cbd5e1", fontSize: 13, fontWeight: 700, outline: "none", cursor: "pointer", background: "#fff" }}
+          >
+            <option value="2026">Tahun 2026</option>
+            <option value="2025">Tahun 2025</option>
+            <option value="2024">Tahun 2024</option>
+          </select>
+        </div>
+
+        {/* GRAFIK BAR RAPAT DENGAN LABEL VERTIKAL */}
+        <div 
+          onClick={() => setShowKpiModal(true)}
+          style={{ background: "#fff", border: "1px solid #e2e8f0", borderRadius: 16, padding: "24px", cursor: "pointer", boxShadow: "0 4px 6px rgba(0,0,0,0.02)", position: "relative" }}
+        >
+          <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", marginBottom: 8 }}>
+            <span style={{ fontSize: 11, fontWeight: 800, color: "#059669", background: "#d1fae5", padding: "4px 10px", borderRadius: 12, whiteSpace: "nowrap" }}>
+              Target 100%
+            </span>
+          </div>
+
+          <div style={{ display: "flex", gap: 16, width: "100%", justifyContent: "space-between" }}>
+            
+            {Object.entries(
+              kpiPerformance.reduce((acc, kpi) => {
+                const dom = kpi.domain || "DOMAIN STRATEGIS";
+                if (!acc[dom]) acc[dom] = [];
+                acc[dom].push(kpi);
+                return acc;
+              }, {})
+            ).map(([domain, kpis]) => (
+              
+              <div
+                key={domain}
+                style={{
+                  flex: Math.max(1, kpis.length * 0.8),
+                  position: "relative",
+                  background: "#f8fafc",
+                  padding: "16px 12px 12px",
+                  borderRadius: 12,
+                  border: "1px solid #f1f5f9",
+                  display: "flex",
+                  flexDirection: "column"
+                }}
+              >
+                
+                {/* LABEL DOMAIN */}
+                <div style={{ textAlign: "center", fontSize: 10, fontWeight: 800, color: "#64748b", marginBottom: 16, letterSpacing: "0.05em", minHeight: 24, lineHeight: 1.2, display: "flex", alignItems: "center", justifyContent: "center", whiteSpace: "normal", wordBreak: "normal" }}>
+                  {domain}
+                </div>
+                
+                {/* BARS CONTAINER (Kita batasi persis di sini agar kalkulasi garis hijaunya akurat) */}
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-evenly",
+                    alignItems: "flex-end",
+                    height: 160,
+                    position: "relative",
+                    zIndex: 5
+                  }}
+                >
+                  
+                  {/* GARIS TARGET (Z-INDEX: 10, POSISI ABSOLUT DI DALAM CONTAINER BAR) */}
+                  {/* Tinggi Bar Max = 140px (mewakili 120%). Maka 100% adalah (100/120) * 140px = 116.66px */}
+                  <div style={{ position: "absolute", bottom: "116.6px", left: -10, right: -10, borderTop: "2px dashed #10b981", zIndex: 10, pointerEvents: "none" }}></div>
+
+                  {kpis.map(kpi => {
+                    const actual = kpi.history[kpiYear] || 0;
+                    // Logika Invers: Makin kecil makin baik (Beban Admin, Masa Tunggu)
+                    let pct = (actual / kpi.target) * 100;
+                    if (kpi.indikator.includes("Masa Tunggu") || kpi.indikator.includes("Beban Administratif")) {
+                       pct = (kpi.target / actual) * 100;
+                    }
+                    
+                    const displayPct = Math.min(pct, 120); 
+                    const isHovered = hoveredKpi === kpi.id;
+                    const barColor = pct >= 100 ? "#059669" : pct >= 80 ? "#2563eb" : "#d97706";
+
+                    return (
+                      <div 
+                        key={kpi.id} 
+                        style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 26, gap: 6, zIndex: 5 }}
+                        onMouseEnter={() => setHoveredKpi(kpi.id)}
+                        onMouseLeave={() => setHoveredKpi(null)}
+                      >
+                        <div style={{ fontSize: 10, fontWeight: 800, color: barColor, opacity: isHovered ? 1 : 0.8, transform: isHovered ? "translateY(-4px)" : "none", transition: "all 0.2s" }}>
+                          {pct.toFixed(0)}%
+                        </div>
+                        
+                        {/* BAR */}
+                        <div style={{ width: "100%", height: 140, display: "flex", alignItems: "flex-end", background: "#e2e8f0", borderRadius: "4px 4px 0 0" }}>
+                          <div style={{ width: "100%", height: `${(displayPct / 120) * 100}%`, background: barColor, borderRadius: "4px 4px 0 0", transition: "height 0.5s", opacity: isHovered ? 0.8 : 1 }}></div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* VERTICAL LABELS CONTAINER */}
+                <div style={{ display: "flex", justifyContent: "space-around", marginTop: 10 }}>
+                  {kpis.map(kpi => (
+                    <div key={`label-${kpi.id}`} style={{ width: 26, display: "flex", justifyContent: "center" }}>
+                      <div style={{ 
+                        fontSize: 9, fontWeight: 700, color: "#475569", 
+                        writingMode: "vertical-rl", transform: "rotate(180deg)", 
+                        height: 105, textAlign: "left", whiteSpace: "nowrap",
+                        textOverflow: "ellipsis", overflow: "hidden"
+                      }}>
+                        {kpi.indikator.length > 22 ? kpi.indikator.substring(0, 20) + '..' : kpi.indikator}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+              </div>
+            ))}
+          </div>
+          <div style={{ textAlign: "center", marginTop: 16, fontSize: 12, color: "#94a3b8", fontWeight: 600 }}>Klik area grafik ini untuk melihat tabel rincian data dan menavigasi ke domain spesifik.</div>
         </div>
       </section>
 
@@ -1208,6 +1423,106 @@ function ExecutiveHome({ onOpen }) {
               </div>
 
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* MODAL KPI DETAILS & NAVIGATION */}
+      {showKpiModal && (
+        <div className="modal-backdrop" onClick={() => setShowKpiModal(false)} style={{ zIndex: 1000, padding: 20 }}>
+          <div className="research-modal" style={{ maxWidth: 1100, width: "100%", maxHeight: "90vh", overflowY: "auto", background: "#f8fafc", padding: 30 }} onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setShowKpiModal(false)}><X size={20} /></button>
+            
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-end", marginBottom: 30, flexWrap: "wrap", gap: 16 }}>
+              <div>
+                <div className="eyebrow" style={{ color: "#059669" }}>PERFORMANCE INDICATOR TRACKING</div>
+                <h2 style={{ fontSize: 24, color: "#0f172a", margin: "4px 0 0" }}>Evaluasi Target Strategis Fakultas</h2>
+              </div>
+              
+              <div style={{ display: "flex", gap: 12, alignItems: "center" }}>
+                <div style={{ position: "relative" }}>
+                  <Search size={14} color="#64748b" style={{ position: "absolute", left: 10, top: 10 }} />
+                  <input 
+                    type="text" 
+                    placeholder="Cari Indikator / Domain..." 
+                    value={searchKpi}
+                    onChange={e => setSearchKpi(e.target.value)}
+                    style={{ padding: "8px 12px 8px 32px", border: "1px solid #cbd5e1", borderRadius: 8, fontSize: 12, width: 220, outline: "none" }}
+                  />
+                </div>
+                <select 
+                  value={kpiYear} 
+                  onChange={e => setKpiYear(e.target.value)}
+                  style={{ padding: "8px 12px", border: "1px solid #cbd5e1", borderRadius: 8, fontSize: 12, outline: "none", cursor: "pointer", background: "#fff", fontWeight: 700 }}
+                >
+                  <option value="2026">Tahun 2026</option>
+                  <option value="2025">Tahun 2025</option>
+                  <option value="2024">Tahun 2024</option>
+                </select>
+              </div>
+            </div>
+
+            <div style={{ background: "#fff", borderRadius: 12, border: "1px solid #e2e8f0", overflowX: "auto" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: 13, textAlign: "left", minWidth: 900 }}>
+                <thead style={{ background: "#f1f5f9", position: "sticky", top: 0, zIndex: 10 }}>
+                  <tr>
+                    <th style={{ padding: "14px 16px", borderBottom: "1px solid #cbd5e1", color: "#334155", width: 140 }}>Domain Data</th>
+                    <th style={{ padding: "14px 16px", borderBottom: "1px solid #cbd5e1", color: "#334155" }}>Indikator Kinerja</th>
+                    <th style={{ padding: "14px 16px", borderBottom: "1px solid #cbd5e1", textAlign: "right", color: "#334155" }}>Capaian ({kpiYear})</th>
+                    <th style={{ padding: "14px 16px", borderBottom: "1px solid #cbd5e1", textAlign: "right", color: "#334155" }}>Target</th>
+                    <th style={{ padding: "14px 16px", borderBottom: "1px solid #cbd5e1", color: "#334155", width: 120 }}>Persentase</th>
+                    <th style={{ padding: "14px 16px", borderBottom: "1px solid #cbd5e1", textAlign: "center", color: "#334155", width: 130 }}>Aksi</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {kpiPerformance
+                    .filter(k => k.indikator.toLowerCase().includes(searchKpi.toLowerCase()) || k.kategori.toLowerCase().includes(searchKpi.toLowerCase()))
+                    .map((kpi, idx) => {
+                      const actual = kpi.history[kpiYear] || 0;
+                      const pct = (actual / kpi.target) * 100;
+                      const barColor = pct >= 100 ? "#059669" : pct >= 80 ? "#2563eb" : "#dc2626";
+                      
+                      return (
+                        <tr key={kpi.id} style={{ borderBottom: "1px solid #f1f5f9" }} onMouseEnter={e => e.currentTarget.style.background = "#f8fafc"} onMouseLeave={e => e.currentTarget.style.background = "transparent"}>
+                          <td style={{ padding: "12px 16px", fontWeight: 800, color: "#0b5ea8", fontSize: 10, textTransform: "uppercase" }}>
+                            {kpi.domain || "DOMAIN STRATEGIS"}
+                          </td>
+                          <td style={{ padding: "12px 16px" }}>
+                            <strong style={{ color: "#0f172a", fontSize: 13, display: "block" }}>{kpi.indikator}</strong>
+                            <span style={{ color: "#64748b", fontSize: 11 }}>{kpi.desc}</span>
+                          </td>
+                          <td style={{ padding: "12px 16px", textAlign: "right", fontWeight: 800, color: "#0f172a" }}>
+                            {actual} <span style={{fontSize: 10, color: "#64748b", fontWeight: 600}}>{kpi.unit}</span>
+                          </td>
+                          <td style={{ padding: "12px 16px", textAlign: "right", fontWeight: 700, color: "#059669" }}>
+                            {kpi.target} <span style={{fontSize: 10}}>{kpi.unit}</span>
+                          </td>
+                          <td style={{ padding: "12px 16px" }}>
+                            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                              <div style={{ flex: 1, height: 6, background: "#f1f5f9", borderRadius: 4 }}>
+                                <div style={{ width: `${Math.min(pct, 100)}%`, height: "100%", background: barColor, borderRadius: 4 }}></div>
+                              </div>
+                              <span style={{ fontSize: 11, fontWeight: 800, color: barColor }}>{pct.toFixed(0)}%</span>
+                            </div>
+                          </td>
+                          <td style={{ padding: "12px 16px", textAlign: "center" }}>
+                            {/* TOMBOL ROUTING: Tutup modal, lalu pindah halaman */}
+                            <button 
+                              onClick={() => handleNavigateToIndicator(kpi.route, kpi.scrollKeyword)}
+                              style={{ background: "#eff6ff", color: "#2563eb", border: "1px solid #bfdbfe", padding: "6px 12px", borderRadius: 6, fontSize: 11, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", gap: 4, margin: "0 auto", transition: "0.2s" }}
+                              onMouseEnter={e => {e.currentTarget.style.background = "#2563eb"; e.currentTarget.style.color = "#fff"}}
+                              onMouseLeave={e => {e.currentTarget.style.background = "#eff6ff"; e.currentTarget.style.color = "#2563eb"}}
+                            >
+                              Lihat Detail <ArrowRight size={12} />
+                            </button>
+                          </td>
+                        </tr>
+                      );
+                  })}
+                </tbody>
+              </table>
+            </div>
+
           </div>
         </div>
       )}
