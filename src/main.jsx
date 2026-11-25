@@ -12,6 +12,7 @@ import CommunityPage from "./CommunityPage";
 import WelfarePage from "./WelfarePage";
 import TeachingPage from "./TeachingPage";
 import ResearchPage from "./ResearchPage";
+import { findUser, getUserByUsername } from "./users";
 
 // IMPORT DATA DARI JSON
 import MainData from "../data/MainData.json";
@@ -94,7 +95,7 @@ function Sidebar({ active, setActive, collapsed, setCollapsed, mobileOpen, onClo
   );
 }
 
-function Header({ onMenu, collapsed, onLogout }) {
+function Header({ onMenu, collapsed, onLogout, user }) {
   return (
     <header className="topbar">
       <div className="topbar-left">
@@ -109,15 +110,20 @@ function Header({ onMenu, collapsed, onLogout }) {
       </div>
 
       <div className="profile-area">
-        <AssetImage
-          src="/foto_prof_trias3.png"
-          alt={PROFESSOR}
-          className="profile-avatar-photo"
-          fallback={<div className="profile-avatar">TA</div>}
-        />
+        {user?.photo ? (
+          <AssetImage
+            key={user.username}
+            src={user.photo}
+            alt={user.fullName}
+            className="profile-avatar-photo"
+            fallback={<div className="profile-avatar">{user.initials}</div>}
+          />
+        ) : (
+          <div className="profile-avatar">{user?.initials || "FT"}</div>
+        )}
         <div className="profile-copy">
-          <strong>{PROFESSOR}</strong>
-          <span>Fakultas Teknik</span>
+          <strong>{user?.fullName || PROFESSOR}</strong>
+          <span>{user?.role || "Fakultas Teknik"}</span>
         </div>
         <ChevronDown size={17} className="muted" />
         <div className="header-divider" />
@@ -192,7 +198,7 @@ function ProfessionalDonutChart({ data, dataKey, title, valueKey, valuePrefix = 
   );
 }
 
-function ExecutiveHome({ onOpen }) {
+function ExecutiveHome({ onOpen, user }) {
   const [selectedSdg, setSelectedSdg] = useState(sdgs[3]);
   const [selectedGesi, setSelectedGesi] = useState(null);
   const [selectedPillar, setSelectedPillar] = useState(strategicPillars[0]);
@@ -371,7 +377,7 @@ function ExecutiveHome({ onOpen }) {
       <section className="hero">
         <div className="hero-copy">
           <div className="hero-kicker"><span className="status-dot" /> EXECUTIVE OVERVIEW</div>
-          <h2>Selamat datang,<br /><span>Prof. Trias Aditya</span></h2>
+          <h2>Selamat datang,<br /><span>{user?.greeting || "Pimpinan Fakultas Teknik"}</span></h2>
           <p>
             Satu pintu untuk melihat kinerja, portofolio, keterhubungan,
             dan indikator strategis Fakultas Teknik secara terintegrasi.
@@ -1537,8 +1543,9 @@ function LoginPage({ onLogin }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (username === "triasaditya" && password === "geodesi1hati") {
-      onLogin();
+    const user = findUser(username, password);
+    if (user) {
+      onLogin(user.username);
     } else {
       setError(true);
     }
@@ -1574,18 +1581,32 @@ function App() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [showLogoutModal, setShowLogoutModal] = useState(false);
 
-  const [isAuthenticated, setIsAuthenticated] = useState(() => {
-    return localStorage.getItem("auth") === "true";
+  // Sesi login disimpan sebagai username di localStorage ("authUser").
+  // Sesi lama ("auth" = "true", sebelum multi-akun) otomatis dianggap akun Prof. Trias.
+  const [currentUser, setCurrentUser] = useState(() => {
+    try {
+      const saved = localStorage.getItem("authUser");
+      if (saved) return getUserByUsername(saved);
+      if (localStorage.getItem("auth") === "true") return getUserByUsername("triasaditya");
+    } catch (e) { /* localStorage tidak tersedia */ }
+    return null;
   });
+  const isAuthenticated = !!currentUser;
 
-  const handleLogin = () => {
-    setIsAuthenticated(true);
-    localStorage.setItem("auth", "true");
+  const handleLogin = (username) => {
+    setCurrentUser(getUserByUsername(username));
+    try {
+      localStorage.setItem("authUser", username);
+      localStorage.removeItem("auth");
+    } catch (e) { /* abaikan */ }
   };
 
   const handleConfirmLogout = () => {
-    setIsAuthenticated(false);
-    localStorage.removeItem("auth");
+    setCurrentUser(null);
+    try {
+      localStorage.removeItem("authUser");
+      localStorage.removeItem("auth");
+    } catch (e) { /* abaikan */ }
     setActive("home");
     setShowLogoutModal(false);
   };
@@ -1605,9 +1626,9 @@ function App() {
       <Sidebar active={active} setActive={selectPage} collapsed={collapsed} setCollapsed={setCollapsed} mobileOpen={mobileOpen} onClose={() => setMobileOpen(false)} />
       
       <div className="page-shell">
-        <Header onMenu={() => setMobileOpen(true)} collapsed={collapsed} onLogout={() => setShowLogoutModal(true)} />
+        <Header onMenu={() => setMobileOpen(true)} collapsed={collapsed} onLogout={() => setShowLogoutModal(true)} user={currentUser} />
         
-        {active === "home" && <ExecutiveHome onOpen={selectPage} />}
+        {active === "home" && <ExecutiveHome onOpen={selectPage} user={currentUser} />}
         {active === "research" && <ResearchPage onBack={() => setActive("home")} />}
         {active === "community" && <CommunityPage onBack={() => setActive("home")} />}
         {active === "welfare" && <WelfarePage onBack={() => setActive("home")} />}
