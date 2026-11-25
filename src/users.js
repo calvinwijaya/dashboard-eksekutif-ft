@@ -65,7 +65,7 @@ export const USERS = [
     username: "tamuft",
     password: "tamuftugm",
     fullName: "Tamu FT UGM",
-    greeting: "Tamu",
+    greeting: "Tamu FT UGM",
     role: "Fakultas Teknik",
     photo: "",
     initials: "TF",
